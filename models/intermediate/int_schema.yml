@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: int_session_real_sm
+    config:
+      tags: ['daily', 'ga4']
+    description: the real source/medium for each session
+    columns:
+      - name: user_pseudo_id
+        tests:
+          - not_null
+      - name: session_id
+        tests:
+          - not_null

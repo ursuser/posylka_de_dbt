@@ -1,0 +1,68 @@
+version: 2
+
+models:
+  - name: fct_events_real_sm
+    config:
+      tags: ['daily', 'ga4']
+    description: all basic events with session source - medium
+    columns:
+      - name: event_date
+        tests:
+          - not_null
+
+  - name: fct_tech_events
+    config:
+      tags: ['daily', 'ga4']
+    description: all basic events via technology
+    columns:
+      - name: event_date
+        tests:
+          - not_null
+      - name: category
+        tests:
+          - not_null
+
+  - name: fct_landing_page
+    config:
+      tags: ['daily', 'ga4']
+    description: conversion events via landing page
+    columns:
+      - name: event_date
+        tests:
+          - not_null
+      - name: landing_page
+        tests:
+          - not_null
+      - name: device_category
+        tests:
+          - not_null
+
+  - name: fct_search_term_intern
+    config:
+      tags: ['daily', 'ga4']
+    description: intern search terms on the site
+    columns:
+      - name: event_date
+        tests:
+          - not_null
+      - name: search_term
+        tests:
+          - not_null
+      - name: device_category
+        tests:
+          - not_null
+
+  - name: fct_seach_console
+    config:
+      tags: ['daily', 'ga4']
+    description: data from search console joined with ga4 data
+    columns:
+      - name: date
+        tests:
+          - not_null
+      - name: device_category
+        tests:
+          - not_null
+      - name: landing_page
+        tests:
+          - not_null

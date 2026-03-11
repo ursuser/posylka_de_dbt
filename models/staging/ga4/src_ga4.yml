@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: analytics_298705553
+    database: posylka-de-478903
+    tables:
+      - name: events
+        identifier: "events_*"
+        loaded_at_field: parse_timestamp('%Y%m%d', regexp_extract(_table_suffix, '[0-9]+'))
+        config:
+          freshness:
+            warn_after: {count: 48, period: hour}
+            error_after: {count: 72, period: hour}

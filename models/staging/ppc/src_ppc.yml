@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: google_ads_386_715_7751
+    database: posylka-de-478903
+    schema: g_ads_3867157751
+    tables:
+      - name: p_ads_Campaign_3867157751
+
+      - name: p_ads_ClickStats_3867157751
+        loaded_at_field: TIMESTAMP (segments_date)
+        config:
+          freshness:
+            warn_after: {count: 2, period: day}
+            error_after: {count: 3, period: day}
+
+      - name: p_ads_CampaignBasicStats_3867157751
+        loaded_at_field: TIMESTAMP (segments_date)
+        config:
+          freshness:
+            warn_after: {count: 2, period: day}
+            error_after: {count: 3, period: day}

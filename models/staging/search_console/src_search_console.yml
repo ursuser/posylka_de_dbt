@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: searchconsole
+    database: posylka-de-478903
+    tables:
+      - name: searchdata_url_impression
+        loaded_at_field: TIMESTAMP (data_date)
+        config:
+          freshness:
+            warn_after: {count: 4, period: day}
+            error_after: {count: 7, period: day}
