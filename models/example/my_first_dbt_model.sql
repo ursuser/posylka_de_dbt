@@ -7,6 +7,7 @@
     Try changing "table" to "view" below
 */
 
+-- test change from local dbt core
 {{ config(materialized='table') }}
 
 with source_data as (
