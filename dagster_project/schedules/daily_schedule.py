@@ -6,21 +6,21 @@ from dagster import (
 
 # scheduled job: runs all models tagged "daily"
 run_daily_models_job = define_asset_job(
-    name="run_daily_models",
+    name="posylka_de_daily",
     selection=AssetSelection.tag("tag", "daily"),
-    description="run models tagged with daily (scheduled)",
+    description="posylka de: run models tagged with daily (scheduled)",
 )
 
 # schedule: every day at 05:00 UTC
 daily_schedule = ScheduleDefinition(
     job=run_daily_models_job,
     cron_schedule="0 5 * * *",
-    description="run daily models every day at 05:00 utc",
+    description="posylka de: run daily models every day at 05:00 utc",
 )
 
 # ad-hoc job: run all models at once
 run_all_models_job = define_asset_job(
-    name="run_all_models",
+    name="posylka_de_run_all",
     selection=AssetSelection.all(),
-    description="run all dbt models (manual)",
+    description="posylka de: run all dbt models (manual)",
 )
