@@ -1,5 +1,6 @@
 from dagster import (
     AssetSelection,
+    DefaultScheduleStatus,
     ScheduleDefinition,
     define_asset_job,
 )
@@ -16,6 +17,7 @@ daily_schedule = ScheduleDefinition(
     job=run_daily_models_job,
     cron_schedule="0 5 * * *",
     description="posylka de: run daily models every day at 05:00 utc",
+    default_status=DefaultScheduleStatus.RUNNING,
 )
 
 # ad-hoc job: run all models at once
