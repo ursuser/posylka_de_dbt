@@ -9,7 +9,7 @@
 with
 
     source as (
-        select distinct
+        select
             cs.click_view_gclid as gclid,
             cs.campaign_id,
             c.campaign_name
@@ -24,6 +24,8 @@ with
         {% if is_incremental() %}
             and cs._PARTITIONTIME >= timestamp_sub(current_timestamp(), interval 3 day)
         {% endif %}
+
+        qualify row_number() over (partition by cs.click_view_gclid order by cs._PARTITIONTIME desc) = 1
     )
 
 select * from source
