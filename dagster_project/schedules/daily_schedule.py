@@ -4,11 +4,18 @@ from dagster import (
     ScheduleDefinition,
     define_asset_job,
 )
+from dagster_dbt import build_dbt_asset_selection
+from dagster_project.assets.dbt_assets import posylka_de_dbt_assets
 
-# scheduled job: runs all models tagged "daily"
+# scheduled job: runs all models tagged "daily" (dbt selection syntax)
+daily_dbt_selection = build_dbt_asset_selection(
+    [posylka_de_dbt_assets],
+    dbt_select="tag:daily",
+)
+
 run_daily_models_job = define_asset_job(
     name="posylka_de_daily",
-    selection=AssetSelection.tag("tag", "daily"),
+    selection=daily_dbt_selection,
     description="posylka de: run models tagged with daily (scheduled)",
 )
 
