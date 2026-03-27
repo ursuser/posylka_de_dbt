@@ -1,6 +1,6 @@
 # PBI: Comparison Period (period-over-period)
 
-Status: PAUSED — not to break the working report.
+Status: DONE — implemented and working.
 
 ## What was done
 

@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "0a505aa8deb30b0446a5",
+  "name": "21c53d563fd898815d8f",
   "position": {
-    "x": 915,
+    "x": 260,
     "y": 127.5,
-    "z": 3000,
+    "z": 10000,
     "height": 321.25,
-    "width": 643.75,
-    "tabOrder": 2000
+    "width": 641.25,
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -20,15 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "fct_events_real_sm"
+                      "Entity": "ga4_channel_group"
                     }
                   },
-                  "Property": "country"
+                  "Property": "channel_group"
                 }
               },
-              "queryRef": "fct_events_real_sm.country",
-              "nativeQueryRef": "country",
-              "active": false
+              "queryRef": "ga4_channel_group.channel_group",
+              "nativeQueryRef": "channel_group",
+              "active": true
             },
             {
               "field": {
@@ -38,12 +38,12 @@
                       "Entity": "fct_events_real_sm"
                     }
                   },
-                  "Property": "city"
+                  "Property": "source_medium_lnd"
                 }
               },
-              "queryRef": "fct_events_real_sm.city",
-              "nativeQueryRef": "city",
-              "active": true
+              "queryRef": "fct_events_real_sm.source_medium_lnd",
+              "nativeQueryRef": "source_medium_lnd",
+              "active": false
             }
           ]
         },
@@ -57,11 +57,11 @@
                       "Entity": "M"
                     }
                   },
-                  "Property": "users"
+                  "Property": "orders"
                 }
               },
-              "queryRef": "M.users",
-              "nativeQueryRef": "users"
+              "queryRef": "M.orders",
+              "nativeQueryRef": "orders"
             }
           ]
         }
@@ -76,7 +76,7 @@
                     "Entity": "M"
                   }
                 },
-                "Property": "users"
+                "Property": "orders"
               }
             },
             "direction": "Descending"

@@ -3,11 +3,10 @@
   "name": "4ec5c3d5aad68ae36622",
   "position": {
     "x": 0,
-    "y": 102.85518773494476,
+    "y": 114.52843523184723,
     "z": 1000,
-    "height": 89.901446539739013,
-    "width": 248.27213822894169,
-    "tabOrder": 0
+    "height": 100.10454721845542,
+    "width": 236.90544060598867
   },
   "visual": {
     "visualType": "slicer",
@@ -94,6 +93,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'Dropdown'"
+                }
+              }
+            },
+            "isInvertedSelectionMode": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

@@ -19,11 +19,12 @@ run_daily_models_job = define_asset_job(
     description="posylka de: run models tagged with daily (scheduled)",
 )
 
-# schedule: every day at 05:00 UTC
+# schedule: every day at 05:00 UTC (06:00 berlin winter / 07:00 berlin summer)
+# power bi refreshes at 08:00 berlin — dagster must finish before that
 daily_schedule = ScheduleDefinition(
     job=run_daily_models_job,
     cron_schedule="0 5 * * *",
-    description="posylka de: run daily models every day at 05:00 utc",
+    description="posylka de: run daily models every day at 05:00 utc. power bi refreshes at 08:00 berlin",
     default_status=DefaultScheduleStatus.RUNNING,
 )
 

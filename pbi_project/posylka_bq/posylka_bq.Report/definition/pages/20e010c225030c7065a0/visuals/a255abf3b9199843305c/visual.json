@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "a255abf3b9199843305c",
   "position": {
-    "x": 270.70563079116175,
-    "y": 464.43335709194582,
+    "x": 260,
+    "y": 465,
     "z": 0,
-    "height": 392.58731290092658,
-    "width": 959.65787598004272,
+    "height": 392.5,
+    "width": 1298.75,
     "tabOrder": 0
   },
   "visual": {
@@ -20,6 +20,21 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
+                      "Entity": "ga4_channel_group"
+                    }
+                  },
+                  "Property": "channel_group"
+                }
+              },
+              "queryRef": "ga4_channel_group.channel_group",
+              "nativeQueryRef": "channel_group",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
                       "Entity": "fct_events_real_sm"
                     }
                   },
@@ -28,7 +43,7 @@
               },
               "queryRef": "fct_events_real_sm.source_medium_lnd",
               "nativeQueryRef": "source_medium",
-              "active": true,
+              "active": false,
               "displayName": "source_medium"
             },
             {
@@ -70,6 +85,20 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
+                      "Entity": "M_prev"
+                    }
+                  },
+                  "Property": "users_diff"
+                }
+              },
+              "queryRef": "M_prev.users_diff",
+              "nativeQueryRef": "users_diff"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
                       "Entity": "M"
                     }
                   },
@@ -78,6 +107,20 @@
               },
               "queryRef": "M.sessions",
               "nativeQueryRef": "sessions"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "M_prev"
+                    }
+                  },
+                  "Property": "sessions_diff"
+                }
+              },
+              "queryRef": "M_prev.sessions_diff",
+              "nativeQueryRef": "sessions_diff"
             },
             {
               "field": {
@@ -98,6 +141,20 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
+                      "Entity": "M_prev"
+                    }
+                  },
+                  "Property": "buyers_diff"
+                }
+              },
+              "queryRef": "M_prev.buyers_diff",
+              "nativeQueryRef": "buyers_diff"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
                       "Entity": "M"
                     }
                   },
@@ -106,6 +163,20 @@
               },
               "queryRef": "M.orders",
               "nativeQueryRef": "orders"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "M_prev"
+                    }
+                  },
+                  "Property": "orders_diff"
+                }
+              },
+              "queryRef": "M_prev.orders_diff",
+              "nativeQueryRef": "orders_diff"
             },
             {
               "field": {
@@ -126,6 +197,20 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
+                      "Entity": "M_prev"
+                    }
+                  },
+                  "Property": "revenue_diff"
+                }
+              },
+              "queryRef": "M_prev.revenue_diff",
+              "nativeQueryRef": "revenue_diff"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
                       "Entity": "M"
                     }
                   },
@@ -134,6 +219,20 @@
               },
               "queryRef": "M.AOV",
               "nativeQueryRef": "AOV"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "M_prev"
+                    }
+                  },
+                  "Property": "AOV_diff"
+                }
+              },
+              "queryRef": "M_prev.AOV_diff",
+              "nativeQueryRef": "AOV_diff"
             }
           ]
         }
@@ -164,6 +263,13 @@
         "levels": [
           {
             "queryRefs": [
+              "ga4_channel_group.channel_group"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
               "fct_events_real_sm.source_medium_lnd"
             ],
             "isCollapsed": true,
@@ -186,7 +292,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "78.02801100518069D"
+                  "Value": "73.47417331126226D"
                 }
               }
             }
@@ -200,7 +306,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "89.50102688031842D"
+                  "Value": "63.634362630711045D"
                 }
               }
             }
@@ -214,7 +320,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "84.9066161161306D"
+                  "Value": "101.56894373836226D"
                 }
               }
             }
@@ -228,7 +334,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "495.67627064833016D"
+                  "Value": "292.24540148565404D"
                 }
               }
             }
@@ -242,7 +348,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "77.27409939203291D"
+                  "Value": "75.56690310813916D"
                 }
               }
             }
@@ -256,13 +362,69 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "75.58378170980896D"
+                  "Value": "69.35846172662231D"
                 }
               }
             }
           },
           "selector": {
             "metadata": "M.buyers"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "70D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "M_prev.AOV_diff"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "72.99999515594233D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "M.AOV"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "98.25000394623993D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "M_prev.revenue_diff"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "284.7500257312164D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "ga4_channel_group.channel_group"
           }
         }
       ]
