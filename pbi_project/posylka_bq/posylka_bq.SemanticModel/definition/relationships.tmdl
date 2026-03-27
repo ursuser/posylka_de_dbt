@@ -1,0 +1,23 @@
+relationship 7c1a33d8-5ea9-4f2c-b769-fb60620cbace
+	joinOnDateBehavior: datePartOnly
+	fromColumn: HB_Date_Basic.DimDate
+	toColumn: LocalDateTable_be51dae9-07a1-4184-93b6-e114e1bdd3cf.Date
+
+relationship fa5dcaff-56fe-4ab2-8142-1f4da627c4fe
+	joinOnDateBehavior: datePartOnly
+	fromColumn: HB_Date_Comp.DimDate
+	toColumn: LocalDateTable_17e39f73-3032-407c-99c8-b1c356e10bc4.Date
+
+relationship c0d54447-437a-404c-3aa5-7130e0c3eefd
+	fromColumn: fct_events_real_sm.event_date
+	toColumn: HB_Date_Basic.DimDate
+
+relationship 685231e7-687f-84e2-1f07-da1900d122fe
+	fromColumn: fct_events_real_sm.source_medium_lnd
+	toColumn: ga4_channel_group.source_medium
+
+relationship a1b2c3d4-e5f6-7890-abcd-ef1234567890
+	isActive: false
+	fromColumn: fct_events_real_sm.event_date
+	toColumn: HB_Date_Comp.DimDate
+

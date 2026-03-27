@@ -1,0 +1,26 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_ProTooling = ["DevMode"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["fct_events_real_sm","M","HB_Date_Basic","HB_Date_Comp","M_prev"]
+
+ref table fct_events_real_sm
+ref table DateTableTemplate_4f58f198-cfd4-4ec1-8026-66d6afb693b5
+ref table M
+ref table HB_Date_Basic
+ref table LocalDateTable_be51dae9-07a1-4184-93b6-e114e1bdd3cf
+ref table HB_Date_Comp
+ref table LocalDateTable_17e39f73-3032-407c-99c8-b1c356e10bc4
+ref table ga4_channel_group
+ref table M_prev
+
+ref cultureInfo en-US
+

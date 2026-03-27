@@ -1,0 +1,89 @@
+table ga4_channel_group
+	lineageTag: af84794a-9941-4576-9120-be33ff71fc1a
+
+	column source_medium
+		lineageTag: 96d5aa9d-0c4f-44a9-b59f-f2d8a5c48bb2
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [source_medium]
+
+		annotation SummarizationSetBy = Automatic
+
+	column channel_group = ```
+			
+			  IF('ga4_channel_group'[source_medium] = "(direct) / (none)", "Direct",                                                                                              
+			  IF(ISBLANK('ga4_channel_group'[source_medium]), "Direct",                                                                                                           
+			  IF('ga4_channel_group'[source_medium] = "google / cpc", "Paid Search",                                                                                              
+			  IF('ga4_channel_group'[source_medium] = "bing / cpc", "Paid Search",                                                                                                
+			  IF('ga4_channel_group'[source_medium] = "google / PMax", "Paid Search",                                                                                             
+			  IF('ga4_channel_group'[source_medium] = "google / organic", "Organic Search",                                                                                       
+			  IF('ga4_channel_group'[source_medium] = "google / Search", "Organic Search",                                                                                        
+			  IF('ga4_channel_group'[source_medium] = "bing / organic", "Organic Search",                                                                                         
+			  IF('ga4_channel_group'[source_medium] = "yandex / organic", "Organic Search",                                                                                       
+			  IF('ga4_channel_group'[source_medium] = "duckduckgo / organic", "Organic Search",                                                                                   
+			  IF('ga4_channel_group'[source_medium] = "ecosia / organic", "Organic Search",                                                                                       
+			  IF('ga4_channel_group'[source_medium] = "qwant / organic", "Organic Search",                                                                                        
+			  IF('ga4_channel_group'[source_medium] = "Pinterest / organic", "Organic Search",                                                                                    
+			  IF('ga4_channel_group'[source_medium] = "yandexsmartcamera / organic", "Organic Search",                                                                            
+			  IF('ga4_channel_group'[source_medium] = "brevo / email", "Email",                                                                                                   
+			  IF('ga4_channel_group'[source_medium] = "yespo / email", "Email",                                                                                                   
+			  IF('ga4_channel_group'[source_medium] = "promo / email", "Email",                                                                                                   
+			  IF('ga4_channel_group'[source_medium] = "sendinblue / email", "Email",                                                                                              
+			  IF('ga4_channel_group'[source_medium] = "sendinblue / (none)", "Email",                                                                                             
+			  IF('ga4_channel_group'[source_medium] = "posylka / email", "Email",                                                                                                 
+			  IF('ga4_channel_group'[source_medium] = "newsletter / email", "Email",                                                                                              
+			  IF('ga4_channel_group'[source_medium] = "trigger / email", "Email",
+			  IF('ga4_channel_group'[source_medium] = "targetmailru / cpc", "Email",                                                                                              
+			  IF('ga4_channel_group'[source_medium] = "social / meta", "Paid Social",                                                                                             
+			  IF('ga4_channel_group'[source_medium] = "spcial / tiktok", "Paid Social",                                                                                           
+			  IF('ga4_channel_group'[source_medium] = "fb / paid", "Paid Social",                                                                                                 
+			  IF('ga4_channel_group'[source_medium] = "ig / paid", "Paid Social",                                                                                                 
+			  IF('ga4_channel_group'[source_medium] = "tiktok / cpc", "Paid Social",                                                                                              
+			  IF('ga4_channel_group'[source_medium] = "tiktok / paid", "Paid Social",                                                                                             
+			  IF('ga4_channel_group'[source_medium] = "an / paid", "Paid Social",                                                                                                 
+			  IF('ga4_channel_group'[source_medium] = "facebook / social", "Organic Social",                                                                                      
+			  IF('ga4_channel_group'[source_medium] = "instagram / social", "Organic Social",                                                                                     
+			  IF('ga4_channel_group'[source_medium] = "instagram / story", "Organic Social",                                                                                      
+			  IF('ga4_channel_group'[source_medium] = "instagram / stories", "Organic Social",                                                                                    
+			  IF('ga4_channel_group'[source_medium] = "instagram / post", "Organic Social",
+			  IF('ga4_channel_group'[source_medium] = "youtube / social", "Organic Social",                                                                                       
+			  IF('ga4_channel_group'[source_medium] = "ok.ru / social", "Organic Social",
+			  IF('ga4_channel_group'[source_medium] = "ok / social", "Organic Social",                                                                                            
+			  IF('ga4_channel_group'[source_medium] = "reddit / social", "Organic Social",                                                                                        
+			  IF('ga4_channel_group'[source_medium] = "tiktok / social", "Organic Social",
+			  IF('ga4_channel_group'[source_medium] = "chatgpt.com / (none)", "AI",                                                                                               
+			  IF('ga4_channel_group'[source_medium] = "chatgpt.com / referral", "AI",
+			  IF('ga4_channel_group'[source_medium] = "perplexity / (none)", "AI",                                                                                                
+			  IF('ga4_channel_group'[source_medium] = "perplexity.ai / referral", "AI",
+			  IF('ga4_channel_group'[source_medium] = "copilot.com / (none)", "AI",                                                                                               
+			  IF('ga4_channel_group'[source_medium] = "copilot.microsoft.com / referral", "AI",
+			  IF('ga4_channel_group'[source_medium] = "claude.ai / referral", "AI",                                                                                               
+			  IF('ga4_channel_group'[source_medium] = "gemini.google.com / referral", "AI",                                                                                       
+			  IF('ga4_channel_group'[source_medium] = "header / banner_small", "Internal",                                                                                        
+			  IF('ga4_channel_group'[source_medium] = "header / banner_big", "Internal",                                                                                          
+			  IF('ga4_channel_group'[source_medium] = "catalog / catalog", "Internal",                                                                                            
+			  IF('ga4_channel_group'[source_medium] = "gutschein / gutschein", "Internal",                                                                                        
+			  IF('ga4_channel_group'[source_medium] = "BilingKey.de / Link", "Internal",
+			  IF(CONTAINSSTRING('ga4_channel_group'[source_medium], "posylka.com / referral"), "Internal",                                                                        
+			  IF('ga4_channel_group'[source_medium] = "android-app / referral", "App",
+			  IF(CONTAINSSTRING('ga4_channel_group'[source_medium], "/ referral"), "Referral",                                                                                    
+			  "Others"))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+			```
+		lineageTag: bbbe865d-8e54-4f4d-a3d0-28d268514036
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ga4_channel_group = calculated
+		mode: import
+		source = ```
+				
+				  SELECTCOLUMNS(                                                                                                                                             
+				      DISTINCT('fct_events_real_sm'[source_medium_lnd]),                                                                                                       
+				      "source_medium",                                                                                                                                     
+				      IF(ISBLANK('fct_events_real_sm'[source_medium_lnd]), "(not set)", 'fct_events_real_sm'[source_medium_lnd])
+				  )
+				```
+
+	annotation PBI_Id = c33b29fed79946edb7f0513f6570571d
+

@@ -1,0 +1,308 @@
+table fct_events_real_sm
+	lineageTag: 7b39b99e-8687-482e-a21d-c78506860a17
+
+	column event_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 46f32c90-062e-415d-a0d0-e9a8acce695a
+		summarizeBy: none
+		sourceColumn: event_date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column user_pseudo_id
+		dataType: string
+		lineageTag: 77207416-29d7-44cc-abc7-9d2db538597e
+		summarizeBy: none
+		sourceColumn: user_pseudo_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column user_first_sm
+		dataType: string
+		lineageTag: 6acf8741-35ae-484a-9194-baefef7b1bf0
+		summarizeBy: none
+		sourceColumn: user_first_sm
+
+		annotation SummarizationSetBy = Automatic
+
+	column user_first_campaign
+		dataType: string
+		lineageTag: 23f814a1-0925-4986-8f05-3e89ddf38c49
+		summarizeBy: none
+		sourceColumn: user_first_campaign
+
+		annotation SummarizationSetBy = Automatic
+
+	column device_category
+		dataType: string
+		lineageTag: 473137cc-b71f-438b-8936-0a1f45866264
+		summarizeBy: none
+		sourceColumn: device_category
+
+		annotation SummarizationSetBy = Automatic
+
+	column country
+		dataType: string
+		lineageTag: 5782a995-3942-4f08-8f7e-7e0ee5a45e5c
+		summarizeBy: none
+		sourceColumn: country
+
+		annotation SummarizationSetBy = Automatic
+
+	column city
+		dataType: string
+		lineageTag: 2dc92ba5-5d37-4a9a-b078-abff519f2d40
+		summarizeBy: none
+		sourceColumn: city
+
+		annotation SummarizationSetBy = Automatic
+
+	column session_id
+		dataType: string
+		lineageTag: 3d36a9c2-5d2d-4cc7-b9f9-f2627ddc94ca
+		summarizeBy: none
+		sourceColumn: session_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_medium_lnd
+		dataType: string
+		lineageTag: b28b808a-47d4-429a-894a-f85e7045a47e
+		summarizeBy: none
+		sourceColumn: source_medium_lnd
+
+		annotation SummarizationSetBy = Automatic
+
+	column campaign_lnd
+		dataType: string
+		lineageTag: 1c407786-359f-4205-9565-425a19b68bdf
+		summarizeBy: none
+		sourceColumn: campaign_lnd
+
+		annotation SummarizationSetBy = Automatic
+
+	column term_lnd
+		dataType: string
+		lineageTag: 96d60a1a-fe0f-4943-8300-113b92971c73
+		summarizeBy: none
+		sourceColumn: term_lnd
+
+		annotation SummarizationSetBy = Automatic
+
+	column content_lnd
+		dataType: string
+		lineageTag: 22ad4b66-629e-4ec8-98ef-f8a8d853c931
+		summarizeBy: none
+		sourceColumn: content_lnd
+
+		annotation SummarizationSetBy = Automatic
+
+	column gclid_lnd
+		dataType: string
+		lineageTag: 1744cbd4-0820-4f87-b018-d12677c7127f
+		summarizeBy: none
+		sourceColumn: gclid_lnd
+
+		annotation SummarizationSetBy = Automatic
+
+	column session_number
+		dataType: int64
+		formatString: 0
+		lineageTag: 69df6c88-9656-4313-81a0-1b895426c46e
+		summarizeBy: sum
+		sourceColumn: session_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column session_engaged
+		dataType: string
+		lineageTag: 68bb15a3-c678-4213-a89b-9b659cb144fc
+		summarizeBy: none
+		sourceColumn: session_engaged
+
+		annotation SummarizationSetBy = Automatic
+
+	column engagement_time_msec
+		dataType: int64
+		formatString: 0
+		lineageTag: 72f7630c-065b-4f71-b949-a72e9adeb5fd
+		summarizeBy: sum
+		sourceColumn: engagement_time_msec
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_view
+		dataType: int64
+		formatString: 0
+		lineageTag: 81e9ae02-9635-414d-bdaf-6f300112182b
+		summarizeBy: sum
+		sourceColumn: page_view
+
+		annotation SummarizationSetBy = Automatic
+
+	column first_visit
+		dataType: int64
+		formatString: 0
+		lineageTag: 487ff684-1c87-4539-8a78-b9c147ca4f04
+		summarizeBy: sum
+		sourceColumn: first_visit
+
+		annotation SummarizationSetBy = Automatic
+
+	column view_promotion
+		dataType: int64
+		formatString: 0
+		lineageTag: 215598a6-562c-4aa5-b0f6-7ac61d09327b
+		summarizeBy: sum
+		sourceColumn: view_promotion
+
+		annotation SummarizationSetBy = Automatic
+
+	column select_promotion
+		dataType: int64
+		formatString: 0
+		lineageTag: 52ceb76b-ffa1-488f-b6da-fae0ae979d08
+		summarizeBy: sum
+		sourceColumn: select_promotion
+
+		annotation SummarizationSetBy = Automatic
+
+	column view_item_list
+		dataType: int64
+		formatString: 0
+		lineageTag: 26f219b7-d8d4-41c3-8788-885b71c9ca30
+		summarizeBy: sum
+		sourceColumn: view_item_list
+
+		annotation SummarizationSetBy = Automatic
+
+	column view_item
+		dataType: int64
+		formatString: 0
+		lineageTag: ffe1d0b3-f05c-4db5-93e8-c47b52284a4c
+		summarizeBy: sum
+		sourceColumn: view_item
+
+		annotation SummarizationSetBy = Automatic
+
+	column select_item
+		dataType: int64
+		formatString: 0
+		lineageTag: 5c43e821-1f58-4d43-b4d4-80b2b13a9d2d
+		summarizeBy: sum
+		sourceColumn: select_item
+
+		annotation SummarizationSetBy = Automatic
+
+	column add_to_cart
+		dataType: int64
+		formatString: 0
+		lineageTag: 189560d5-4f43-4c29-999d-29f64935c952
+		summarizeBy: sum
+		sourceColumn: add_to_cart
+
+		annotation SummarizationSetBy = Automatic
+
+	column view_cart
+		dataType: int64
+		formatString: 0
+		lineageTag: 1ab66da6-d976-445f-af15-342c6d2811ff
+		summarizeBy: sum
+		sourceColumn: view_cart
+
+		annotation SummarizationSetBy = Automatic
+
+	column remove_from_cart
+		dataType: int64
+		formatString: 0
+		lineageTag: de00ccf4-9061-415e-a49b-f6437c4cac43
+		summarizeBy: sum
+		sourceColumn: remove_from_cart
+
+		annotation SummarizationSetBy = Automatic
+
+	column add_to_wishlist
+		dataType: int64
+		formatString: 0
+		lineageTag: 48349b69-3cfd-4d97-8165-0725ecb70f6b
+		summarizeBy: sum
+		sourceColumn: add_to_wishlist
+
+		annotation SummarizationSetBy = Automatic
+
+	column begin_checkout
+		dataType: int64
+		formatString: 0
+		lineageTag: 5e8b51db-dc15-4692-9c53-aa42c357bfec
+		summarizeBy: sum
+		sourceColumn: begin_checkout
+
+		annotation SummarizationSetBy = Automatic
+
+	column add_shipping_info
+		dataType: int64
+		formatString: 0
+		lineageTag: d4a031ac-d1aa-4287-929b-2e46eefed12a
+		summarizeBy: sum
+		sourceColumn: add_shipping_info
+
+		annotation SummarizationSetBy = Automatic
+
+	column add_payment_info
+		dataType: int64
+		formatString: 0
+		lineageTag: 99e7ee04-a716-43f3-ac82-fb293ae87fef
+		summarizeBy: sum
+		sourceColumn: add_payment_info
+
+		annotation SummarizationSetBy = Automatic
+
+	column purchase
+		dataType: int64
+		formatString: 0
+		lineageTag: 08adfe91-0939-491a-9b91-8ef3b1aa282e
+		summarizeBy: sum
+		sourceColumn: purchase
+
+		annotation SummarizationSetBy = Automatic
+
+	column view_search_results
+		dataType: int64
+		formatString: 0
+		lineageTag: 68856285-4427-4aeb-b541-27d472cc5b81
+		summarizeBy: sum
+		sourceColumn: view_search_results
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_revenue
+		dataType: double
+		lineageTag: c85c4c94-018b-4713-9381-80d792e921a4
+		summarizeBy: sum
+		sourceColumn: total_revenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition fct_events_real_sm = m
+		mode: import
+		source = ```
+				let                                                                                                                                                          
+				      Source = GoogleBigQuery.Database([Implementation="2.0"]),                                                                                                
+				      #"posylka-dbt_Database" = Source{[Name="posylka-dbt",Kind="Database"]}[Data],                                                                            
+				      dbt_prod_Schema = #"posylka-dbt_Database"{[Name="dbt_prod",Kind="Schema"]}[Data],                                                                        
+				      fct_events_real_sm_Table = dbt_prod_Schema{[Name="fct_events_real_sm",Kind="Table"]}[Data],                                                              
+				      #"Changed Type" = Table.TransformColumnTypes(fct_events_real_sm_Table,{{"event_date", type date}}),                                                      
+				      #"Filtered Rows" = Table.SelectRows(#"Changed Type", each [event_date] >= Date.AddDays(DateTime.Date(DateTime.LocalNow()), -90))                         
+				  in                                                                                                                                                           
+				      #"Filtered Rows"
+				```
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "posylka_bq"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "48e96785-9577-4031-b20b-9c3a650611ae"
+  }
+}

@@ -1,0 +1,272 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "a255abf3b9199843305c",
+  "position": {
+    "x": 270.70563079116175,
+    "y": 464.43335709194582,
+    "z": 0,
+    "height": 392.58731290092658,
+    "width": 959.65787598004272,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_events_real_sm"
+                    }
+                  },
+                  "Property": "source_medium_lnd"
+                }
+              },
+              "queryRef": "fct_events_real_sm.source_medium_lnd",
+              "nativeQueryRef": "source_medium",
+              "active": true,
+              "displayName": "source_medium"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_events_real_sm"
+                    }
+                  },
+                  "Property": "campaign_lnd"
+                }
+              },
+              "queryRef": "fct_events_real_sm.campaign_lnd",
+              "nativeQueryRef": "campaign",
+              "active": false,
+              "displayName": "campaign"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "M"
+                    }
+                  },
+                  "Property": "users"
+                }
+              },
+              "queryRef": "M.users",
+              "nativeQueryRef": "users"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "M"
+                    }
+                  },
+                  "Property": "sessions"
+                }
+              },
+              "queryRef": "M.sessions",
+              "nativeQueryRef": "sessions"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "M"
+                    }
+                  },
+                  "Property": "buyers"
+                }
+              },
+              "queryRef": "M.buyers",
+              "nativeQueryRef": "buyers"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "M"
+                    }
+                  },
+                  "Property": "orders"
+                }
+              },
+              "queryRef": "M.orders",
+              "nativeQueryRef": "orders"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "M"
+                    }
+                  },
+                  "Property": "revenue"
+                }
+              },
+              "queryRef": "M.revenue",
+              "nativeQueryRef": "revenue"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "M"
+                    }
+                  },
+                  "Property": "AOV"
+                }
+              },
+              "queryRef": "M.AOV",
+              "nativeQueryRef": "AOV"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "M"
+                  }
+                },
+                "Property": "users"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "fct_events_real_sm.source_medium_lnd"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "fct_events_real_sm.campaign_lnd"
+            ],
+            "isCollapsed": true
+          }
+        ],
+        "root": {}
+      }
+    ],
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "78.02801100518069D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "M.users"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "89.50102688031842D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "M.orders"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "84.9066161161306D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "M.revenue"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "495.67627064833016D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "fct_events_real_sm.source_medium_lnd"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "77.27409939203291D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "M.sessions"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "75.58378170980896D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "M.buyers"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

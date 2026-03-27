@@ -1,0 +1,42 @@
+table HB_Date_Comp
+	lineageTag: a4eae93c-a555-4780-a0ff-0c8ec4b5fe3b
+
+	column DimDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: b0fe5d27-68f7-4bc8-b901-d38c3c035275
+		summarizeBy: none
+		sourceColumn: DimDate
+
+		variation Variation
+			isDefault
+			relationship: fa5dcaff-56fe-4ab2-8142-1f4da627c4fe
+			defaultHierarchy: LocalDateTable_17e39f73-3032-407c-99c8-b1c356e10bc4.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition HB_Date_Comp = m
+		mode: import
+		source =
+				let
+				
+				   x = Number.From(DateTime.LocalNow())-Number.From(#date(2026, 1, 1)),
+				
+				   Source = List.Dates(#date(2026, 1, 1), x, #duration(1, 0, 0, 0)),
+				
+				   #"Converted to Table" = Table.FromList(Source, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+				
+				   #"Changed Type" = Table.TransformColumnTypes(#"Converted to Table",{{"Column1", type date}}),
+				
+				   #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"Column1", "DimDate"}})
+				
+				in
+				
+				   #"Renamed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

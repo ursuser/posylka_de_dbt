@@ -1,0 +1,65 @@
+table M_prev
+	lineageTag: f0a1b2c3-d4e5-f678-9012-abcdef345678
+
+	measure users_prev = CALCULATE([users],ALL('HB_Date_Basic'[DimDate]),USERELATIONSHIP('HB_Date_Comp'[DimDate],fct_events_real_sm[event_date]))
+		formatString: 0
+		lineageTag: a1000001-0000-0000-0000-000000000001
+
+	measure users_diff = DIVIDE([users]-[users_prev],[users_prev],0)
+		formatString: ▲ 0%;▼ 0%;0%
+		lineageTag: a1000002-0000-0000-0000-000000000002
+
+	measure sessions_prev = CALCULATE([sessions],ALL('HB_Date_Basic'[DimDate]),USERELATIONSHIP('HB_Date_Comp'[DimDate],fct_events_real_sm[event_date]))
+		formatString: 0
+		lineageTag: a1000003-0000-0000-0000-000000000003
+
+	measure sessions_diff = DIVIDE([sessions]-[sessions_prev],[sessions_prev],0)
+		formatString: ▲ 0%;▼ 0%;0%
+		lineageTag: a1000004-0000-0000-0000-000000000004
+
+	measure orders_prev = CALCULATE([orders],ALL('HB_Date_Basic'[DimDate]),USERELATIONSHIP('HB_Date_Comp'[DimDate],fct_events_real_sm[event_date]))
+		formatString: 0
+		lineageTag: a1000005-0000-0000-0000-000000000005
+
+	measure orders_diff = DIVIDE([orders]-[orders_prev],[orders_prev],0)
+		formatString: ▲ 0%;▼ 0%;0%
+		lineageTag: a1000006-0000-0000-0000-000000000006
+
+	measure revenue_prev = CALCULATE([revenue],ALL('HB_Date_Basic'[DimDate]),USERELATIONSHIP('HB_Date_Comp'[DimDate],fct_events_real_sm[event_date]))
+		lineageTag: a1000007-0000-0000-0000-000000000007
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure revenue_diff = DIVIDE([revenue]-[revenue_prev],[revenue_prev],0)
+		formatString: ▲ 0%;▼ 0%;0%
+		lineageTag: a1000008-0000-0000-0000-000000000008
+
+	measure AOV_prev = CALCULATE([AOV],ALL('HB_Date_Basic'[DimDate]),USERELATIONSHIP('HB_Date_Comp'[DimDate],fct_events_real_sm[event_date]))
+		lineageTag: a1000009-0000-0000-0000-000000000009
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure AOV_diff = DIVIDE([AOV]-[AOV_prev],[AOV_prev],0)
+		formatString: ▲ 0%;▼ 0%;0%
+		lineageTag: a1000010-0000-0000-0000-000000000010
+
+	measure buyers_prev = CALCULATE([buyers],ALL('HB_Date_Basic'[DimDate]),USERELATIONSHIP('HB_Date_Comp'[DimDate],fct_events_real_sm[event_date]))
+		formatString: 0
+		lineageTag: a1000011-0000-0000-0000-000000000011
+
+	measure buyers_diff = DIVIDE([buyers]-[buyers_prev],[buyers_prev],0)
+		formatString: ▲ 0%;▼ 0%;0%
+		lineageTag: a1000012-0000-0000-0000-000000000012
+
+	partition M_prev = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMlSKjQUA", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", Int64.Type}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+

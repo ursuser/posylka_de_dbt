@@ -1,0 +1,100 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "M",
+          "nodeLineageTag": "aea53b62-a3b7-4ccb-8c2f-719855abcda9",
+          "size": {
+            "height": 282.30080693531136,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 592.662904044373,
+            "y": 0
+          },
+          "nodeIndex": "fct_events_real_sm",
+          "nodeLineageTag": "7b39b99e-8687-482e-a21d-c78506860a17",
+          "size": {
+            "height": 701,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 47.332863005546614,
+            "y": 569.08205837710466
+          },
+          "nodeIndex": "HB_Date_Basic",
+          "nodeLineageTag": "03050478-8f42-4ab5-8029-9589fe29249a",
+          "size": {
+            "height": 145,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 917.57520173382773,
+            "y": 106.41390694633867
+          },
+          "nodeIndex": "HB_Date_Comp",
+          "nodeLineageTag": "a4eae93c-a555-4780-a0ff-0c8ec4b5fe3b",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 280.29697053227846,
+            "y": 0
+          },
+          "nodeIndex": "ga4_channel_group",
+          "nodeLineageTag": "af84794a-9941-4576-9120-be33ff71fc1a",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1034.5209664768779,
+            "y": 437.06673583366705
+          },
+          "nodeIndex": "M_prev",
+          "nodeLineageTag": "f0a1b2c3-d4e5-f678-9012-abcdef345678",
+          "size": {
+            "height": 425.5709687837475,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 89.192590520569482,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}
