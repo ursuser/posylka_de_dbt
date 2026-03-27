@@ -1,0 +1,31 @@
+version: 2
+
+sources:
+  - name: mv3_data
+    database: posylka-de-478903
+    tables:
+      - name: mv3_data_orders
+        config:
+          loaded_at_field: loaded_at
+          freshness:
+            warn_after: {count: 48, period: hour}
+            error_after: {count: 72, period: hour}
+
+      - name: mv3_data_products
+        config:
+          loaded_at_field: loaded_at
+          freshness:
+            warn_after: {count: 48, period: hour}
+            error_after: {count: 72, period: hour}
+
+      - name: mv3_data_status
+        config:
+          loaded_at_field: loaded_at
+          freshness:
+            warn_after: {count: 48, period: hour}
+            error_after: {count: 72, period: hour}
+
+      - name: dict_status
+      - name: dict_source
+      - name: dict_delivery
+      - name: dict_payment
