@@ -1138,6 +1138,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "source medium lnd": {
@@ -4599,6 +4602,1476 @@ cultureInfo en-US
 			        }
 			      ],
 			      "SemanticType": "Time"
+			    },
+			    "m.cr": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M",
+			          "ConceptualProperty": "CR"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cr": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "m.arppu": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M",
+			          "ConceptualProperty": "ARPPU"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "arppu": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "m.new_users": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M",
+			          "ConceptualProperty": "new_users"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "new users": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "new_users": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "new operator": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "new worker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "new employer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "new manipulator": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "new handler": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "new manager": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "new consumer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "new customer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "new client": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "new punter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
+			    },
+			    "m.users_view_item": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M",
+			          "ConceptualProperty": "users_view_item"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "users view item": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "users_view_item": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "item": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "user view product": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "user view element": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "user view entry": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "user view article": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "user view object": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "user view piece": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "user view token": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "product": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "element": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "entry": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "view item": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "m.users_add_to_cart": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M",
+			          "ConceptualProperty": "users_add_to_cart"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "users add to cart": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "users_add_to_cart": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "operator add to cart": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "worker add to cart": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "employer add to cart": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "manipulator add to cart": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "handler add to cart": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "manager add to cart": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "consumer add to cart": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "customer add to cart": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "client add to cart": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "punter add to cart": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "add to cart": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "m.users_begin_checkout": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M",
+			          "ConceptualProperty": "users_begin_checkout"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "users begin checkout": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "users_begin_checkout": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "operator begin checkout": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "worker begin checkout": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "employer begin checkout": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "manipulator begin checkout": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "handler begin checkout": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "manager begin checkout": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "consumer begin checkout": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "customer begin checkout": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "client begin checkout": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "punter begin checkout": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "begin checkout": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "ga_4_channel_group": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ga4_channel_group"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ga 4 channel group": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ga4_channel_group": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "4 channel group": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "ga 4 channel category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "ga 4 channel organization": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "4 channel category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "4 channel organization": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "ga 4 channel bracket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "ga 4 channel class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "ga 4 channel crew": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "ga 4 channel team": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "4 channel bracket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "4 channel class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "ga_4_channel_group.source_medium": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ga4_channel_group",
+			          "ConceptualProperty": "source_medium"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "source medium": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "source_medium": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "medium": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "intermediate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "middle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "middling": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "standard": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "moderate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "source vehicle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "source mode": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "source method": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "source avenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "source agent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
+			    },
+			    "ga_4_channel_group.channel_group": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ga4_channel_group",
+			          "ConceptualProperty": "channel_group"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "channel group": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "channel_group": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "channel category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "channel organization": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "channel bracket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "channel class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "channel crew": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "channel team": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "M_prev": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_prev"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "M prev": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "M_prev": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "M_prev.users_prev": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_prev",
+			          "ConceptualProperty": "users_prev"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "users prev": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "users_prev": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "M_prev.users_diff": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_prev",
+			          "ConceptualProperty": "users_diff"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "users diff": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "users_diff": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "diff": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "M_prev.sessions_prev": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_prev",
+			          "ConceptualProperty": "sessions_prev"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sessions prev": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "sessions_prev": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "M_prev.sessions_diff": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_prev",
+			          "ConceptualProperty": "sessions_diff"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sessions diff": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "sessions_diff": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "diff": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "M_prev.orders_prev": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_prev",
+			          "ConceptualProperty": "orders_prev"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "orders prev": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "orders_prev": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "M_prev.orders_diff": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_prev",
+			          "ConceptualProperty": "orders_diff"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "orders diff": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "orders_diff": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "diff": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "M_prev.revenue_prev": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_prev",
+			          "ConceptualProperty": "revenue_prev"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "revenue prev": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "revenue_prev": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "income prev": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "profit prev": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "turnover prev": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "yield prev": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "M_prev.revenue_diff": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_prev",
+			          "ConceptualProperty": "revenue_diff"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "revenue diff": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "revenue_diff": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "diff": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "income diff": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "profit diff": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "turnover diff": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "yield diff": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "M_prev.AOV_prev": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_prev",
+			          "ConceptualProperty": "AOV_prev"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "AOV prev": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "AOV_prev": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "M_prev.AOV_diff": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_prev",
+			          "ConceptualProperty": "AOV_diff"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "AOV diff": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "AOV_diff": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "diff": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "M_prev.buyers_prev": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_prev",
+			          "ConceptualProperty": "buyers_prev"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "buyers prev": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "buyers_prev": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "M_prev.buyers_diff": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_prev",
+			          "ConceptualProperty": "buyers_diff"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "buyers diff": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "buyers_diff": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "diff": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "M_prev.CR_prev": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_prev",
+			          "ConceptualProperty": "CR_prev"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CR prev": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CR_prev": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "M_prev.CR_diff": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_prev",
+			          "ConceptualProperty": "CR_diff"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CR diff": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CR_diff": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "diff": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "M_prev.ARPPU_prev": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_prev",
+			          "ConceptualProperty": "ARPPU_prev"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ARPPU prev": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ARPPU_prev": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "M_prev.ARPPU_diff": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_prev",
+			          "ConceptualProperty": "ARPPU_diff"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ARPPU diff": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ARPPU_diff": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "diff": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "M_prev.new_users_prev": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_prev",
+			          "ConceptualProperty": "new_users_prev"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "new users prev": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "new_users_prev": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "M_prev.new_users_diff": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_prev",
+			          "ConceptualProperty": "new_users_diff"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "new users diff": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "new_users_diff": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "diff": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
@@ -4932,6 +6405,52 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "fct_events_real_sm_has_ga_4_channel_group": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_events_real_sm"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_events_real_sm": {
+			          "Target": {
+			            "Entity": "fct_events_real_sm"
+			          }
+			        },
+			        "ga_4_channel_group": {
+			          "Target": {
+			            "Entity": "ga_4_channel_group"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_events_real_sm"
+			            },
+			            "Object": {
+			              "Role": "ga_4_channel_group"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_events_real_sm_have_ga_4_channel_groups"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ga_4_channel_group"
+			            },
+			            "Object": {
+			              "Role": "fct_events_real_sm"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ga_4_channel_groups_have_fct_events_real_sm"
+			        }
+			      ]
+			    },
 			    "fct_events_real_sm_has_HB_date_basic": {
 			      "Binding": {
 			        "ConceptualEntity": "fct_events_real_sm"
@@ -4975,6 +6494,864 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "HB_date_basics_have_fct_events_real_sm"
+			        }
+			      ]
+			    },
+			    "fct_events_real_sm_has_M_prev_new_users_diff": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_events_real_sm"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_events_real_sm": {
+			          "Target": {
+			            "Entity": "fct_events_real_sm"
+			          }
+			        },
+			        "M_prev.new_users_diff": {
+			          "Target": {
+			            "Entity": "M_prev.new_users_diff"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_events_real_sm"
+			            },
+			            "Object": {
+			              "Role": "M_prev.new_users_diff"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_events_real_sm_have_new_users_diff"
+			        }
+			      ]
+			    },
+			    "fct_events_real_sm_has_M_prev_new_users_prev": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_events_real_sm"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_events_real_sm": {
+			          "Target": {
+			            "Entity": "fct_events_real_sm"
+			          }
+			        },
+			        "M_prev.new_users_prev": {
+			          "Target": {
+			            "Entity": "M_prev.new_users_prev"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_events_real_sm"
+			            },
+			            "Object": {
+			              "Role": "M_prev.new_users_prev"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_events_real_sm_have_new_users_prev"
+			        }
+			      ]
+			    },
+			    "fct_events_real_sm_has_M_prev_ARPPU_diff": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_events_real_sm"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_events_real_sm": {
+			          "Target": {
+			            "Entity": "fct_events_real_sm"
+			          }
+			        },
+			        "M_prev.ARPPU_diff": {
+			          "Target": {
+			            "Entity": "M_prev.ARPPU_diff"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_events_real_sm"
+			            },
+			            "Object": {
+			              "Role": "M_prev.ARPPU_diff"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_events_real_sm_have_ARPPU_diff"
+			        }
+			      ]
+			    },
+			    "fct_events_real_sm_has_M_prev_ARPPU_prev": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_events_real_sm"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_events_real_sm": {
+			          "Target": {
+			            "Entity": "fct_events_real_sm"
+			          }
+			        },
+			        "M_prev.ARPPU_prev": {
+			          "Target": {
+			            "Entity": "M_prev.ARPPU_prev"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_events_real_sm"
+			            },
+			            "Object": {
+			              "Role": "M_prev.ARPPU_prev"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_events_real_sm_have_ARPPU_prev"
+			        }
+			      ]
+			    },
+			    "fct_events_real_sm_has_M_prev_CR_diff": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_events_real_sm"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_events_real_sm": {
+			          "Target": {
+			            "Entity": "fct_events_real_sm"
+			          }
+			        },
+			        "M_prev.CR_diff": {
+			          "Target": {
+			            "Entity": "M_prev.CR_diff"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_events_real_sm"
+			            },
+			            "Object": {
+			              "Role": "M_prev.CR_diff"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_events_real_sm_have_CR_diff"
+			        }
+			      ]
+			    },
+			    "fct_events_real_sm_has_M_prev_CR_prev": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_events_real_sm"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_events_real_sm": {
+			          "Target": {
+			            "Entity": "fct_events_real_sm"
+			          }
+			        },
+			        "M_prev.CR_prev": {
+			          "Target": {
+			            "Entity": "M_prev.CR_prev"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_events_real_sm"
+			            },
+			            "Object": {
+			              "Role": "M_prev.CR_prev"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_events_real_sm_have_CR_prev"
+			        }
+			      ]
+			    },
+			    "fct_events_real_sm_has_M_prev_buyers_diff": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_events_real_sm"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_events_real_sm": {
+			          "Target": {
+			            "Entity": "fct_events_real_sm"
+			          }
+			        },
+			        "M_prev.buyers_diff": {
+			          "Target": {
+			            "Entity": "M_prev.buyers_diff"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_events_real_sm"
+			            },
+			            "Object": {
+			              "Role": "M_prev.buyers_diff"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_events_real_sm_have_buyers_diff"
+			        }
+			      ]
+			    },
+			    "fct_events_real_sm_has_M_prev_buyers_prev": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_events_real_sm"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_events_real_sm": {
+			          "Target": {
+			            "Entity": "fct_events_real_sm"
+			          }
+			        },
+			        "M_prev.buyers_prev": {
+			          "Target": {
+			            "Entity": "M_prev.buyers_prev"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_events_real_sm"
+			            },
+			            "Object": {
+			              "Role": "M_prev.buyers_prev"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_events_real_sm_have_buyers_prev"
+			        }
+			      ]
+			    },
+			    "fct_events_real_sm_has_M_prev_AOV_diff": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_events_real_sm"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_events_real_sm": {
+			          "Target": {
+			            "Entity": "fct_events_real_sm"
+			          }
+			        },
+			        "M_prev.AOV_diff": {
+			          "Target": {
+			            "Entity": "M_prev.AOV_diff"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_events_real_sm"
+			            },
+			            "Object": {
+			              "Role": "M_prev.AOV_diff"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_events_real_sm_have_AOV_diff"
+			        }
+			      ]
+			    },
+			    "fct_events_real_sm_has_M_prev_AOV_prev": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_events_real_sm"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_events_real_sm": {
+			          "Target": {
+			            "Entity": "fct_events_real_sm"
+			          }
+			        },
+			        "M_prev.AOV_prev": {
+			          "Target": {
+			            "Entity": "M_prev.AOV_prev"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_events_real_sm"
+			            },
+			            "Object": {
+			              "Role": "M_prev.AOV_prev"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_events_real_sm_have_AOV_prev"
+			        }
+			      ]
+			    },
+			    "fct_events_real_sm_has_M_prev_revenue_diff": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_events_real_sm"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_events_real_sm": {
+			          "Target": {
+			            "Entity": "fct_events_real_sm"
+			          }
+			        },
+			        "M_prev.revenue_diff": {
+			          "Target": {
+			            "Entity": "M_prev.revenue_diff"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_events_real_sm"
+			            },
+			            "Object": {
+			              "Role": "M_prev.revenue_diff"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_events_real_sm_have_revenue_diff"
+			        }
+			      ]
+			    },
+			    "fct_events_real_sm_has_M_prev_revenue_prev": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_events_real_sm"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_events_real_sm": {
+			          "Target": {
+			            "Entity": "fct_events_real_sm"
+			          }
+			        },
+			        "M_prev.revenue_prev": {
+			          "Target": {
+			            "Entity": "M_prev.revenue_prev"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_events_real_sm"
+			            },
+			            "Object": {
+			              "Role": "M_prev.revenue_prev"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_events_real_sm_have_revenue_prev"
+			        }
+			      ]
+			    },
+			    "fct_events_real_sm_has_M_prev_orders_diff": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_events_real_sm"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_events_real_sm": {
+			          "Target": {
+			            "Entity": "fct_events_real_sm"
+			          }
+			        },
+			        "M_prev.orders_diff": {
+			          "Target": {
+			            "Entity": "M_prev.orders_diff"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_events_real_sm"
+			            },
+			            "Object": {
+			              "Role": "M_prev.orders_diff"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_events_real_sm_have_orders_diff"
+			        }
+			      ]
+			    },
+			    "fct_events_real_sm_has_M_prev_orders_prev": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_events_real_sm"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_events_real_sm": {
+			          "Target": {
+			            "Entity": "fct_events_real_sm"
+			          }
+			        },
+			        "M_prev.orders_prev": {
+			          "Target": {
+			            "Entity": "M_prev.orders_prev"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_events_real_sm"
+			            },
+			            "Object": {
+			              "Role": "M_prev.orders_prev"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_events_real_sm_have_orders_prev"
+			        }
+			      ]
+			    },
+			    "fct_events_real_sm_has_M_prev_sessions_diff": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_events_real_sm"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_events_real_sm": {
+			          "Target": {
+			            "Entity": "fct_events_real_sm"
+			          }
+			        },
+			        "M_prev.sessions_diff": {
+			          "Target": {
+			            "Entity": "M_prev.sessions_diff"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_events_real_sm"
+			            },
+			            "Object": {
+			              "Role": "M_prev.sessions_diff"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_events_real_sm_have_sessions_diff"
+			        }
+			      ]
+			    },
+			    "fct_events_real_sm_has_M_prev_sessions_prev": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_events_real_sm"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_events_real_sm": {
+			          "Target": {
+			            "Entity": "fct_events_real_sm"
+			          }
+			        },
+			        "M_prev.sessions_prev": {
+			          "Target": {
+			            "Entity": "M_prev.sessions_prev"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_events_real_sm"
+			            },
+			            "Object": {
+			              "Role": "M_prev.sessions_prev"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_events_real_sm_have_sessions_prev"
+			        }
+			      ]
+			    },
+			    "fct_events_real_sm_has_M_prev_users_diff": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_events_real_sm"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_events_real_sm": {
+			          "Target": {
+			            "Entity": "fct_events_real_sm"
+			          }
+			        },
+			        "M_prev.users_diff": {
+			          "Target": {
+			            "Entity": "M_prev.users_diff"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_events_real_sm"
+			            },
+			            "Object": {
+			              "Role": "M_prev.users_diff"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_events_real_sm_have_users_diff"
+			        }
+			      ]
+			    },
+			    "fct_events_real_sm_has_M_prev_users_prev": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_events_real_sm"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_events_real_sm": {
+			          "Target": {
+			            "Entity": "fct_events_real_sm"
+			          }
+			        },
+			        "M_prev.users_prev": {
+			          "Target": {
+			            "Entity": "M_prev.users_prev"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_events_real_sm"
+			            },
+			            "Object": {
+			              "Role": "M_prev.users_prev"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_events_real_sm_have_users_prev"
+			        }
+			      ]
+			    },
+			    "ga_4_channel_group_has_channel_group": {
+			      "Binding": {
+			        "ConceptualEntity": "ga4_channel_group"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ga_4_channel_group": {
+			          "Target": {
+			            "Entity": "ga_4_channel_group"
+			          }
+			        },
+			        "ga_4_channel_group.channel_group": {
+			          "Target": {
+			            "Entity": "ga_4_channel_group.channel_group"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ga_4_channel_group"
+			            },
+			            "Object": {
+			              "Role": "ga_4_channel_group.channel_group"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ga_4_channel_groups_have_channel_groups"
+			        }
+			      ]
+			    },
+			    "ga_4_channel_group_has_source_medium": {
+			      "Binding": {
+			        "ConceptualEntity": "ga4_channel_group"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ga_4_channel_group": {
+			          "Target": {
+			            "Entity": "ga_4_channel_group"
+			          }
+			        },
+			        "ga_4_channel_group.source_medium": {
+			          "Target": {
+			            "Entity": "ga_4_channel_group.source_medium"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ga_4_channel_group"
+			            },
+			            "Object": {
+			              "Role": "ga_4_channel_group.source_medium"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ga_4_channel_groups_have_source_media"
+			        }
+			      ]
+			    },
+			    "fct_events_real_sm_has_m_users_begin_checkout": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_events_real_sm"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_events_real_sm": {
+			          "Target": {
+			            "Entity": "fct_events_real_sm"
+			          }
+			        },
+			        "m.users_begin_checkout": {
+			          "Target": {
+			            "Entity": "m.users_begin_checkout"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_events_real_sm"
+			            },
+			            "Object": {
+			              "Role": "m.users_begin_checkout"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_events_real_sm_have_users_begin_checkout"
+			        }
+			      ]
+			    },
+			    "fct_events_real_sm_has_m_users_add_to_cart": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_events_real_sm"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_events_real_sm": {
+			          "Target": {
+			            "Entity": "fct_events_real_sm"
+			          }
+			        },
+			        "m.users_add_to_cart": {
+			          "Target": {
+			            "Entity": "m.users_add_to_cart"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_events_real_sm"
+			            },
+			            "Object": {
+			              "Role": "m.users_add_to_cart"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_events_real_sm_have_users_add_to_cart"
+			        }
+			      ]
+			    },
+			    "fct_events_real_sm_has_m_users_view_item": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_events_real_sm"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_events_real_sm": {
+			          "Target": {
+			            "Entity": "fct_events_real_sm"
+			          }
+			        },
+			        "m.users_view_item": {
+			          "Target": {
+			            "Entity": "m.users_view_item"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_events_real_sm"
+			            },
+			            "Object": {
+			              "Role": "m.users_view_item"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_events_real_sm_have_users_view_item"
+			        }
+			      ]
+			    },
+			    "fct_events_real_sm_has_m_new_users": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_events_real_sm"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_events_real_sm": {
+			          "Target": {
+			            "Entity": "fct_events_real_sm"
+			          }
+			        },
+			        "m.new_users": {
+			          "Target": {
+			            "Entity": "m.new_users"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_events_real_sm"
+			            },
+			            "Object": {
+			              "Role": "m.new_users"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_events_real_sm_have_new_users"
+			        }
+			      ]
+			    },
+			    "fct_events_real_sm_has_m_arppu": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_events_real_sm"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_events_real_sm": {
+			          "Target": {
+			            "Entity": "fct_events_real_sm"
+			          }
+			        },
+			        "m.arppu": {
+			          "Target": {
+			            "Entity": "m.arppu"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_events_real_sm"
+			            },
+			            "Object": {
+			              "Role": "m.arppu"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_events_real_sm_have_arppu"
+			        }
+			      ]
+			    },
+			    "fct_events_real_sm_has_m_cr": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_events_real_sm"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_events_real_sm": {
+			          "Target": {
+			            "Entity": "fct_events_real_sm"
+			          }
+			        },
+			        "m.cr": {
+			          "Target": {
+			            "Entity": "m.cr"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_events_real_sm"
+			            },
+			            "Object": {
+			              "Role": "m.cr"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_events_real_sm_have_cr"
 			        }
 			      ]
 			    },
@@ -5965,39 +8342,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "fct_events_real_sm_have_campaign_lnds"
-			        }
-			      ]
-			    },
-			    "fct_events_real_sm_has_source_medium_lnd": {
-			      "Binding": {
-			        "ConceptualEntity": "fct_events_real_sm"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fct_events_real_sm": {
-			          "Target": {
-			            "Entity": "fct_events_real_sm"
-			          }
-			        },
-			        "fct_events_real_sm.source_medium_lnd": {
-			          "Target": {
-			            "Entity": "fct_events_real_sm.source_medium_lnd"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fct_events_real_sm"
-			            },
-			            "Object": {
-			              "Role": "fct_events_real_sm.source_medium_lnd"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fct_events_real_sm_have_source_medium_lnds"
 			        }
 			      ]
 			    },

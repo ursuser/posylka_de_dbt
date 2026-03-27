@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "00033dfe78591725e5f8",
   "position": {
-    "x": 1575,
-    "y": 661.25,
+    "x": 1493.3333333333335,
+    "y": 503.33333333333337,
     "z": 6000,
-    "height": 426.25,
-    "width": 416.25,
-    "tabOrder": 5000
+    "height": 353.33333333333337,
+    "width": 493.33333333333337,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "donutChart",
@@ -77,14 +77,14 @@
             "position": {
               "expr": {
                 "Literal": {
-                  "Value": "'Right'"
+                  "Value": "'BottomCenter'"
                 }
               }
             },
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -97,7 +97,7 @@
             "labelStyle": {
               "expr": {
                 "Literal": {
-                  "Value": "'Category, data value, percent of total'"
+                  "Value": "'Percent of total'"
                 }
               }
             },
@@ -105,6 +105,20 @@
               "expr": {
                 "Literal": {
                   "Value": "'outside'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
                 }
               }
             }
@@ -231,6 +245,99 @@
               "expr": {
                 "Literal": {
                   "Value": "'revenue by device'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "divider": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "spacing": [
+        {
+          "properties": {
+            "customizeSpacing": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "spaceBelowTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

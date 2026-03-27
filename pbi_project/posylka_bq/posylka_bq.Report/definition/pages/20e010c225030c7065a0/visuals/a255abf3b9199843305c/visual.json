@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "a255abf3b9199843305c",
   "position": {
-    "x": 260,
-    "y": 465,
+    "x": 261.66666666666669,
+    "y": 128.33333333333334,
     "z": 0,
-    "height": 392.5,
-    "width": 1298.75,
+    "height": 393.33333333333337,
+    "width": 1218.3333333333335,
     "tabOrder": 0
   },
   "visual": {
@@ -266,6 +266,18 @@
               "ga4_channel_group.channel_group"
             ],
             "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ga4_channel_group"
+                    }
+                  },
+                  "Property": "channel_group"
+                }
+              }
+            ],
             "isPinned": true
           },
           {
@@ -418,13 +430,68 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "284.7500257312164D"
+                  "Value": "202.16333630224196D"
                 }
               }
             }
           },
           "selector": {
             "metadata": "ga4_channel_group.channel_group"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Right'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
           }
         }
       ]

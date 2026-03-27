@@ -51,6 +51,31 @@ table M_prev
 		formatString: ▲ 0%;▼ 0%;0%
 		lineageTag: a1000012-0000-0000-0000-000000000012
 
+	measure CR_prev = CALCULATE([CR],ALL('HB_Date_Basic'[DimDate]),USERELATIONSHIP('HB_Date_Comp'[DimDate],fct_events_real_sm[event_date]))
+		formatString: 0
+		lineageTag: a2000001-0000-0000-0000-000000000001
+
+	measure CR_diff = DIVIDE([CR]-[CR_prev],[CR_prev],0)
+		formatString: ▲ 0%;▼ 0%;0%
+		lineageTag: a2000002-0000-0000-0000-000000000002
+
+	measure ARPPU_prev = CALCULATE([ARPPU],ALL('HB_Date_Basic'[DimDate]),USERELATIONSHIP('HB_Date_Comp'[DimDate],fct_events_real_sm[event_date]))
+		lineageTag: a2000003-0000-0000-0000-000000000003
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure ARPPU_diff = DIVIDE([ARPPU]-[ARPPU_prev],[ARPPU_prev],0)
+		formatString: ▲ 0%;▼ 0%;0%
+		lineageTag: a2000004-0000-0000-0000-000000000004
+
+	measure new_users_prev = CALCULATE([new_users],ALL('HB_Date_Basic'[DimDate]),USERELATIONSHIP('HB_Date_Comp'[DimDate],fct_events_real_sm[event_date]))
+		formatString: 0
+		lineageTag: a3000001-0000-0000-0000-000000000001
+
+	measure new_users_diff = DIVIDE([new_users]-[new_users_prev],[new_users_prev],0)
+		formatString: ▲ 0%;▼ 0%;0%
+		lineageTag: a3000002-0000-0000-0000-000000000002
+
 	partition M_prev = m
 		mode: import
 		source =

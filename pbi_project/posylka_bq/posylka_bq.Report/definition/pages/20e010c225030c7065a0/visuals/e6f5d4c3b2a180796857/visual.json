@@ -1,12 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "e90188b88e97aa62e220",
+  "name": "e6f5d4c3b2a180796857",
   "position": {
-    "x": 1495.1713859910581,
-    "y": 3.371173484261508,
-    "z": 4000,
-    "height": 109.31508340221976,
-    "width": 229.82861400894191
+    "x": 1272.1590909090912,
+    "y": 3.1418918918918926,
+    "z": 6000,
+    "height": 111.53716216216219,
+    "width": 213.06818181818187
   },
   "visual": {
     "visualType": "cardVisual",
@@ -22,11 +22,11 @@
                       "Entity": "M"
                     }
                   },
-                  "Property": "AOV"
+                  "Property": "ARPPU"
                 }
               },
-              "queryRef": "M.AOV",
-              "nativeQueryRef": "AOV",
+              "queryRef": "M.ARPPU",
+              "nativeQueryRef": "ARPPU",
               "format": "#,0.00 \"€\";-#,0.00 \"€\";#,0.00 \"€\""
             }
           ]
@@ -41,11 +41,11 @@
                       "Entity": "M_prev"
                     }
                   },
-                  "Property": "AOV_diff"
+                  "Property": "ARPPU_diff"
                 }
               },
-              "queryRef": "M_prev.AOV_diff",
-              "nativeQueryRef": "AOV_diff"
+              "queryRef": "M_prev.ARPPU_diff",
+              "nativeQueryRef": "ARPPU_diff"
             }
           ]
         }
@@ -60,7 +60,7 @@
                     "Entity": "M"
                   }
                 },
-                "Property": "AOV"
+                "Property": "ARPPU"
               }
             },
             "direction": "Descending"
@@ -158,7 +158,7 @@
             }
           },
           "selector": {
-            "metadata": "M.AOV"
+            "metadata": "M.ARPPU"
           }
         }
       ],
@@ -268,7 +268,7 @@
                 }
               }
             ],
-            "metadata": "M.AOV",
+            "metadata": "M.ARPPU",
             "id": "field-d8ec049e-3e21-8508-22d3-d7a1ba8d5b46",
             "order": 0
           }
@@ -283,7 +283,7 @@
                       "Entity": "M_prev"
                     }
                   },
-                  "Property": "AOV_diff"
+                  "Property": "ARPPU_diff"
                 }
               }
             }
@@ -296,7 +296,7 @@
                 }
               }
             ],
-            "metadata": "M.AOV",
+            "metadata": "M.ARPPU",
             "id": "field-e55725d1-81e4-ddd8-7dd0-d9d6611d1203",
             "order": 0
           }
@@ -347,7 +347,7 @@
             }
           },
           "selector": {
-            "metadata": "M.AOV"
+            "metadata": "M.ARPPU"
           }
         },
         {
@@ -375,7 +375,7 @@
             }
           },
           "selector": {
-            "metadata": "M.AOV",
+            "metadata": "M.ARPPU",
             "id": "field-e55725d1-81e4-ddd8-7dd0-d9d6611d1203"
           }
         }
@@ -437,7 +437,7 @@
                                       "Entity": "M_prev"
                                     }
                                   },
-                                  "Property": "AOV_diff"
+                                  "Property": "ARPPU_diff"
                                 }
                               },
                               "Right": {
@@ -464,7 +464,7 @@
                                       "Entity": "M_prev"
                                     }
                                   },
-                                  "Property": "AOV_diff"
+                                  "Property": "ARPPU_diff"
                                 }
                               },
                               "Right": {
@@ -495,7 +495,7 @@
                 }
               }
             ],
-            "metadata": "M.AOV"
+            "metadata": "M.ARPPU"
           }
         },
         {
@@ -523,7 +523,7 @@
             }
           },
           "selector": {
-            "metadata": "M.AOV",
+            "metadata": "M.ARPPU",
             "id": "field-e55725d1-81e4-ddd8-7dd0-d9d6611d1203"
           }
         },
@@ -546,7 +546,7 @@
                                       "Entity": "M_prev"
                                     }
                                   },
-                                  "Property": "AOV_diff"
+                                  "Property": "ARPPU_diff"
                                 }
                               },
                               "Right": {
@@ -573,7 +573,7 @@
                                       "Entity": "M_prev"
                                     }
                                   },
-                                  "Property": "AOV_diff"
+                                  "Property": "ARPPU_diff"
                                 }
                               },
                               "Right": {
@@ -604,7 +604,7 @@
                 }
               }
             ],
-            "metadata": "M.AOV",
+            "metadata": "M.ARPPU",
             "id": "field-e55725d1-81e4-ddd8-7dd0-d9d6611d1203"
           }
         },
@@ -619,7 +619,7 @@
             }
           },
           "selector": {
-            "metadata": "M.AOV"
+            "metadata": "M.ARPPU"
           }
         }
       ],
@@ -635,7 +635,7 @@
             }
           },
           "selector": {
-            "metadata": "M.AOV",
+            "metadata": "M.ARPPU",
             "id": "field-e55725d1-81e4-ddd8-7dd0-d9d6611d1203"
           }
         },
@@ -649,7 +649,7 @@
                 }
               }
             ],
-            "metadata": "M.AOV",
+            "metadata": "M.ARPPU",
             "id": "field-e55725d1-81e4-ddd8-7dd0-d9d6611d1203"
           }
         }
@@ -666,7 +666,7 @@
             }
           },
           "selector": {
-            "metadata": "M.AOV"
+            "metadata": "M.ARPPU"
           }
         }
       ],
@@ -721,7 +721,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'AOV'"
+                  "Value": "'ARPPU'"
                 }
               }
             },

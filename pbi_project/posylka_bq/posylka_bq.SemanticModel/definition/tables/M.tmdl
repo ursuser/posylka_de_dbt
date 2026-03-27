@@ -25,6 +25,30 @@ table M
 		formatString: #,##0
 		lineageTag: 3557b02f-d292-476b-a56a-b84c95614bc5
 
+	measure CR = DIVIDE([buyers], [users], 0)
+		formatString: 0.00%
+		lineageTag: b1000001-0000-0000-0000-000000000001
+
+	measure ARPPU = DIVIDE([revenue], [buyers], 0)
+		formatString: € #,##0.00
+		lineageTag: b2000001-0000-0000-0000-000000000001
+
+	measure new_users = CALCULATE(DISTINCTCOUNT(fct_events_real_sm[user_pseudo_id]), fct_events_real_sm[first_visit] > 0)
+		formatString: #,##0
+		lineageTag: c1000001-0000-0000-0000-000000000001
+
+	measure users_view_item = CALCULATE(DISTINCTCOUNT(fct_events_real_sm[user_pseudo_id]), fct_events_real_sm[view_item] > 0)
+		formatString: #,##0
+		lineageTag: c1000002-0000-0000-0000-000000000002
+
+	measure users_add_to_cart = CALCULATE(DISTINCTCOUNT(fct_events_real_sm[user_pseudo_id]), fct_events_real_sm[add_to_cart] > 0)
+		formatString: #,##0
+		lineageTag: c1000003-0000-0000-0000-000000000003
+
+	measure users_begin_checkout = CALCULATE(DISTINCTCOUNT(fct_events_real_sm[user_pseudo_id]), fct_events_real_sm[begin_checkout] > 0)
+		formatString: #,##0
+		lineageTag: c1000004-0000-0000-0000-000000000004
+
 	partition M = m
 		mode: import
 		source =

@@ -7,7 +7,7 @@
     "z": 8000,
     "height": 102.5,
     "width": 237.5,
-    "tabOrder": 7000
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "slicer",
@@ -59,7 +59,7 @@
             "endDate": {
               "expr": {
                 "Literal": {
-                  "Value": "datetime'2026-03-01T00:00:00'"
+                  "Value": "datetime'2026-03-26T00:00:00'"
                 }
               }
             },
@@ -103,7 +103,7 @@
                         },
                         "Right": {
                           "Literal": {
-                            "Value": "datetime'2026-03-02T00:00:00'"
+                            "Value": "datetime'2026-03-27T00:00:00'"
                           }
                         }
                       }

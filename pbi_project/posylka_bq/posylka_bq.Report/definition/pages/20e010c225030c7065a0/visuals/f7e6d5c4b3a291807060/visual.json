@@ -1,12 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "e90188b88e97aa62e220",
+  "name": "f7e6d5c4b3a291807060",
   "position": {
-    "x": 1495.1713859910581,
-    "y": 3.371173484261508,
-    "z": 4000,
-    "height": 109.31508340221976,
-    "width": 229.82861400894191
+    "x": 828.822652757079,
+    "y": 2.249984451970843,
+    "z": 5000,
+    "height": 114.00001554802917,
+    "width": 198.97913561847989
   },
   "visual": {
     "visualType": "cardVisual",
@@ -22,12 +22,12 @@
                       "Entity": "M"
                     }
                   },
-                  "Property": "AOV"
+                  "Property": "CR"
                 }
               },
-              "queryRef": "M.AOV",
-              "nativeQueryRef": "AOV",
-              "format": "#,0.00 \"€\";-#,0.00 \"€\";#,0.00 \"€\""
+              "queryRef": "M.CR",
+              "nativeQueryRef": "CR",
+              "format": "0.00%"
             }
           ]
         },
@@ -41,11 +41,11 @@
                       "Entity": "M_prev"
                     }
                   },
-                  "Property": "AOV_diff"
+                  "Property": "CR_diff"
                 }
               },
-              "queryRef": "M_prev.AOV_diff",
-              "nativeQueryRef": "AOV_diff"
+              "queryRef": "M_prev.CR_diff",
+              "nativeQueryRef": "CR_diff"
             }
           ]
         }
@@ -60,7 +60,7 @@
                     "Entity": "M"
                   }
                 },
-                "Property": "AOV"
+                "Property": "CR"
               }
             },
             "direction": "Descending"
@@ -158,7 +158,7 @@
             }
           },
           "selector": {
-            "metadata": "M.AOV"
+            "metadata": "M.CR"
           }
         }
       ],
@@ -268,7 +268,7 @@
                 }
               }
             ],
-            "metadata": "M.AOV",
+            "metadata": "M.CR",
             "id": "field-d8ec049e-3e21-8508-22d3-d7a1ba8d5b46",
             "order": 0
           }
@@ -283,7 +283,7 @@
                       "Entity": "M_prev"
                     }
                   },
-                  "Property": "AOV_diff"
+                  "Property": "CR_diff"
                 }
               }
             }
@@ -296,7 +296,7 @@
                 }
               }
             ],
-            "metadata": "M.AOV",
+            "metadata": "M.CR",
             "id": "field-e55725d1-81e4-ddd8-7dd0-d9d6611d1203",
             "order": 0
           }
@@ -347,7 +347,7 @@
             }
           },
           "selector": {
-            "metadata": "M.AOV"
+            "metadata": "M.CR"
           }
         },
         {
@@ -375,7 +375,7 @@
             }
           },
           "selector": {
-            "metadata": "M.AOV",
+            "metadata": "M.CR",
             "id": "field-e55725d1-81e4-ddd8-7dd0-d9d6611d1203"
           }
         }
@@ -437,7 +437,7 @@
                                       "Entity": "M_prev"
                                     }
                                   },
-                                  "Property": "AOV_diff"
+                                  "Property": "CR_diff"
                                 }
                               },
                               "Right": {
@@ -464,7 +464,7 @@
                                       "Entity": "M_prev"
                                     }
                                   },
-                                  "Property": "AOV_diff"
+                                  "Property": "CR_diff"
                                 }
                               },
                               "Right": {
@@ -495,7 +495,7 @@
                 }
               }
             ],
-            "metadata": "M.AOV"
+            "metadata": "M.CR"
           }
         },
         {
@@ -523,7 +523,7 @@
             }
           },
           "selector": {
-            "metadata": "M.AOV",
+            "metadata": "M.CR",
             "id": "field-e55725d1-81e4-ddd8-7dd0-d9d6611d1203"
           }
         },
@@ -546,7 +546,7 @@
                                       "Entity": "M_prev"
                                     }
                                   },
-                                  "Property": "AOV_diff"
+                                  "Property": "CR_diff"
                                 }
                               },
                               "Right": {
@@ -573,7 +573,7 @@
                                       "Entity": "M_prev"
                                     }
                                   },
-                                  "Property": "AOV_diff"
+                                  "Property": "CR_diff"
                                 }
                               },
                               "Right": {
@@ -604,7 +604,7 @@
                 }
               }
             ],
-            "metadata": "M.AOV",
+            "metadata": "M.CR",
             "id": "field-e55725d1-81e4-ddd8-7dd0-d9d6611d1203"
           }
         },
@@ -619,7 +619,7 @@
             }
           },
           "selector": {
-            "metadata": "M.AOV"
+            "metadata": "M.CR"
           }
         }
       ],
@@ -635,7 +635,7 @@
             }
           },
           "selector": {
-            "metadata": "M.AOV",
+            "metadata": "M.CR",
             "id": "field-e55725d1-81e4-ddd8-7dd0-d9d6611d1203"
           }
         },
@@ -649,7 +649,7 @@
                 }
               }
             ],
-            "metadata": "M.AOV",
+            "metadata": "M.CR",
             "id": "field-e55725d1-81e4-ddd8-7dd0-d9d6611d1203"
           }
         }
@@ -666,7 +666,7 @@
             }
           },
           "selector": {
-            "metadata": "M.AOV"
+            "metadata": "M.CR"
           }
         }
       ],
@@ -721,7 +721,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'AOV'"
+                  "Value": "'CR user to buyer'"
                 }
               }
             },
