@@ -2,29 +2,27 @@ table M
 	lineageTag: aea53b62-a3b7-4ccb-8c2f-719855abcda9
 
 	measure users = DISTINCTCOUNT(fct_events_real_sm[user_pseudo_id])
-		formatString: 0
+		formatString: #,##0
 		lineageTag: 4ae781cf-a994-42b4-a425-676e2617cbde
 
 	measure sessions = DISTINCTCOUNT(fct_events_real_sm[session_id])
-		formatString: 0
+		formatString: #,##0
 		lineageTag: d20f0fd8-0725-40ab-a435-016b30ed9bbe
 
 	measure revenue = sum(fct_events_real_sm[total_revenue])
+		formatString: € #,##0.00
 		lineageTag: af2bce32-858c-491e-baba-26c5efae7671
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	measure orders = sum(fct_events_real_sm[purchase])
-		formatString: 0
+		formatString: #,##0
 		lineageTag: 1e7e917e-cfe8-43d4-bdab-838350b1bf31
 
 	measure AOV = [revenue]/[orders]
+		formatString: € #,##0.00
 		lineageTag: a8cb423b-e297-487f-8ef6-6159fb7827c5
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	measure buyers = CALCULATE(DISTINCTCOUNT('fct_events_real_sm'[user_pseudo_id]),fct_events_real_sm[purchase] <> 0)
-		formatString: 0
+		formatString: #,##0
 		lineageTag: 3557b02f-d292-476b-a56a-b84c95614bc5
 
 	partition M = m
@@ -34,7 +32,7 @@ table M
 				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMlSKjQUA", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
 				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", Int64.Type}}),
 				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
-				in
+			in
 				    #"Removed Columns"
 
 	annotation PBI_ResultType = Table
