@@ -81,8 +81,10 @@ Each project is a git clone of its GitHub repo. `dagster_project/` lives inside 
 | Name | Type | What | When |
 |------|------|------|------|
 | `posylka_de_daily` | scheduled job | models tagged `daily` | every day 05:00 UTC |
+| `posylka_de_weekly` | scheduled job | models tagged `weekly` | every sunday 18:00 UTC |
 | `posylka_de_run_all` | manual job | all models | on demand from UI |
 | `daily_schedule` | schedule | triggers `posylka_de_daily` | cron `0 5 * * *` |
+| `weekly_schedule` | schedule | triggers `posylka_de_weekly` | cron `0 18 * * 0` |
 | `email_on_run_failure` | sensor | sends email on any job failure | automatic |
 
 Email alerts go to `ursuser@gmail.com` (Gmail App Password stored in `ALERT_EMAIL_PASSWORD` env var in docker-compose).
@@ -95,6 +97,10 @@ Email alerts go to `ursuser@gmail.com` (Gmail App Password stored in `ALERT_EMAI
 4. Pull: `cd /root/orchestration/projects/posylka_de/dbt_project && git pull`
 5. If dagster_project changed: `cd /root/orchestration && docker compose restart dagster-webserver dagster-daemon`
 6. If only dbt models changed: no restart needed, next run picks up changes
+
+**If new dbt models were added** (new assets not showing in Dagster UI):
+- Recompile manifest inside container: `docker exec orch-dagster-webserver bash -c 'cd /app/projects/posylka_de/dbt_project && dbt compile --profiles-dir /root/.dbt --target prod'`
+- Then restart: `cd /root/orchestration && docker compose restart dagster-webserver dagster-daemon`
 
 ## How to Manage Server
 
