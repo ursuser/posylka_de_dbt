@@ -28,6 +28,26 @@ daily_schedule = ScheduleDefinition(
     default_status=DefaultScheduleStatus.RUNNING,
 )
 
+# scheduled job: runs all models tagged "weekly"
+weekly_dbt_selection = build_dbt_asset_selection(
+    [posylka_de_dbt_assets],
+    dbt_select="tag:weekly",
+)
+
+run_weekly_models_job = define_asset_job(
+    name="posylka_de_weekly",
+    selection=weekly_dbt_selection,
+    description="posylka de: run models tagged with weekly (scheduled)",
+)
+
+# schedule: every sunday at 18:00 utc (19:00 berlin winter / 20:00 berlin summer)
+weekly_schedule = ScheduleDefinition(
+    job=run_weekly_models_job,
+    cron_schedule="0 18 * * 0",
+    description="posylka de: run weekly models every sunday at 18:00 utc",
+    default_status=DefaultScheduleStatus.RUNNING,
+)
+
 # ad-hoc job: run all models at once
 run_all_models_job = define_asset_job(
     name="posylka_de_run_all",

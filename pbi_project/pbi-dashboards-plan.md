@@ -130,15 +130,29 @@ Built last, after all pages are stable.
 
 ## dbt Models Needed
 
-| Model | Source | Used For |
-|-------|--------|----------|
-| `stg_crm_orders` | CRM orders table | base staging |
-| `stg_crm_order_items` | CRM order items | ASP, Gross Margin |
-| `stg_crm_order_statuses` | CRM statuses | Delivery Time, Buyout Rate, Refunds |
-| `fct_crm_sales` | CRM | page 2: Sales |
-| `fct_cohorts` | CRM | page 3: Cohorts |
-| `fct_rfm` | CRM | page 4: RFM |
-| `stg_google_ads` | Google Ads BQ export | page 5 |
-| `stg_search_console` | SC BQ export | page 6 |
+| Model | Source | Used For | Status |
+|-------|--------|----------|--------|
+| `stg_crm__orders` | CRM orders table | base staging | done |
+| `stg_crm__order_products` | CRM order items | ASP | done |
+| `stg_crm__order_statuses` | CRM statuses | Delivery Time, Buyout Rate, Refunds | done |
+| `stg_crm__dict_status` | CRM status dict | status categories | done |
+| `stg_crm__dict_source` | CRM source dict | source names | done |
+| `stg_crm__dict_delivery` | CRM delivery dict | delivery type names | done |
+| `stg_crm__dict_payment` | CRM payment dict | payment type names | done |
+| `fct_crm_sales` | CRM | page 2: Sales (daily) | done |
+| `fct_cohorts` | CRM | page 3: Cohorts — month + week (weekly) | done |
+| `fct_rfm` | CRM | page 4: RFM segments (weekly) | done |
+| `stg_google_ads` | Google Ads BQ export | page 5 | pending |
+| `stg_search_console` | SC BQ export | page 6 | pending |
 
 GA4 models already exist (`fct_events_real_sm`).
+
+## Notes from CRM modeling
+
+- Gross Margin not available — no cost_price in order_products table
+- Porto/postal costs not available — no field in orders table
+- Conversion Rate (orders/sessions) to be calculated in PBI joining GA4 sessions
+- `stg_crm__orders` deduplicates: sum(amount), min(created_at), latest loaded_at for other fields
+- ~1.9% of executed orders have negative delivery_days (CRM data bug) — set to null
+- RFM uses explicit frequency thresholds (not ntile) due to 80% single-order customers
+- Dagster tags: `daily` for fct_crm_sales, `weekly` for fct_cohorts and fct_rfm
