@@ -25,3 +25,13 @@ relationship 3dcbe000-3b01-6f01-f780-521805171540
 	fromColumn: fct_crm_sales.order_date
 	toColumn: HB_Date_Basic.DimDate
 
+relationship fcaa3fe0-ce6f-4f23-9cb9-c98e943f6eb1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: HB_Date_Basic.WeekStart
+	toColumn: LocalDateTable_138b723d-d93e-4058-9167-7c267b3696d2.Date
+
+relationship e0b72e55-f896-428f-b76a-b57f78429dfe
+	joinOnDateBehavior: datePartOnly
+	fromColumn: HB_Date_Basic.MonthStart
+	toColumn: LocalDateTable_f07212e3-44b3-4f32-9850-8222fa3e11d6.Date
+

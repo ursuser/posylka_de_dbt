@@ -23,6 +23,9 @@ ref table ga4_channel_group
 ref table M_prev
 ref table fct_crm_sales
 ref table M_crm
+ref table period
+ref table LocalDateTable_138b723d-d93e-4058-9167-7c267b3696d2
+ref table LocalDateTable_f07212e3-44b3-4f32-9850-8222fa3e11d6
 
 ref cultureInfo en-US
 

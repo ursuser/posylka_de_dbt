@@ -1,0 +1,50 @@
+table period
+	lineageTag: c0b32c15-be0b-4e91-a73e-6b7eb3b1af64
+
+	column period
+		lineageTag: 48a950b0-7ee9-4f0b-8167-7b7f4e1f9817
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'period Order'
+
+		relatedColumnDetails
+			groupByColumn: 'period Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'period Fields'
+		isHidden
+		lineageTag: 43f0d6d7-29b4-4789-b43f-30a1a45aae4d
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'period Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'period Order'
+		isHidden
+		formatString: 0
+		lineageTag: 085160d1-0297-41d3-a86e-e27eb15b9248
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition period = calculated
+		mode: import
+		source =
+				{
+				    ("Date", NAMEOF('HB_Date_Basic'[DimDate]), 0),
+				    ("Week", NAMEOF('HB_Date_Basic'[WeekStart]), 1),
+				    ("Month", NAMEOF('HB_Date_Basic'[MonthStart]), 2),
+				    ("Year", NAMEOF('HB_Date_Basic'[Year]), 3)
+				}
+
+	annotation PBI_Id = 00310486dd3945edbe323b03ac4dfa78
+

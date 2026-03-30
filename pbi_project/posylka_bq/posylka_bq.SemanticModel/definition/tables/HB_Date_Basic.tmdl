@@ -17,24 +17,66 @@ table HB_Date_Basic
 
 		annotation UnderlyingDateTimeDataType = Date
 
+	column WeekStart
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 0956f901-dbb3-4994-8aac-3ad56ced3631
+		summarizeBy: none
+		sourceColumn: WeekStart
+
+		variation Variation
+			isDefault
+			relationship: fcaa3fe0-ce6f-4f23-9cb9-c98e943f6eb1
+			defaultHierarchy: LocalDateTable_138b723d-d93e-4058-9167-7c267b3696d2.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Year
+		dataType: string
+		lineageTag: 31fc7e47-a593-4d15-8763-45113e1f67ff
+		summarizeBy: none
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthStart
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 5e575dfa-3c49-46c3-834b-685ff3f6565e
+		summarizeBy: none
+		sourceColumn: MonthStart
+
+		variation Variation
+			isDefault
+			relationship: e0b72e55-f896-428f-b76a-b57f78429dfe
+			defaultHierarchy: LocalDateTable_f07212e3-44b3-4f32-9850-8222fa3e11d6.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
 	partition HB_Date_Basic = m
 		mode: import
 		source =
 				let
 				
-				   x = Number.From(DateTime.LocalNow())-Number.From(#date(2026, 1, 1)),
+				   x = Number.From(DateTime.LocalNow())-Number.From(#date(2025, 6, 1)),
 				
-				   Source = List.Dates(#date(2026, 1, 1), x, #duration(1, 0, 0, 0)),
+				   Source = List.Dates(#date(2025, 6, 1), x, #duration(1, 0, 0, 0)),
 				
 				   #"Converted to Table" = Table.FromList(Source, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
 				
 				   #"Changed Type" = Table.TransformColumnTypes(#"Converted to Table",{{"Column1", type date}}),
 				
-				   #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"Column1", "DimDate"}})
-				
+				   #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"Column1", "DimDate"}}),
+				    #"Added Custom" = Table.AddColumn(#"Renamed Columns", "WeekStart", each Date.StartOfWeek([DimDate], Day.Monday)),
+				    #"Added Custom1" = Table.AddColumn(#"Added Custom", "MonthStart", each Date.StartOfMonth([DimDate])),
+				    #"Added Custom2" = Table.AddColumn(#"Added Custom1", "Year", each Date.Year([DimDate])),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Added Custom2",{{"WeekStart", type date}, {"MonthStart", type date}})
 				in
-				
-				   #"Renamed Columns"
+				    #"Changed Type1"
 
 	annotation PBI_NavigationStepName = Navigation
 

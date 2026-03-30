@@ -62,7 +62,8 @@ Overview is built last — when all data sources are connected and pages are sta
 `Revenue | Orders | AOV | ASP | New Customers % | Refund Rate % | Buyout Rate % | Avg Delivery Days`
 
 **Visuals — implementation tasks:**
-- [ ] KPI cards (8 cards)
+- [x] KPI cards (8 cards)
+- [x] Slicers (left panel: date, source, new/returning, delivery type, payment type)
 - [ ] Combo chart: Revenue (bars) + AOV (line) by day/week/month with drill-down
 - [ ] Stacked bar: Orders — New vs Returning by month
 - [ ] Field Parameter: Revenue / Orders toggle (shared by donut + bar)

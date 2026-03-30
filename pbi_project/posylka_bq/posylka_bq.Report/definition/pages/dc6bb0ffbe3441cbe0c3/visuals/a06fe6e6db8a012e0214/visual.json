@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "21ed62d0158d2e7bd135",
+  "name": "a06fe6e6db8a012e0214",
   "position": {
-    "x": 47.5,
-    "y": 35,
-    "z": 0,
-    "height": 643.75,
-    "width": 1111.25,
-    "tabOrder": 0
+    "x": 874.45544554455444,
+    "y": 551.28712871287132,
+    "z": 6001,
+    "height": 500.59405940594058,
+    "width": 1031.2871287128714,
+    "tabOrder": 7001
   },
   "visual": {
     "visualType": "scatterChart",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "ga4_channel_group"
+                      "Entity": "fct_crm_sales"
                     }
                   },
-                  "Property": "channel_group"
+                  "Property": "source_name"
                 }
               },
-              "queryRef": "ga4_channel_group.channel_group",
-              "nativeQueryRef": "channel_group",
+              "queryRef": "fct_crm_sales.source_name",
+              "nativeQueryRef": "source_name",
               "active": true
             }
           ]
@@ -39,14 +39,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "ga4_channel_group"
+                      "Entity": "fct_crm_sales"
                     }
                   },
-                  "Property": "channel_group"
+                  "Property": "source_name"
                 }
               },
-              "queryRef": "ga4_channel_group.channel_group",
-              "nativeQueryRef": "channel_group"
+              "queryRef": "fct_crm_sales.source_name",
+              "nativeQueryRef": "source_name"
             }
           ]
         },
@@ -57,14 +57,14 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "M"
+                      "Entity": "M_crm"
                     }
                   },
-                  "Property": "revenue"
+                  "Property": "crm_revenue"
                 }
               },
-              "queryRef": "M.revenue",
-              "nativeQueryRef": "revenue"
+              "queryRef": "M_crm.crm_revenue",
+              "nativeQueryRef": "crm_revenue"
             }
           ]
         },
@@ -75,14 +75,14 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "M"
+                      "Entity": "M_crm"
                     }
                   },
-                  "Property": "AOV"
+                  "Property": "crm_orders"
                 }
               },
-              "queryRef": "M.AOV",
-              "nativeQueryRef": "AOV",
+              "queryRef": "M_crm.crm_orders",
+              "nativeQueryRef": "crm_orders",
               "active": true
             }
           ]
@@ -94,34 +94,67 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "M"
+                      "Entity": "M_crm"
                     }
                   },
-                  "Property": "orders"
+                  "Property": "crm_aov"
                 }
               },
-              "queryRef": "M.orders",
-              "nativeQueryRef": "orders"
+              "queryRef": "M_crm.crm_aov",
+              "nativeQueryRef": "crm_aov"
             }
           ]
         }
       }
     },
     "objects": {
-      "categoryAxis": [
+      "legend": [
         {
           "properties": {
-            "start": {
+            "showGradientLegend": {
               "expr": {
                 "Literal": {
-                  "Value": "40D"
+                  "Value": "false"
                 }
               }
             },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "bubbles": [
+        {
+          "properties": {
+            "bubbleSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14L"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
             "end": {
               "expr": {
                 "Literal": {
-                  "Value": "100D"
+                  "Value": "70000D"
+                }
+              }
+            },
+            "start": {
+              "expr": {
+                "Literal": {
+                  "Value": "-1500D"
                 }
               }
             }
@@ -134,14 +167,14 @@
             "end": {
               "expr": {
                 "Literal": {
-                  "Value": "2800D"
+                  "Value": "1600D"
                 }
               }
             },
             "start": {
               "expr": {
                 "Literal": {
-                  "Value": "-10D"
+                  "Value": "-200D"
                 }
               }
             }
@@ -150,13 +183,26 @@
       ]
     },
     "visualContainerObjects": {
-      "title": [
+      "subTitle": [
         {
           "properties": {
             "show": {
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'orders, AOV and revenue by source_name'"
                 }
               }
             }

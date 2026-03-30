@@ -3521,16 +3521,6 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.452
 			          }
-			        },
-			        {
-			          "period": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.452
-			          }
 			        }
 			      ]
 			    },
@@ -6244,268 +6234,11 @@ cultureInfo en-US
 			      ],
 			      "SemanticType": "Time"
 			    },
-			    "fct_crm_sale.order_date.date_hierarchy": {
+			    "HB_date_basic.week_start.month": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "fct_crm_sales",
-			          "VariationSource": "order_date",
-			          "VariationSet": "Variation",
-			          "Hierarchy": "Date Hierarchy"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "order date hierarchy": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "date hierarchy": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
-			    "fct_crm_sale.order_date.year": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "fct_crm_sales",
-			          "VariationSource": "order_date",
-			          "VariationSet": "Variation",
-			          "Hierarchy": "Date Hierarchy",
-			          "HierarchyLevel": "Year"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "order year": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "year": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "order date year": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "date year": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "order date yr": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.762
-			          }
-			        },
-			        {
-			          "order yr": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "date yr": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "yr": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "order moment year": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "moment year": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "order period year": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "period year": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
-			    "fct_crm_sale.order_date.quarter": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "fct_crm_sales",
-			          "VariationSource": "order_date",
-			          "VariationSet": "Variation",
-			          "Hierarchy": "Date Hierarchy",
-			          "HierarchyLevel": "Quarter"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "order quarter": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "quarter": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "order date quarter": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "date quarter": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "order date qtr": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.846
-			          }
-			        },
-			        {
-			          "order qtr": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.833
-			          }
-			        },
-			        {
-			          "date qtr": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.833
-			          }
-			        },
-			        {
-			          "qtr": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.818
-			          }
-			        },
-			        {
-			          "order moment quarter": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "moment quarter": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "order period quarter": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "period quarter": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
-			    "fct_crm_sale.order_date.month": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "fct_crm_sales",
-			          "VariationSource": "order_date",
+			          "ConceptualEntity": "HB_Date_Basic",
+			          "VariationSource": "WeekStart",
 			          "VariationSet": "Variation",
 			          "Hierarchy": "Date Hierarchy",
 			          "HierarchyLevel": "Month"
@@ -6514,7 +6247,7 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "order month": {
+			          "week start month": {
 			            "State": "Generated"
 			          }
 			        },
@@ -6524,18 +6257,13 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "order date month": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "date month": {
+			          "start month": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
 			        },
 			        {
-			          "order date mth": {
+			          "week start mth": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -6545,17 +6273,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "order mth": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "date mth": {
+			          "start mth": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -6573,121 +6291,304 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.736
 			          }
-			        },
-			        {
-			          "order moment month": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "moment month": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "order period month": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "period month": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
 			        }
 			      ],
 			      "SemanticType": "Time"
 			    },
-			    "fct_crm_sale.order_date.day": {
+			    "HB_date_basic.week_start.quarter": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "fct_crm_sales",
-			          "VariationSource": "order_date",
+			          "ConceptualEntity": "HB_Date_Basic",
+			          "VariationSource": "WeekStart",
 			          "VariationSet": "Variation",
 			          "Hierarchy": "Date Hierarchy",
-			          "HierarchyLevel": "Day"
+			          "HierarchyLevel": "Quarter"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "order day": {
+			          "week start quarter": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "day": {
+			          "quarter": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "order date day": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "date day": {
+			          "start quarter": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
 			        },
 			        {
-			          "order moment day": {
+			          "week start qtr": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.609
+			            "Weight": 0.846
 			          }
 			        },
 			        {
-			          "moment day": {
+			          "start qtr": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.6
+			            "Weight": 0.833
 			          }
 			        },
 			        {
-			          "order period day": {
+			          "qtr": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.591
+			            "Weight": 0.818
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "HB_date_basic.week_start.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "HB_Date_Basic",
+			          "VariationSource": "WeekStart",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "week start year": {
+			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "period day": {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "start year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "week start yr": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.582
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "start yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "HB_date_basic.week_start.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "HB_Date_Basic",
+			          "VariationSource": "WeekStart",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "week start date hierarchy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "start date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "HB_date_basic.week_start": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "HB_Date_Basic",
+			          "ConceptualProperty": "WeekStart"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "week start": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "WeekStart": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "start": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "week twitch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "week jump": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "week jerk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "week flinch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "week jolt": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "twitch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "jump": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "jerk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "flinch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "jolt": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "Week": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ],
@@ -8407,23 +8308,2017 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "HB_date_basic.week_start.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "HB_Date_Basic",
+			          "VariationSource": "WeekStart",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "week start day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "start day": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "HB_date_basic.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "HB_Date_Basic",
+			          "ConceptualProperty": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ]
+			    },
+			    "HB_date_basic.month_start": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "HB_Date_Basic",
+			          "ConceptualProperty": "MonthStart"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "month start": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "MonthStart": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "start": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "mth start": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "month twitch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "month jump": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "month jerk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "month flinch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "month jolt": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "twitch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "jump": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "jerk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "flinch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "HB_date_basic.month_start.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "HB_Date_Basic",
+			          "VariationSource": "MonthStart",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "month start date hierarchy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "start date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "HB_date_basic.month_start.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "HB_Date_Basic",
+			          "VariationSource": "MonthStart",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "month start year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "start year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "month start yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "start yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "mth start year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "HB_date_basic.month_start.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "HB_Date_Basic",
+			          "VariationSource": "MonthStart",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "month start quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "start quarter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "month start qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.846
+			          }
+			        },
+			        {
+			          "start qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        },
+			        {
+			          "mth start quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "HB_date_basic.month_start.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "HB_Date_Basic",
+			          "VariationSource": "MonthStart",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "month start month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "start month": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "month start mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "start mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "mth start month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "HB_date_basic.month_start.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "HB_Date_Basic",
+			          "VariationSource": "MonthStart",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "month start day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "start day": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "mth start day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "M_crm": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_crm"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "M crm": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "M_crm": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "crm": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "M_crm.crm_revenue": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_crm",
+			          "ConceptualProperty": "crm_revenue"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "crm revenue": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "crm_revenue": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "crm income": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "crm profit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "crm turnover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "crm yield": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "Revenue": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "M_crm.crm_orders": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_crm",
+			          "ConceptualProperty": "crm_orders"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "crm orders": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "crm_orders": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "crm instruction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "crm guideline": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "crm preparation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "crm direction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "crm command": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "crm tip": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "crm briefing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "crm remit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "crm mission": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "crm directive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "M_crm.crm_aov": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_crm",
+			          "ConceptualProperty": "crm_aov"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "crm aov": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "crm_aov": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "AOV": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "M_crm.crm_asp": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_crm",
+			          "ConceptualProperty": "crm_asp"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "crm asp": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "crm_asp": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "asp": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "crm viper": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "crm adder": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "crm cobra": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "viper": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "adder": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "cobra": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "M_crm.crm_new_customers": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_crm",
+			          "ConceptualProperty": "crm_new_customers"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "crm new customers": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "crm_new_customers": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "crm new clientele": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "crm new patron": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "crm new client": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "crm new consumer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "crm new punter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "crm new regular": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "crm new custom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "crm new trade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "crm new business": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "crm new following": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "M_crm.crm_returning_customers": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_crm",
+			          "ConceptualProperty": "crm_returning_customers"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "crm returning customers": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "crm_returning_customers": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "customers": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "returning customers": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "crm returning clientele": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "crm returning patron": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "crm returning client": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "crm returning consumer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "crm returning punter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "returning clientele": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "returning patron": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "returning client": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "returning consumer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "returning punter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ]
+			    },
+			    "M_crm.crm_new_customers_pct": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_crm",
+			          "ConceptualProperty": "crm_new_customers_pct"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "crm new customers pct": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "crm_new_customers_pct": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "M_crm.crm_refunds": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_crm",
+			          "ConceptualProperty": "crm_refunds"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "crm refunds": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "crm_refunds": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "refunds": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "crm repayment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "crm reimbursement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "crm compensation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "repayment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "reimbursement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "compensation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "crm recompense": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "recompense": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "M_crm.crm_refund_rate": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_crm",
+			          "ConceptualProperty": "crm_refund_rate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "crm refund rate": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "crm_refund_rate": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "rate": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "refund rate": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "crm refund degree": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "crm refund frequency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "crm refund percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "crm refund ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "crm refund quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "refund degree": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "refund frequency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "refund percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "refund ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "refund quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ]
+			    },
+			    "M_crm.crm_buyout_rate": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_crm",
+			          "ConceptualProperty": "crm_buyout_rate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "crm buyout rate": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "crm_buyout_rate": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "rate": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "buyout rate": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "crm buyout degree": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "crm buyout frequency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "crm buyout percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "crm buyout ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "crm buyout quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "buyout degree": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "buyout frequency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "buyout percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "buyout ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "buyout quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ]
+			    },
+			    "M_crm.crm_avg_delivery_days": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_crm",
+			          "ConceptualProperty": "crm_avg_delivery_days"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "crm avg delivery days": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "crm_avg_delivery_days": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "crm average delivery day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "crm avg delivery existence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "crm avg delivery being": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "crm avg delivery living": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "crm avg delivery eras": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "crm avg delivery generation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "crm avg delivery epoch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "crm avg delivery period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "crm avg delivery age": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "crm avg delivery daylight": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.45
+			          }
+			        }
+			      ]
+			    },
+			    "period": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "period"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "period": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "era": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "epoch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "age": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "stage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "phase": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "period.period": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "period",
+			          "ConceptualProperty": "period"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "period": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "period name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "era": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "epoch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "age": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "stage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "phase": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ],
+			      "NameType": "Name"
+			    },
+			    "period.period_field": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "period",
+			          "ConceptualProperty": "period Fields"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "period field": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "field": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "period arena": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "arena": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "period turf": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "period ground": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "period pitch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "period park": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "turf": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "ground": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "pitch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "park": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "period.period_order": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "period",
+			          "ConceptualProperty": "period Order"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "period order": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "order": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "period instruction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "period direction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "period edict": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "instruction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "direction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "edict": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "period command": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "period directive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "period demand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "period mandate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "fct_crm_sale_order_date_date_hierarchy_has_fct_crm_sale_order_date_day": {
+			    "HB_date_basic_month_start_date_hierarchy_has_HB_date_basic_month_start_month": {
 			      "Binding": {
-			        "ConceptualEntity": "fct_crm_sales"
+			        "ConceptualEntity": "HB_Date_Basic"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fct_crm_sale.order_date.date_hierarchy": {
+			        "HB_date_basic.month_start.date_hierarchy": {
 			          "Target": {
-			            "Entity": "fct_crm_sale.order_date.date_hierarchy"
+			            "Entity": "HB_date_basic.month_start.date_hierarchy"
 			          }
 			        },
-			        "fct_crm_sale.order_date.day": {
+			        "HB_date_basic.month_start.month": {
 			          "Target": {
-			            "Entity": "fct_crm_sale.order_date.day"
+			            "Entity": "HB_date_basic.month_start.month"
 			          }
 			        }
 			      },
@@ -8431,32 +10326,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fct_crm_sale.order_date.date_hierarchy"
+			              "Role": "HB_date_basic.month_start.date_hierarchy"
 			            },
 			            "Object": {
-			              "Role": "fct_crm_sale.order_date.day"
+			              "Role": "HB_date_basic.month_start.month"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "order_date_hierarchies_have_order_days"
+			          "ID": "month_start_date_hierarchies_have_month_start_months"
 			        }
 			      ]
 			    },
-			    "fct_crm_sale_order_date_date_hierarchy_has_fct_crm_sale_order_date_month": {
+			    "HB_date_basic_month_start_date_hierarchy_has_HB_date_basic_month_start_quarter": {
 			      "Binding": {
-			        "ConceptualEntity": "fct_crm_sales"
+			        "ConceptualEntity": "HB_Date_Basic"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fct_crm_sale.order_date.date_hierarchy": {
+			        "HB_date_basic.month_start.date_hierarchy": {
 			          "Target": {
-			            "Entity": "fct_crm_sale.order_date.date_hierarchy"
+			            "Entity": "HB_date_basic.month_start.date_hierarchy"
 			          }
 			        },
-			        "fct_crm_sale.order_date.month": {
+			        "HB_date_basic.month_start.quarter": {
 			          "Target": {
-			            "Entity": "fct_crm_sale.order_date.month"
+			            "Entity": "HB_date_basic.month_start.quarter"
 			          }
 			        }
 			      },
@@ -8464,32 +10359,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fct_crm_sale.order_date.date_hierarchy"
+			              "Role": "HB_date_basic.month_start.date_hierarchy"
 			            },
 			            "Object": {
-			              "Role": "fct_crm_sale.order_date.month"
+			              "Role": "HB_date_basic.month_start.quarter"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "order_date_hierarchies_have_order_months"
+			          "ID": "month_start_date_hierarchies_have_month_start_quarters"
 			        }
 			      ]
 			    },
-			    "fct_crm_sale_order_date_date_hierarchy_has_fct_crm_sale_order_date_quarter": {
+			    "HB_date_basic_month_start_date_hierarchy_has_HB_date_basic_month_start_year": {
 			      "Binding": {
-			        "ConceptualEntity": "fct_crm_sales"
+			        "ConceptualEntity": "HB_Date_Basic"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fct_crm_sale.order_date.date_hierarchy": {
+			        "HB_date_basic.month_start.date_hierarchy": {
 			          "Target": {
-			            "Entity": "fct_crm_sale.order_date.date_hierarchy"
+			            "Entity": "HB_date_basic.month_start.date_hierarchy"
 			          }
 			        },
-			        "fct_crm_sale.order_date.quarter": {
+			        "HB_date_basic.month_start.year": {
 			          "Target": {
-			            "Entity": "fct_crm_sale.order_date.quarter"
+			            "Entity": "HB_date_basic.month_start.year"
 			          }
 			        }
 			      },
@@ -8497,32 +10392,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fct_crm_sale.order_date.date_hierarchy"
+			              "Role": "HB_date_basic.month_start.date_hierarchy"
 			            },
 			            "Object": {
-			              "Role": "fct_crm_sale.order_date.quarter"
+			              "Role": "HB_date_basic.month_start.year"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "order_date_hierarchies_have_order_quarters"
+			          "ID": "month_start_date_hierarchies_have_month_start_years"
 			        }
 			      ]
 			    },
-			    "fct_crm_sale_order_date_date_hierarchy_has_fct_crm_sale_order_date_year": {
+			    "HB_date_basic_month_start_has_date_hierarchy": {
 			      "Binding": {
-			        "ConceptualEntity": "fct_crm_sales"
+			        "ConceptualEntity": "HB_Date_Basic"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fct_crm_sale.order_date.date_hierarchy": {
+			        "HB_date_basic.month_start": {
 			          "Target": {
-			            "Entity": "fct_crm_sale.order_date.date_hierarchy"
+			            "Entity": "HB_date_basic.month_start"
 			          }
 			        },
-			        "fct_crm_sale.order_date.year": {
+			        "HB_date_basic.month_start.date_hierarchy": {
 			          "Target": {
-			            "Entity": "fct_crm_sale.order_date.year"
+			            "Entity": "HB_date_basic.month_start.date_hierarchy"
 			          }
 			        }
 			      },
@@ -8530,32 +10425,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fct_crm_sale.order_date.date_hierarchy"
+			              "Role": "HB_date_basic.month_start"
 			            },
 			            "Object": {
-			              "Role": "fct_crm_sale.order_date.year"
+			              "Role": "HB_date_basic.month_start.date_hierarchy"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "order_date_hierarchies_have_order_years"
+			          "ID": "month_starts_have_month_start_date_hierarchies"
 			        }
 			      ]
 			    },
-			    "fct_crm_sale_order_date_has_date_hierarchy": {
+			    "HB_date_basic_week_start_date_hierarchy_has_HB_date_basic_week_start_day": {
 			      "Binding": {
-			        "ConceptualEntity": "fct_crm_sales"
+			        "ConceptualEntity": "HB_Date_Basic"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fct_crm_sale.order_date": {
+			        "HB_date_basic.week_start.date_hierarchy": {
 			          "Target": {
-			            "Entity": "fct_crm_sale.order_date"
+			            "Entity": "HB_date_basic.week_start.date_hierarchy"
 			          }
 			        },
-			        "fct_crm_sale.order_date.date_hierarchy": {
+			        "HB_date_basic.week_start.day": {
 			          "Target": {
-			            "Entity": "fct_crm_sale.order_date.date_hierarchy"
+			            "Entity": "HB_date_basic.week_start.day"
 			          }
 			        }
 			      },
@@ -8563,15 +10458,147 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fct_crm_sale.order_date"
+			              "Role": "HB_date_basic.week_start.date_hierarchy"
 			            },
 			            "Object": {
-			              "Role": "fct_crm_sale.order_date.date_hierarchy"
+			              "Role": "HB_date_basic.week_start.day"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "order_dates_have_order_date_hierarchies"
+			          "ID": "week_start_date_hierarchies_have_week_start_days"
+			        }
+			      ]
+			    },
+			    "HB_date_basic_week_start_date_hierarchy_has_HB_date_basic_week_start_month": {
+			      "Binding": {
+			        "ConceptualEntity": "HB_Date_Basic"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "HB_date_basic.week_start.date_hierarchy": {
+			          "Target": {
+			            "Entity": "HB_date_basic.week_start.date_hierarchy"
+			          }
+			        },
+			        "HB_date_basic.week_start.month": {
+			          "Target": {
+			            "Entity": "HB_date_basic.week_start.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "HB_date_basic.week_start.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "HB_date_basic.week_start.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "week_start_date_hierarchies_have_week_start_months"
+			        }
+			      ]
+			    },
+			    "HB_date_basic_week_start_date_hierarchy_has_HB_date_basic_week_start_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "HB_Date_Basic"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "HB_date_basic.week_start.date_hierarchy": {
+			          "Target": {
+			            "Entity": "HB_date_basic.week_start.date_hierarchy"
+			          }
+			        },
+			        "HB_date_basic.week_start.quarter": {
+			          "Target": {
+			            "Entity": "HB_date_basic.week_start.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "HB_date_basic.week_start.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "HB_date_basic.week_start.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "week_start_date_hierarchies_have_week_start_quarters"
+			        }
+			      ]
+			    },
+			    "HB_date_basic_week_start_date_hierarchy_has_HB_date_basic_week_start_year": {
+			      "Binding": {
+			        "ConceptualEntity": "HB_Date_Basic"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "HB_date_basic.week_start.date_hierarchy": {
+			          "Target": {
+			            "Entity": "HB_date_basic.week_start.date_hierarchy"
+			          }
+			        },
+			        "HB_date_basic.week_start.year": {
+			          "Target": {
+			            "Entity": "HB_date_basic.week_start.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "HB_date_basic.week_start.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "HB_date_basic.week_start.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "week_start_date_hierarchies_have_week_start_years"
+			        }
+			      ]
+			    },
+			    "HB_date_basic_week_start_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "HB_Date_Basic"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "HB_date_basic.week_start": {
+			          "Target": {
+			            "Entity": "HB_date_basic.week_start"
+			          }
+			        },
+			        "HB_date_basic.week_start.date_hierarchy": {
+			          "Target": {
+			            "Entity": "HB_date_basic.week_start.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "HB_date_basic.week_start"
+			            },
+			            "Object": {
+			              "Role": "HB_date_basic.week_start.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "week_starts_have_week_start_date_hierarchies"
 			        }
 			      ]
 			    },
@@ -8905,6 +10932,52 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "fct_crm_sale_has_HB_date_basic": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "HB_date_basic": {
+			          "Target": {
+			            "Entity": "HB_date_basic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale"
+			            },
+			            "Object": {
+			              "Role": "HB_date_basic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_crm_sales_have_HB_date_basics"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "HB_date_basic"
+			            },
+			            "Object": {
+			              "Role": "fct_crm_sale"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "HB_date_basics_have_fct_crm_sales"
+			        }
+			      ]
+			    },
 			    "fct_events_real_sm_has_ga_4_channel_group": {
 			      "Binding": {
 			        "ConceptualEntity": "fct_events_real_sm"
@@ -8994,6 +11067,481 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "HB_date_basics_have_fct_events_real_sm"
+			        }
+			      ]
+			    },
+			    "period_has_period": {
+			      "Binding": {
+			        "ConceptualEntity": "period"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "period": {
+			          "Target": {
+			            "Entity": "period"
+			          }
+			        },
+			        "period.period": {
+			          "Target": {
+			            "Entity": "period.period"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "period"
+			            },
+			            "Object": {
+			              "Role": "period.period"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "periods_have_periods"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "period"
+			            },
+			            "Name": {
+			              "Role": "period.period"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "periods_are_names_IDs_of_periods"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_has_M_crm_crm_avg_delivery_days": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "M_crm.crm_avg_delivery_days": {
+			          "Target": {
+			            "Entity": "M_crm.crm_avg_delivery_days"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale"
+			            },
+			            "Object": {
+			              "Role": "M_crm.crm_avg_delivery_days"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_crm_sales_have_crm_avg_delivery_days"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_has_M_crm_crm_buyout_rate": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "M_crm.crm_buyout_rate": {
+			          "Target": {
+			            "Entity": "M_crm.crm_buyout_rate"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale"
+			            },
+			            "Object": {
+			              "Role": "M_crm.crm_buyout_rate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_crm_sales_have_crm_buyout_rate"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_has_M_crm_crm_refund_rate": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "M_crm.crm_refund_rate": {
+			          "Target": {
+			            "Entity": "M_crm.crm_refund_rate"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale"
+			            },
+			            "Object": {
+			              "Role": "M_crm.crm_refund_rate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_crm_sales_have_crm_refund_rate"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_has_M_crm_crm_refunds": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "M_crm.crm_refunds": {
+			          "Target": {
+			            "Entity": "M_crm.crm_refunds"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale"
+			            },
+			            "Object": {
+			              "Role": "M_crm.crm_refunds"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_crm_sales_have_crm_refunds"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_has_M_crm_crm_new_customers_pct": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "M_crm.crm_new_customers_pct": {
+			          "Target": {
+			            "Entity": "M_crm.crm_new_customers_pct"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale"
+			            },
+			            "Object": {
+			              "Role": "M_crm.crm_new_customers_pct"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_crm_sales_have_crm_new_customers_pct"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_has_M_crm_crm_returning_customers": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "M_crm.crm_returning_customers": {
+			          "Target": {
+			            "Entity": "M_crm.crm_returning_customers"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale"
+			            },
+			            "Object": {
+			              "Role": "M_crm.crm_returning_customers"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_crm_sales_have_crm_returning_customers"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_has_M_crm_crm_new_customers": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "M_crm.crm_new_customers": {
+			          "Target": {
+			            "Entity": "M_crm.crm_new_customers"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale"
+			            },
+			            "Object": {
+			              "Role": "M_crm.crm_new_customers"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_crm_sales_have_crm_new_customers"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_has_M_crm_crm_asp": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "M_crm.crm_asp": {
+			          "Target": {
+			            "Entity": "M_crm.crm_asp"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale"
+			            },
+			            "Object": {
+			              "Role": "M_crm.crm_asp"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_crm_sales_have_crm_asp"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_has_M_crm_crm_aov": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "M_crm.crm_aov": {
+			          "Target": {
+			            "Entity": "M_crm.crm_aov"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale"
+			            },
+			            "Object": {
+			              "Role": "M_crm.crm_aov"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_crm_sales_have_crm_aov"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_has_M_crm_crm_orders": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "M_crm.crm_orders": {
+			          "Target": {
+			            "Entity": "M_crm.crm_orders"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale"
+			            },
+			            "Object": {
+			              "Role": "M_crm.crm_orders"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_crm_sales_have_crm_orders"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_has_M_crm_crm_revenue": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "M_crm.crm_revenue": {
+			          "Target": {
+			            "Entity": "M_crm.crm_revenue"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale"
+			            },
+			            "Object": {
+			              "Role": "M_crm.crm_revenue"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_crm_sales_have_crm_revenue"
+			        }
+			      ]
+			    },
+			    "HB_date_basic_has_month_start": {
+			      "Binding": {
+			        "ConceptualEntity": "HB_Date_Basic"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "HB_date_basic": {
+			          "Target": {
+			            "Entity": "HB_date_basic"
+			          }
+			        },
+			        "HB_date_basic.month_start": {
+			          "Target": {
+			            "Entity": "HB_date_basic.month_start"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "HB_date_basic"
+			            },
+			            "Object": {
+			              "Role": "HB_date_basic.month_start"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "HB_date_basics_have_month_starts"
+			        }
+			      ]
+			    },
+			    "HB_date_basic_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "HB_Date_Basic"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "HB_date_basic": {
+			          "Target": {
+			            "Entity": "HB_date_basic"
+			          }
+			        },
+			        "HB_date_basic.year": {
+			          "Target": {
+			            "Entity": "HB_date_basic.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "HB_date_basic"
+			            },
+			            "Object": {
+			              "Role": "HB_date_basic.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "HB_date_basics_have_years"
 			        }
 			      ]
 			    },
@@ -9588,6 +12136,39 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "fct_crm_sales_have_user_nr"
+			        }
+			      ]
+			    },
+			    "HB_date_basic_has_week_start": {
+			      "Binding": {
+			        "ConceptualEntity": "HB_Date_Basic"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "HB_date_basic": {
+			          "Target": {
+			            "Entity": "HB_date_basic"
+			          }
+			        },
+			        "HB_date_basic.week_start": {
+			          "Target": {
+			            "Entity": "HB_date_basic.week_start"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "HB_date_basic"
+			            },
+			            "Object": {
+			              "Role": "HB_date_basic.week_start"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "HB_date_basics_have_week_starts"
 			        }
 			      ]
 			    },
@@ -12190,6 +14771,39 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "some_fct_crm_sales_are_executed_fct_crm_sales"
+			        }
+			      ]
+			    },
+			    "HB_date_basic_month_start_date_hierarchy_has_HB_date_basic_month_start_day": {
+			      "Binding": {
+			        "ConceptualEntity": "HB_Date_Basic"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "HB_date_basic.month_start.date_hierarchy": {
+			          "Target": {
+			            "Entity": "HB_date_basic.month_start.date_hierarchy"
+			          }
+			        },
+			        "HB_date_basic.month_start.day": {
+			          "Target": {
+			            "Entity": "HB_date_basic.month_start.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "HB_date_basic.month_start.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "HB_date_basic.month_start.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "month_start_date_hierarchies_have_month_start_days"
 			        }
 			      ]
 			    }

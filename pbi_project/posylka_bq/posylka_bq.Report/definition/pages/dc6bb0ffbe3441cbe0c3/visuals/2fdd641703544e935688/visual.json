@@ -4,10 +4,10 @@
   "position": {
     "x": 16.674937965260547,
     "y": 166.74937965260546,
-    "z": 3000,
+    "z": 2000,
     "height": 123.87096774193549,
     "width": 237.02233250620347,
-    "tabOrder": 4000
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "slicer",
@@ -59,7 +59,7 @@
             "endDate": {
               "expr": {
                 "Literal": {
-                  "Value": "datetime'2026-03-26T00:00:00'"
+                  "Value": "datetime'2025-12-02T23:00:00'"
                 }
               }
             },
@@ -103,7 +103,7 @@
                         },
                         "Right": {
                           "Literal": {
-                            "Value": "datetime'2026-03-27T00:00:00'"
+                            "Value": "datetime'2025-12-03T00:00:00'"
                           }
                         }
                       }
