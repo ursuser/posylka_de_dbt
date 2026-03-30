@@ -66,3 +66,18 @@ models:
       - name: landing_page
         tests:
           - not_null
+
+  - name: fct_crm_sales
+    config:
+      tags: ['daily', 'crm']
+    description: order-level crm fact table with status, customer type, delivery days and refund flags
+
+  - name: fct_cohorts
+    config:
+      tags: ['weekly', 'crm']
+    description: cohort retention table with monthly and weekly period types for pbi matrix
+
+  - name: fct_rfm
+    config:
+      tags: ['weekly', 'crm']
+    description: customer-level rfm scores and segments based on executed orders
