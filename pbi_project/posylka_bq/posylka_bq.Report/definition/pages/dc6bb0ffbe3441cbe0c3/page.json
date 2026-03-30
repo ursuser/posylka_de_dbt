@@ -1,8 +1,8 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
-  "name": "20e010c225030c7065a0",
-  "displayName": "site",
+  "name": "dc6bb0ffbe3441cbe0c3",
+  "displayName": "CRM",
   "displayOption": "FitToPage",
-  "height": 1100,
-  "width": 2000
+  "height": 1080,
+  "width": 1920
 }

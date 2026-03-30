@@ -878,7 +878,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "type": {
+			          "grouping": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -888,7 +888,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "grouping": {
+			          "kind": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -6072,9 +6072,2509 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "fct_crm_sale": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_crm_sales"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fct crm sale": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fct_crm_sales": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "fct crm auction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "fct crm transaction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "fct crm deal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "fct crm trade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "fct crm vending": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "fct crm retailing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "fct crm selling": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        }
+			      ]
+			    },
+			    "fct_crm_sale.order_nr": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_crm_sales",
+			          "ConceptualProperty": "order_nr"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "order nr": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "order_nr": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "nr": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "fct_crm_sale.order_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_crm_sales",
+			          "ConceptualProperty": "order_date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "order date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "order_date": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "order moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "order period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fct_crm_sale.order_date.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_crm_sales",
+			          "VariationSource": "order_date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "order date hierarchy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fct_crm_sale.order_date.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_crm_sales",
+			          "VariationSource": "order_date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "order year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "order date year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "order date yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "order yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "date yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "order moment year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "moment year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "order period year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "period year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fct_crm_sale.order_date.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_crm_sales",
+			          "VariationSource": "order_date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "order quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "order date quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date quarter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "order date qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.846
+			          }
+			        },
+			        {
+			          "order qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "date qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        },
+			        {
+			          "order moment quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "moment quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "order period quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "period quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fct_crm_sale.order_date.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_crm_sales",
+			          "VariationSource": "order_date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "order month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "order date month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date month": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "order date mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "order mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "date mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "order moment month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "moment month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "order period month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "period month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fct_crm_sale.order_date.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_crm_sales",
+			          "VariationSource": "order_date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "order day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "order date day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date day": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "order moment day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "moment day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "order period day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "period day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fct_crm_sale.user_nr": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_crm_sales",
+			          "ConceptualProperty": "user_nr"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "user nr": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "user_nr": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "nr": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "fct_crm_sale.is_new_customer": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_crm_sales",
+			          "ConceptualProperty": "is_new_customer"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "is new customer": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "is_new_customer": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "is new client": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "is new consumer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "is new user": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "is new buyer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "is new patron": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "is new purchaser": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "is new shopper": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        }
+			      ]
+			    },
+			    "fct_crm_sale.amount": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_crm_sales",
+			          "ConceptualProperty": "amount"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "amount": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "volume": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "expanse": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "extent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "aggregate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "fct_crm_sale.unit_sold": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_crm_sales",
+			          "ConceptualProperty": "units_sold"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "unit sold": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "units_sold": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "module sold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "element sold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "entity sold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "group sold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "component sold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "constituent sold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "item sold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "part sold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "section sold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "fct_crm_sale.source_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_crm_sales",
+			          "ConceptualProperty": "source_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "source id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "source_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "source": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "source identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "source identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "source identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "source credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "basis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "font": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "birthplace": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "foundation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "cause": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "spring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "fct_crm_sale.source_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_crm_sales",
+			          "ConceptualProperty": "source_name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "source name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "source_name": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "source": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "source nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "source title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "source label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "source tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "basis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "font": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "birthplace": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "foundation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "cause": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "spring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "fct_crm_sale.payment_type_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_crm_sales",
+			          "ConceptualProperty": "payment_type_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "payment type id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "payment_type_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "type": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "type id": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "payment type identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "payment type identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "payment type identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "type identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "type identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "type identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "payment type credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "genre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "manner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ]
+			    },
+			    "fct_crm_sale.payment_type": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_crm_sales",
+			          "ConceptualProperty": "payment_type"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "payment type": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "payment_type": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "type": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "payment category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "payment genre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "payment manner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "payment variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "genre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "manner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "payment brand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "payment class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "payment kind": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "fct_crm_sale.delivery_type_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_crm_sales",
+			          "ConceptualProperty": "delivery_type_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "delivery type id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "delivery_type_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "type": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "type id": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "delivery type identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "delivery type identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "delivery type identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "type identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "type identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "type identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "delivery type credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "genre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "manner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ]
+			    },
+			    "fct_crm_sale.delivery_type": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_crm_sales",
+			          "ConceptualProperty": "delivery_type"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "delivery type": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "delivery_type": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "type": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "delivery category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "delivery genre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "delivery manner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "delivery variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "genre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "manner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "delivery brand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "delivery class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "delivery kind": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "fct_crm_sale.promo_code": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_crm_sales",
+			          "ConceptualProperty": "promo_code"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "promo code": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "promo_code": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "promo id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "promo key": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "fct_crm_sale.current_status_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_crm_sales",
+			          "ConceptualProperty": "current_status_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "current status id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "current_status_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "status": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "current status": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "status id": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "current status identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "current status identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "current status identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "current category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "current importance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "current prestige": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "current prominence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "status identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "status identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "status identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "fct_crm_sale.current_status_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_crm_sales",
+			          "ConceptualProperty": "current_status_name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "current status name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "current_status_name": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "status": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "current status": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "status name": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "current category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "current importance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "current prestige": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "current prominence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "current status nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "current status title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "current status label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "current status tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "importance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "prestige": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ]
+			    },
+			    "fct_crm_sale.current_status_category": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_crm_sales",
+			          "ConceptualProperty": "current_status_category"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "current status category": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "current_status_category": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "category": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "status category": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "current status classification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "status classification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "current status class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "current status group": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "current status type": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "current status grouping": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "current status kind": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "classification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "status class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "status group": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "fct_crm_sale.is_executed": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_crm_sales",
+			          "ConceptualProperty": "is_executed"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "is executed": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "is_executed": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fct_crm_sale.is_refund": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_crm_sales",
+			          "ConceptualProperty": "is_refund"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "is refund": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "is_refund": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "refund": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "is repayment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "is reimbursement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "is compensation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "repayment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "reimbursement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "compensation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "is recompense": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "recompense": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "fct_crm_sale.is_cancelled": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_crm_sales",
+			          "ConceptualProperty": "is_cancelled"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "is cancelled": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "is_cancelled": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fct_crm_sale.delivery_day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_crm_sales",
+			          "ConceptualProperty": "delivery_days"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "delivery day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "delivery_days": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "fct_crm_sale_order_date_date_hierarchy_has_fct_crm_sale_order_date_day": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale.order_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "fct_crm_sale.order_date.date_hierarchy"
+			          }
+			        },
+			        "fct_crm_sale.order_date.day": {
+			          "Target": {
+			            "Entity": "fct_crm_sale.order_date.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale.order_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "fct_crm_sale.order_date.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "order_date_hierarchies_have_order_days"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_order_date_date_hierarchy_has_fct_crm_sale_order_date_month": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale.order_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "fct_crm_sale.order_date.date_hierarchy"
+			          }
+			        },
+			        "fct_crm_sale.order_date.month": {
+			          "Target": {
+			            "Entity": "fct_crm_sale.order_date.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale.order_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "fct_crm_sale.order_date.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "order_date_hierarchies_have_order_months"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_order_date_date_hierarchy_has_fct_crm_sale_order_date_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale.order_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "fct_crm_sale.order_date.date_hierarchy"
+			          }
+			        },
+			        "fct_crm_sale.order_date.quarter": {
+			          "Target": {
+			            "Entity": "fct_crm_sale.order_date.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale.order_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "fct_crm_sale.order_date.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "order_date_hierarchies_have_order_quarters"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_order_date_date_hierarchy_has_fct_crm_sale_order_date_year": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale.order_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "fct_crm_sale.order_date.date_hierarchy"
+			          }
+			        },
+			        "fct_crm_sale.order_date.year": {
+			          "Target": {
+			            "Entity": "fct_crm_sale.order_date.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale.order_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "fct_crm_sale.order_date.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "order_date_hierarchies_have_order_years"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_order_date_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale.order_date": {
+			          "Target": {
+			            "Entity": "fct_crm_sale.order_date"
+			          }
+			        },
+			        "fct_crm_sale.order_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "fct_crm_sale.order_date.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale.order_date"
+			            },
+			            "Object": {
+			              "Role": "fct_crm_sale.order_date.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "order_dates_have_order_date_hierarchies"
+			        }
+			      ]
+			    },
 			    "HB_date_comp_dim_date_date_hierarchy_has_HB_date_comp_dim_date_day": {
 			      "Binding": {
 			        "ConceptualEntity": "HB_Date_Comp"
@@ -6494,6 +8994,666 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "HB_date_basics_have_fct_events_real_sm"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_has_delivery_day": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "fct_crm_sale.delivery_day": {
+			          "Target": {
+			            "Entity": "fct_crm_sale.delivery_day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale"
+			            },
+			            "Object": {
+			              "Role": "fct_crm_sale.delivery_day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_crm_sales_have_delivery_days"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_has_is_cancelled": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "fct_crm_sale.is_cancelled": {
+			          "Target": {
+			            "Entity": "fct_crm_sale.is_cancelled"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale"
+			            },
+			            "Object": {
+			              "Role": "fct_crm_sale.is_cancelled"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_crm_sales_have_is_cancelled"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_has_is_refund": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "fct_crm_sale.is_refund": {
+			          "Target": {
+			            "Entity": "fct_crm_sale.is_refund"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale"
+			            },
+			            "Object": {
+			              "Role": "fct_crm_sale.is_refund"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_crm_sales_have_is_refunds"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_has_is_executed": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "fct_crm_sale.is_executed": {
+			          "Target": {
+			            "Entity": "fct_crm_sale.is_executed"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale"
+			            },
+			            "Object": {
+			              "Role": "fct_crm_sale.is_executed"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_crm_sales_have_is_executed"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_has_current_status_category": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "fct_crm_sale.current_status_category": {
+			          "Target": {
+			            "Entity": "fct_crm_sale.current_status_category"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale"
+			            },
+			            "Object": {
+			              "Role": "fct_crm_sale.current_status_category"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_crm_sales_have_current_status_categories"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_has_current_status_name": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "fct_crm_sale.current_status_name": {
+			          "Target": {
+			            "Entity": "fct_crm_sale.current_status_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale"
+			            },
+			            "Object": {
+			              "Role": "fct_crm_sale.current_status_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_crm_sales_have_current_status_names"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_has_current_status_id": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "fct_crm_sale.current_status_id": {
+			          "Target": {
+			            "Entity": "fct_crm_sale.current_status_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale"
+			            },
+			            "Object": {
+			              "Role": "fct_crm_sale.current_status_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_crm_sales_have_current_status_ids"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_has_promo_code": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "fct_crm_sale.promo_code": {
+			          "Target": {
+			            "Entity": "fct_crm_sale.promo_code"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale"
+			            },
+			            "Object": {
+			              "Role": "fct_crm_sale.promo_code"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_crm_sales_have_promo_codes"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_has_delivery_type": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "fct_crm_sale.delivery_type": {
+			          "Target": {
+			            "Entity": "fct_crm_sale.delivery_type"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale"
+			            },
+			            "Object": {
+			              "Role": "fct_crm_sale.delivery_type"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_crm_sales_have_delivery_types"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_has_delivery_type_id": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "fct_crm_sale.delivery_type_id": {
+			          "Target": {
+			            "Entity": "fct_crm_sale.delivery_type_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale"
+			            },
+			            "Object": {
+			              "Role": "fct_crm_sale.delivery_type_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_crm_sales_have_delivery_type_ids"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_has_payment_type": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "fct_crm_sale.payment_type": {
+			          "Target": {
+			            "Entity": "fct_crm_sale.payment_type"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale"
+			            },
+			            "Object": {
+			              "Role": "fct_crm_sale.payment_type"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_crm_sales_have_payment_types"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_has_payment_type_id": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "fct_crm_sale.payment_type_id": {
+			          "Target": {
+			            "Entity": "fct_crm_sale.payment_type_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale"
+			            },
+			            "Object": {
+			              "Role": "fct_crm_sale.payment_type_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_crm_sales_have_payment_type_ids"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_has_source_name": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "fct_crm_sale.source_name": {
+			          "Target": {
+			            "Entity": "fct_crm_sale.source_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale"
+			            },
+			            "Object": {
+			              "Role": "fct_crm_sale.source_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_crm_sales_have_source_names"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_has_source_id": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "fct_crm_sale.source_id": {
+			          "Target": {
+			            "Entity": "fct_crm_sale.source_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale"
+			            },
+			            "Object": {
+			              "Role": "fct_crm_sale.source_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_crm_sales_have_source_ids"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_has_unit_sold": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "fct_crm_sale.unit_sold": {
+			          "Target": {
+			            "Entity": "fct_crm_sale.unit_sold"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale"
+			            },
+			            "Object": {
+			              "Role": "fct_crm_sale.unit_sold"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_crm_sales_have_unit_sold"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_has_amount": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "fct_crm_sale.amount": {
+			          "Target": {
+			            "Entity": "fct_crm_sale.amount"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale"
+			            },
+			            "Object": {
+			              "Role": "fct_crm_sale.amount"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_crm_sales_have_amounts"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_has_is_new_customer": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "fct_crm_sale.is_new_customer": {
+			          "Target": {
+			            "Entity": "fct_crm_sale.is_new_customer"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale"
+			            },
+			            "Object": {
+			              "Role": "fct_crm_sale.is_new_customer"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_crm_sales_have_is_new_customers"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_has_user_nr": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "fct_crm_sale.user_nr": {
+			          "Target": {
+			            "Entity": "fct_crm_sale.user_nr"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale"
+			            },
+			            "Object": {
+			              "Role": "fct_crm_sale.user_nr"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_crm_sales_have_user_nr"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_has_order_date": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "fct_crm_sale.order_date": {
+			          "Target": {
+			            "Entity": "fct_crm_sale.order_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale"
+			            },
+			            "Object": {
+			              "Role": "fct_crm_sale.order_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_crm_sales_have_order_dates"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_has_order_nr": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "fct_crm_sale.order_nr": {
+			          "Target": {
+			            "Entity": "fct_crm_sale.order_nr"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale"
+			            },
+			            "Object": {
+			              "Role": "fct_crm_sale.order_nr"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_crm_sales_have_order_nr"
 			        }
 			      ]
 			    },
@@ -8765,6 +11925,48 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "fct_crm_sale_is_ordered_on_order_date": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "fct_crm_sale.order_date": {
+			          "Target": {
+			            "Entity": "fct_crm_sale.order_date"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "When": {
+			          "Role": "fct_crm_sale.order_date"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Verbs": [
+			              {
+			                "order": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "fct_crm_sale"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.9,
+			          "ID": "fct_crm_sales_are_ordered_on_order_dates"
+			        }
+			      ]
+			    },
 			    "HB_date_comp_is_dimmed_on_dim_date": {
 			      "Binding": {
 			        "ConceptualEntity": "HB_Date_Comp"
@@ -8888,6 +12090,106 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.9,
 			          "ID": "fct_events_real_sm_are_evented_on_event_dates"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_is_cancelled": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "fct_crm_sale.is_cancelled": {
+			          "Target": {
+			            "Entity": "fct_crm_sale.is_cancelled"
+			          }
+			        }
+			      },
+			      "Conditions": [
+			        {
+			          "Target": {
+			            "Role": "fct_crm_sale.is_cancelled"
+			          },
+			          "Operator": "Equals",
+			          "Value": {
+			            "Boolean": [
+			              true
+			            ]
+			          }
+			        }
+			      ],
+			      "Phrasings": [
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "fct_crm_sale"
+			            },
+			            "Adjectives": [
+			              {
+			                "cancelled": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ]
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "some_fct_crm_sales_are_cancelled_fct_crm_sales"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_is_executed": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "fct_crm_sale.is_executed": {
+			          "Target": {
+			            "Entity": "fct_crm_sale.is_executed"
+			          }
+			        }
+			      },
+			      "Conditions": [
+			        {
+			          "Target": {
+			            "Role": "fct_crm_sale.is_executed"
+			          },
+			          "Operator": "Equals",
+			          "Value": {
+			            "Boolean": [
+			              true
+			            ]
+			          }
+			        }
+			      ],
+			      "Phrasings": [
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "fct_crm_sale"
+			            },
+			            "Adjectives": [
+			              {
+			                "executed": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ]
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "some_fct_crm_sales_are_executed_fct_crm_sales"
 			        }
 			      ]
 			    }

@@ -37,28 +37,49 @@ Overview is built last — when all data sources are connected and pages are sta
 
 ## Page 2: CRM / Sales
 
-**Metrics (from client requirements):**
-- Revenue (выручка)
-- Orders (количество заказов)
-- AOV — Average Order Value (средняя корзина)
-- ASP — Average Selling Price (средняя цена единицы = revenue / units sold)
-- Conversion Rate — orders / sessions (GA4 sessions as denominator)
-- Gross Margin — requires cost price in order items table (TBC)
-- New Customers vs Returning Customers
-- Refunds (количество возвратов)
-- Refund Rate (%)
-- Delivery Time Avg (среднее время доставки)
-- Процент выкупа (delivered orders / total orders × 100%)
-- Porto / postal costs — requires field in orders table (TBC)
+**Not available (no data in CRM):**
+- Gross Margin — no cost_price in order_products table
+- Porto / postal costs — no field in orders table
+- Conversion Rate — needs GA4 join, handled on Traffic page
 
-**CRM tables in BigQuery:**
-- `orders` — main orders table
-- `order_items` — products inside orders (units, price, possibly cost)
-- `order_statuses` — status history (used for delivery time, buyout rate, refunds)
+**Layout:**
 
-**Open questions:**
-- [ ] Does `order_items` have a cost price column? (needed for Gross Margin)
-- [ ] Does `orders` have a Porto/postal costs column?
+```
+[ left panel: slicers ]  |  [ KPI cards row ]
+                          |  [ combo chart: Revenue bars + AOV line ] [ stacked bar: New vs Returning by month ]
+                          |  [ Revenue/Orders toggle ] [ donut: share by source ] [ bar: source ranked ]
+                          |  [ line: Refund Rate trend ] [ line: Avg Delivery Days trend ]
+```
+
+**Slicers (left panel):**
+- Date range (order_date)
+- Source (source_name) — multi-select
+- New / Returning customer
+- Delivery type
+- Payment type
+
+**KPI cards (top row):**
+`Revenue | Orders | AOV | ASP | New Customers % | Refund Rate % | Buyout Rate % | Avg Delivery Days`
+
+**Visuals — implementation tasks:**
+- [ ] KPI cards (8 cards)
+- [ ] Combo chart: Revenue (bars) + AOV (line) by day/week/month with drill-down
+- [ ] Stacked bar: Orders — New vs Returning by month
+- [ ] Field Parameter: Revenue / Orders toggle (shared by donut + bar)
+- [ ] Donut chart: share by source (top-5 + Other), switches via field parameter
+- [ ] Horizontal bar: source ranked by Revenue/Orders, switches via field parameter
+- [ ] Line chart: Refund Rate % trend by month
+- [ ] Line chart: Avg Delivery Days trend by month
+
+**DAX measures needed:**
+- `Revenue` = SUMX filtered on is_executed
+- `Orders` = COUNTROWS filtered on is_executed
+- `AOV` = Revenue / Orders
+- `ASP` = Revenue / SUM(units_sold)
+- `New Customers %` = DIVIDE(new orders, total orders)
+- `Refund Rate %` = DIVIDE(refund orders, executed + refund)
+- `Buyout Rate %` = DIVIDE(executed, executed + cancelled + refund)
+- `Avg Delivery Days` = AVERAGE(delivery_days)
 
 ---
 

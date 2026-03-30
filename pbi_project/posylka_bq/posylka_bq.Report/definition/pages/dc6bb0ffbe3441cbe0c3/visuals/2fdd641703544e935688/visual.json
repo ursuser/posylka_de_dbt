@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "b8ad2fae80f0391bbba4",
+  "name": "2fdd641703544e935688",
   "position": {
-    "x": 11.25,
-    "y": 413.75,
-    "z": 8000,
-    "height": 102.5,
-    "width": 237.5,
-    "tabOrder": 5000
+    "x": 16.674937965260547,
+    "y": 166.74937965260546,
+    "z": 3000,
+    "height": 123.87096774193549,
+    "width": 237.02233250620347,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,13 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "HB_Date_Comp"
+                      "Entity": "HB_Date_Basic"
                     }
                   },
                   "Property": "DimDate"
                 }
               },
-              "queryRef": "HB_Date_Comp.DimDate",
+              "queryRef": "HB_Date_Basic.DimDate",
               "nativeQueryRef": "DimDate",
               "active": true
             }
@@ -40,7 +40,7 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "HB_Date_Comp"
+                    "Entity": "HB_Date_Basic"
                   }
                 },
                 "Property": "DimDate"
@@ -82,7 +82,7 @@
                 "From": [
                   {
                     "Name": "h",
-                    "Entity": "HB_Date_Comp",
+                    "Entity": "HB_Date_Basic",
                     "Type": 0
                   }
                 ],

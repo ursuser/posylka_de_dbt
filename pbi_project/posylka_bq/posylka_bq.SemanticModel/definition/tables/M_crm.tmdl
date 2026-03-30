@@ -1,0 +1,107 @@
+table M_crm
+	lineageTag: e0000001-0000-0000-0000-000000000000
+
+	/// responds to status slicer
+	measure crm_revenue = SUM(fct_crm_sales[amount])
+		formatString: € #,##0.00
+		lineageTag: e1000001-0000-0000-0000-000000000001
+
+	/// responds to status slicer
+	measure crm_orders = COUNTROWS(fct_crm_sales)
+		formatString: #,##0
+		lineageTag: e1000002-0000-0000-0000-000000000002
+
+	/// responds to status slicer
+	measure crm_aov = DIVIDE([crm_revenue], [crm_orders], 0)
+		formatString: € #,##0.00
+		lineageTag: e1000003-0000-0000-0000-000000000003
+
+	/// responds to status slicer
+	measure crm_asp = DIVIDE([crm_revenue], SUM(fct_crm_sales[units_sold]), 0)
+		formatString: € #,##0.00
+		lineageTag: e1000004-0000-0000-0000-000000000004
+
+	/// responds to status slicer
+	measure crm_new_customers = CALCULATE(COUNTROWS(fct_crm_sales), fct_crm_sales[is_new_customer] = TRUE())
+		formatString: #,##0
+		lineageTag: e1000005-0000-0000-0000-000000000005
+
+	/// responds to status slicer
+	measure crm_returning_customers = [crm_orders] - [crm_new_customers]
+		formatString: #,##0
+		lineageTag: e1000006-0000-0000-0000-000000000006
+
+	/// responds to status slicer
+	measure crm_new_customers_pct = DIVIDE([crm_new_customers], [crm_orders], 0)
+		formatString: 0.0%
+		lineageTag: e1000007-0000-0000-0000-000000000007
+
+	/// ignores status slicer — always shows absolute refund count
+	measure crm_refunds =
+			CALCULATE(
+			    COUNTROWS(fct_crm_sales),
+			    REMOVEFILTERS(fct_crm_sales[current_status_category], fct_crm_sales[is_executed], fct_crm_sales[is_refund], fct_crm_sales[is_cancelled]),
+			    fct_crm_sales[is_refund] = TRUE()
+			)
+		formatString: #,##0
+		lineageTag: e1000008-0000-0000-0000-000000000008
+
+	/// ignores status slicer — ratio always computed across all statuses
+	measure crm_refund_rate =
+			VAR _refunds =
+			    CALCULATE(
+			        COUNTROWS(fct_crm_sales),
+			        REMOVEFILTERS(fct_crm_sales[current_status_category], fct_crm_sales[is_executed], fct_crm_sales[is_refund], fct_crm_sales[is_cancelled]),
+			        fct_crm_sales[is_refund] = TRUE()
+			    )
+			VAR _executed =
+			    CALCULATE(
+			        COUNTROWS(fct_crm_sales),
+			        REMOVEFILTERS(fct_crm_sales[current_status_category], fct_crm_sales[is_executed], fct_crm_sales[is_refund], fct_crm_sales[is_cancelled]),
+			        fct_crm_sales[is_executed] = TRUE()
+			    )
+			RETURN DIVIDE(_refunds, _executed + _refunds, 0)
+		formatString: 0.0%
+		lineageTag: e1000009-0000-0000-0000-000000000009
+
+	/// ignores status slicer — ratio always computed across all statuses
+	measure crm_buyout_rate =
+			VAR _executed =
+			    CALCULATE(
+			        COUNTROWS(fct_crm_sales),
+			        REMOVEFILTERS(fct_crm_sales[current_status_category], fct_crm_sales[is_executed], fct_crm_sales[is_refund], fct_crm_sales[is_cancelled]),
+			        fct_crm_sales[is_executed] = TRUE()
+			    )
+			VAR _refunds =
+			    CALCULATE(
+			        COUNTROWS(fct_crm_sales),
+			        REMOVEFILTERS(fct_crm_sales[current_status_category], fct_crm_sales[is_executed], fct_crm_sales[is_refund], fct_crm_sales[is_cancelled]),
+			        fct_crm_sales[is_refund] = TRUE()
+			    )
+			VAR _cancelled =
+			    CALCULATE(
+			        COUNTROWS(fct_crm_sales),
+			        REMOVEFILTERS(fct_crm_sales[current_status_category], fct_crm_sales[is_executed], fct_crm_sales[is_refund], fct_crm_sales[is_cancelled]),
+			        fct_crm_sales[is_cancelled] = TRUE()
+			    )
+			RETURN DIVIDE(_executed, _executed + _cancelled + _refunds, 0)
+		formatString: 0.0%
+		lineageTag: e1000010-0000-0000-0000-000000000010
+
+	/// responds to status slicer — nulls for non-executed are ignored by AVERAGE automatically
+	measure crm_avg_delivery_days = AVERAGE(fct_crm_sales[delivery_days])
+		formatString: 0.0
+		lineageTag: e1000011-0000-0000-0000-000000000011
+
+	partition M_crm = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMlSKjQUA", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", Int64.Type}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+

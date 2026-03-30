@@ -21,3 +21,7 @@ relationship a1b2c3d4-e5f6-7890-abcd-ef1234567890
 	fromColumn: fct_events_real_sm.event_date
 	toColumn: HB_Date_Comp.DimDate
 
+relationship 3dcbe000-3b01-6f01-f780-521805171540
+	fromColumn: fct_crm_sales.order_date
+	toColumn: HB_Date_Basic.DimDate
+

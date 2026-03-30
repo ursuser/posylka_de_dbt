@@ -1,0 +1,193 @@
+table fct_crm_sales
+	lineageTag: 7b27bc52-d9c6-4b9b-a9a8-6e18906f55c0
+
+	column order_nr
+		dataType: string
+		lineageTag: 83daf22f-ea18-48f4-8052-b7ddfb2d2f2a
+		summarizeBy: none
+		sourceColumn: order_nr
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: e3162f8b-4ce5-4903-ab61-45068648fff5
+		summarizeBy: none
+		sourceColumn: order_date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column user_nr
+		dataType: string
+		lineageTag: 99b9bd72-7294-48ab-96c6-56967fcad450
+		summarizeBy: none
+		sourceColumn: user_nr
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_new_customer
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 1360e9c2-50cb-47d9-a3aa-3db9bb80e3d4
+		summarizeBy: none
+		sourceColumn: is_new_customer
+
+		annotation SummarizationSetBy = Automatic
+
+	column amount
+		dataType: double
+		lineageTag: c66b518b-2b3e-4841-89bb-2ae93364bae0
+		summarizeBy: sum
+		sourceColumn: amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column units_sold
+		dataType: int64
+		formatString: 0
+		lineageTag: b3abc3cf-dc39-4a9e-a542-291c5d020e22
+		summarizeBy: sum
+		sourceColumn: units_sold
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_id
+		dataType: int64
+		formatString: 0
+		lineageTag: c2c9083c-13d6-4051-8dcf-333c157a0470
+		summarizeBy: sum
+		sourceColumn: source_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_name
+		dataType: string
+		lineageTag: 6deb6c47-9ccb-4337-a65e-58f983f08f78
+		summarizeBy: none
+		sourceColumn: source_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column payment_type_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 26a36368-4bb9-4c32-a3ba-1ddc4d0a9dba
+		summarizeBy: sum
+		sourceColumn: payment_type_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column payment_type
+		dataType: string
+		lineageTag: 34f67315-a153-4b58-b5c7-d1d44019f648
+		summarizeBy: none
+		sourceColumn: payment_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column delivery_type_id
+		dataType: int64
+		formatString: 0
+		lineageTag: c27089cb-a975-4ef2-960b-6f4bd8da2072
+		summarizeBy: sum
+		sourceColumn: delivery_type_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column delivery_type
+		dataType: string
+		lineageTag: f167e479-62aa-4fcb-8d15-90fde56ee99d
+		summarizeBy: none
+		sourceColumn: delivery_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column promo_code
+		dataType: string
+		lineageTag: 8dae6a84-9123-42d6-9b61-26e1f4596c2a
+		summarizeBy: none
+		sourceColumn: promo_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column current_status_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 45a6bd71-66cb-4cec-b244-6e8e5d7a09ee
+		summarizeBy: sum
+		sourceColumn: current_status_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column current_status_name
+		dataType: string
+		lineageTag: fde4bdee-498d-42dd-bd35-f7c5d1c49ee9
+		summarizeBy: none
+		sourceColumn: current_status_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column current_status_category
+		dataType: string
+		lineageTag: 8f3555af-e226-4400-af51-0651d7d9defe
+		summarizeBy: none
+		sourceColumn: current_status_category
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_executed
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 54894c79-7617-4fb7-90f4-b75526a96013
+		summarizeBy: none
+		sourceColumn: is_executed
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_refund
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 131761f0-eccd-40da-a1f3-59c34febd8af
+		summarizeBy: none
+		sourceColumn: is_refund
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_cancelled
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 32d90e63-7627-4060-8255-bc30ac2638a0
+		summarizeBy: none
+		sourceColumn: is_cancelled
+
+		annotation SummarizationSetBy = Automatic
+
+	column delivery_days
+		dataType: int64
+		formatString: 0
+		lineageTag: e46b495c-c366-45a1-9061-1d2ad1a76ce4
+		summarizeBy: sum
+		sourceColumn: delivery_days
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fct_crm_sales = m
+		mode: import
+		source =
+				let
+				    Source = GoogleBigQuery.Database([Implementation="2.0"]),
+				    #"posylka-dbt_Database" = Source{[Name="posylka-dbt",Kind="Database"]}[Data],
+				    dbt_prod_Schema = #"posylka-dbt_Database"{[Name="dbt_prod",Kind="Schema"]}[Data],
+				    fct_crm_sales_Table = dbt_prod_Schema{[Name="fct_crm_sales",Kind="Table"]}[Data]
+				in
+				    fct_crm_sales_Table
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
