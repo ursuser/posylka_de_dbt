@@ -42,7 +42,7 @@ with
                 )
             ) as session_id,
             min(event_timestamp) as session_start_at,
-            min(parse_date('%Y%m%d', event_date)) as event_date,
+            max(parse_date('%Y%m%d', event_date)) as event_date,
             min_by(
                 (
                     select value.string_value
@@ -412,6 +412,7 @@ with
             end as medium,
             case
                 when campaign is not null
+                    and not starts_with(campaign, '{')
                 then campaign
                 when srsltid is not null
                 then 'Shopping Free Listings'

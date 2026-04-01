@@ -5,7 +5,7 @@
 | # | Page | Data Source | Status |
 |---|------|-------------|--------|
 | 1 | Traffic | GA4 | done |
-| 2 | CRM / Sales | CRM (BigQuery) | next |
+| 2 | CRM / Sales | CRM (BigQuery) | in progress |
 | 3 | Cohorts | CRM | pending |
 | 4 | RFM | CRM | pending |
 | 5 | Google Ads | Google Ads (BigQuery) | pending |
@@ -64,7 +64,9 @@ Overview is built last — when all data sources are connected and pages are sta
 **Visuals — implementation tasks:**
 - [x] KPI cards (8 cards)
 - [x] Slicers (left panel: date, source, new/returning, delivery type, payment type)
-- [ ] Combo chart: Revenue (bars) + AOV (line) by day/week/month with drill-down
+- [x] Combo chart: Revenue (bars) + AOV (line) with period toggle (Day/Week/Month/Year)
+- [x] Period Field Parameter: Day / Week / Month / Year toggle on combo chart
+- [x] Scatter/bubble chart: Orders (X) vs AOV (Y), sized by Revenue, by source_name
 - [ ] Stacked bar: Orders — New vs Returning by month
 - [ ] Field Parameter: Revenue / Orders toggle (shared by donut + bar)
 - [ ] Donut chart: share by source (top-5 + Other), switches via field parameter
@@ -94,7 +96,11 @@ Overview is built last — when all data sources are connected and pages are sta
 - Revenue by cohort over time
 - Avg orders per customer by cohort
 
-**Data source:** CRM orders table (customer_id + order_date)
+**Slicers:**
+- Acquisition source/medium (`acquisition_sm`)
+- Acquisition campaign (`acquisition_campaign`)
+
+**Data source:** `fct_cohorts` — includes acquisition dimensions from GA4 + CRM fallback
 
 ---
 
@@ -164,6 +170,8 @@ Built last, after all pages are stable.
 | `fct_crm_sales` | CRM | page 2: Sales (daily) | done |
 | `fct_cohorts` | CRM | page 3: Cohorts — month + week (weekly) | done |
 | `fct_rfm` | CRM | page 4: RFM segments (weekly) | done |
+| `int_ga4_purchases` | GA4 | purchase events with attribution (last/first/lndc click) | done |
+| `int_crm__order_acquisition` | CRM + GA4 | order-level acquisition source (view) | done |
 | `stg_google_ads` | Google Ads BQ export | page 5 | pending |
 | `stg_search_console` | SC BQ export | page 6 | pending |
 

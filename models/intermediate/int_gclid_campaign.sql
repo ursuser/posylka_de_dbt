@@ -15,8 +15,9 @@ with
             c.campaign_name
         from {{ source("google_ads_386_715_7751", "p_ads_ClickStats_3867157751") }} cs
         left join (
-            select distinct campaign_id, campaign_name
+            select campaign_id, max(campaign_name) as campaign_name
             from {{ source("google_ads_386_715_7751", "p_ads_Campaign_3867157751") }}
+            group by campaign_id
         ) c
             on cs.campaign_id = c.campaign_id
         where cs.click_view_gclid is not null

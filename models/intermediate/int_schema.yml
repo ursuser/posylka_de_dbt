@@ -1,6 +1,27 @@
 version: 2
 
 models:
+  - name: int_ga4_purchases
+    config:
+      tags: ['daily', 'ga4']
+    description: ga4 purchase events with attribution (last-click, first-click, last-non-direct-click), one row per transaction_id
+    columns:
+      - name: transaction_id
+        tests:
+          - not_null
+          - unique
+      - name: event_date
+        tests:
+          - not_null
+
+  - name: int_gclid_campaign
+    description: gclid to campaign name mapping, one row per gclid
+    columns:
+      - name: gclid
+        tests:
+          - not_null
+          - unique
+
   - name: int_session_real_sm
     config:
       tags: ['daily', 'ga4']
@@ -12,3 +33,4 @@ models:
       - name: session_id
         tests:
           - not_null
+          - unique
