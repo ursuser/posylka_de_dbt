@@ -5,9 +5,9 @@ orders as (
         order_nr,
         user_nr,
         order_date,
-        amount,
-        is_executed
+        amount
     from {{ ref('fct_crm_sales') }}
+    where is_executed
 ),
 
 -- acquisition source of each user's first order
@@ -77,7 +77,6 @@ orders_offset_month as (
         ord.amount
     from orders as ord
     inner join customer_cohort_month as coh on coh.user_nr = ord.user_nr
-    where ord.is_executed
 ),
 
 agg_month as (
@@ -178,7 +177,6 @@ orders_offset_week as (
         ord.amount
     from orders as ord
     inner join customer_cohort_week as coh on coh.user_nr = ord.user_nr
-    where ord.is_executed
 ),
 
 agg_week as (
