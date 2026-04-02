@@ -22,4 +22,15 @@ def posylka_de_dbt_assets(context: AssetExecutionContext, dbt: DbtCliResource):
     if result.returncode != 0:
         raise RuntimeError(f"git pull failed: {result.stderr.strip()}")
 
+    context.log.info("regenerating dbt manifest...")
+    parse_result = subprocess.run(
+        ["dbt", "parse", "--profiles-dir", "/root/.dbt", "--target", "prod"],
+        cwd=str(dbt_project_dir),
+        capture_output=True,
+        text=True,
+    )
+    context.log.info(f"dbt parse: {parse_result.stdout.strip()}")
+    if parse_result.returncode != 0:
+        raise RuntimeError(f"dbt parse failed: {parse_result.stderr.strip()}")
+
     yield from dbt.cli(["build"], context=context).stream()
