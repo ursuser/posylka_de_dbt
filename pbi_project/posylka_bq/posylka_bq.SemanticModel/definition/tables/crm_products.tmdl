@@ -1,0 +1,38 @@
+table crm_products
+	lineageTag: fd488452-2014-434b-8139-d260e31624eb
+
+	column product_name
+		lineageTag: 2da033e0-0a0b-4e34-976f-853c82c1fa39
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [product_name]
+
+		annotation SummarizationSetBy = Automatic
+
+	column category_name
+		lineageTag: d67cf04c-6251-4ac6-ac91-705ce817c811
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [category_name]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition crm_products = calculated
+		mode: import
+		source = ```
+				GROUPBY(                                                                                                                                      
+				      UNION(
+				          SELECTCOLUMNS(fct_crm_item_cross_sell,
+				              "product_name", [item1_name],
+				              "category_name", [item1_category_name]),                                                                                          
+				          SELECTCOLUMNS(fct_crm_item_cross_sell,
+				              "product_name", [item2_name],                                                                                                      
+				              "category_name", [item2_category_name])                                                                                           
+				      ),
+				      [product_name],                                                                                                                           
+				      "category_name", MAXX(CURRENTGROUP(), [category_name])
+				  )
+				```
+
+	annotation PBI_Id = be8ce95a16f347eb924aa7efad16528f
+

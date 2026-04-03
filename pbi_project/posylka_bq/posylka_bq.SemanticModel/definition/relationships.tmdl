@@ -40,3 +40,17 @@ relationship 73ebed34-dc1c-40ee-aa2b-8ff7df4d90db
 	fromColumn: fct_cohorts.cohort_period
 	toColumn: LocalDateTable_1c769152-4f19-4cc3-8a41-1b0d550a448c.Date
 
+relationship 5dd21d0c-23e0-471c-a4a1-17965719726c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fct_crm_item_cross_sell.order_month
+	toColumn: LocalDateTable_9d386990-4ca9-41fa-ab48-f14ad06028a2.Date
+
+relationship 5630a887-5ead-ad98-3d97-8cd49e270199
+	fromColumn: fct_crm_item_cross_sell.item1_name
+	toColumn: crm_products.product_name
+
+relationship beb1dc24-8a72-bcbd-e43c-884f6094fcc8
+	isActive: false
+	fromColumn: fct_crm_item_cross_sell.item2_name
+	toColumn: crm_products.product_name
+

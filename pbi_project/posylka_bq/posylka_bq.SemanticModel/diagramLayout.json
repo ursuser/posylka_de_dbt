@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 791.54557108326526,
+        "x": 1525.9115045953597,
         "y": 0
       },
       "nodes": [
@@ -141,12 +141,51 @@
         {
           "location": {
             "x": 2451.9344768761694,
-            "y": 377.228983954741
+            "y": 614.91688915254872
           },
           "nodeIndex": "cohort_metric",
           "nodeLineageTag": "406c54d4-7bee-4a28-89f7-0e9b792a966a",
           "size": {
             "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2997.16693872093,
+            "y": 0
+          },
+          "nodeIndex": "fct_crm_item_cross_sell",
+          "nodeLineageTag": "e442f01a-01f9-4adc-bfcb-f9a5191db1d1",
+          "size": {
+            "height": 431.17681560445038,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3054.6907271645282,
+            "y": 660.21910707122015
+          },
+          "nodeIndex": "M_items",
+          "nodeLineageTag": "1ca304c8-42cf-47c8-834b-947d301cdbd9",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2543.7816479888406,
+            "y": 6.7876504352948643
+          },
+          "nodeIndex": "crm_products",
+          "nodeLineageTag": "fd488452-2014-434b-8139-d260e31624eb",
+          "size": {
+            "height": 200,
             "width": 234
           },
           "zIndex": 0

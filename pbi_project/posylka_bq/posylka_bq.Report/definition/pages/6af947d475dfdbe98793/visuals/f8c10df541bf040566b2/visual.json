@@ -1,0 +1,234 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "f8c10df541bf040566b2",
+  "position": {
+    "x": 21.970021413276232,
+    "y": 540,
+    "z": 0,
+    "height": 523.81156316916486,
+    "width": 1876.7023554603854,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_crm_item_cross_sell"
+                    }
+                  },
+                  "Property": "item1_name"
+                }
+              },
+              "queryRef": "fct_crm_item_cross_sell.item1_name",
+              "nativeQueryRef": "item1_name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_crm_item_cross_sell"
+                    }
+                  },
+                  "Property": "item2_name"
+                }
+              },
+              "queryRef": "fct_crm_item_cross_sell.item2_name",
+              "nativeQueryRef": "item2_name"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "M_items"
+                    }
+                  },
+                  "Property": "items_bought_together"
+                }
+              },
+              "queryRef": "M_items.items_bought_together",
+              "nativeQueryRef": "bought together",
+              "displayName": "bought together"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "M_items"
+                    }
+                  },
+                  "Property": "items_pair_revenue"
+                }
+              },
+              "queryRef": "M_items.items_pair_revenue",
+              "nativeQueryRef": "pair revenue",
+              "displayName": "pair revenue"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "M_items"
+                    }
+                  },
+                  "Property": "items_confidence"
+                }
+              },
+              "queryRef": "M_items.items_confidence",
+              "nativeQueryRef": "confidence",
+              "displayName": "confidence"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "M_items"
+                  }
+                },
+                "Property": "items_bought_together"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "672.0691933762744D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "fct_crm_item_cross_sell.item1_name"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "164.0981633353466D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "M_items.items_pair_revenue"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "703.6023851469233D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "fct_crm_item_cross_sell.item2_name"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "171.88554996235968D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "M_items.items_bought_together"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "107.51939179577677D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "M_items.items_confidence"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "159b804357554f3ebd9e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_crm_item_cross_sell"
+              }
+            },
+            "Property": "item1_name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0d217b8ebc836f076aaa",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_crm_item_cross_sell"
+              }
+            },
+            "Property": "item2_name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "100bb3d0d7dd6e1906e6",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "M_items"
+              }
+            },
+            "Property": "items_pair_revenue"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+table items_times_revenue
+	lineageTag: d4b18f4e-534d-4531-850c-18648e86af4a
+
+	column items_times_revenue
+		lineageTag: f8b8194d-38e6-45a8-9e8b-d2b0d75e7eef
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'items_times_revenue Order'
+
+		relatedColumnDetails
+			groupByColumn: 'items_times_revenue Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'items_times_revenue Fields'
+		isHidden
+		lineageTag: eecfd018-5235-45ff-9ef1-f87194ba1a1c
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'items_times_revenue Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'items_times_revenue Order'
+		isHidden
+		formatString: 0
+		lineageTag: 7ed880f7-3da1-4aa8-ac1e-23b102ab89e2
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition items_times_revenue = calculated
+		mode: import
+		source =
+				{
+				    ("items_pair_revenue", NAMEOF('M_items'[items_pair_revenue]), 0),
+				    ("items_times_bought_together", NAMEOF('M_items'[items_bought_together]), 1)
+				}
+
+	annotation PBI_Id = 7b74db8274434d68bd3dcc521ef0dc83
+

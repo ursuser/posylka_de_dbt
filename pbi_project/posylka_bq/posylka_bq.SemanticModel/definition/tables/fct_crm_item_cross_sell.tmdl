@@ -1,0 +1,149 @@
+table fct_crm_item_cross_sell
+	lineageTag: e442f01a-01f9-4adc-bfcb-f9a5191db1d1
+
+	column item1_sku
+		dataType: string
+		lineageTag: d3aad6fa-30b5-44ab-846f-d10f3a6aeb7a
+		summarizeBy: none
+		sourceColumn: item1_sku
+
+		annotation SummarizationSetBy = Automatic
+
+	column item1_name
+		dataType: string
+		lineageTag: 5c2313cc-3fdf-42f4-964c-24036de23cbc
+		summarizeBy: none
+		sourceColumn: item1_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column item1_category_name
+		dataType: string
+		lineageTag: b4ef7a8f-683d-489d-8ace-ca53e45f7f4b
+		summarizeBy: none
+		sourceColumn: item1_category_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column item2_sku
+		dataType: string
+		lineageTag: 80e655f1-a85d-477b-aaf9-c4f5e088fa0a
+		summarizeBy: none
+		sourceColumn: item2_sku
+
+		annotation SummarizationSetBy = Automatic
+
+	column item2_name
+		dataType: string
+		lineageTag: 48fc1b6c-cac4-4e61-a032-e51d965f2748
+		summarizeBy: none
+		sourceColumn: item2_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column item2_category_name
+		dataType: string
+		lineageTag: 300cccf7-3b3b-4434-9c41-870c31472e77
+		summarizeBy: none
+		sourceColumn: item2_category_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_month
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 3736d7e3-4683-4dbc-be88-e826607cef54
+		summarizeBy: none
+		sourceColumn: order_month
+
+		variation Variation
+			isDefault
+			relationship: 5dd21d0c-23e0-471c-a4a1-17965719726c
+			defaultHierarchy: LocalDateTable_9d386990-4ca9-41fa-ab48-f14ad06028a2.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column times_bought_together
+		dataType: int64
+		formatString: 0
+		lineageTag: 4358c48d-a8d9-47dd-afd4-0cec0caae83d
+		summarizeBy: sum
+		sourceColumn: times_bought_together
+
+		annotation SummarizationSetBy = Automatic
+
+	column pair_revenue
+		dataType: double
+		lineageTag: 62970dc3-65c0-4f81-95ae-dc18c8792ca3
+		summarizeBy: sum
+		sourceColumn: pair_revenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column item1_total_orders
+		dataType: int64
+		formatString: 0
+		lineageTag: 1a8a4ea8-3286-4a2f-a8ed-928fb6f783a8
+		summarizeBy: sum
+		sourceColumn: item1_total_orders
+
+		annotation SummarizationSetBy = Automatic
+
+	column item1_avg_price
+		dataType: double
+		lineageTag: 28e45b6b-7bdf-429f-ac69-e86b0f730d41
+		summarizeBy: sum
+		sourceColumn: item1_avg_price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column item2_total_orders
+		dataType: int64
+		formatString: 0
+		lineageTag: 2cce56c7-a614-4ee3-b96d-101385da0b0e
+		summarizeBy: sum
+		sourceColumn: item2_total_orders
+
+		annotation SummarizationSetBy = Automatic
+
+	column item2_avg_price
+		dataType: double
+		lineageTag: 6b2c061c-c7f8-43c1-bf86-31c7329de530
+		summarizeBy: sum
+		sourceColumn: item2_avg_price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pair_label =
+			LEFT(fct_crm_item_cross_sell[item1_name], 25)
+			      & " + "
+			      & LEFT(fct_crm_item_cross_sell[item2_name], 25)
+		lineageTag: 100873dc-94a5-4933-85f0-08dc3d2b71f7
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fct_crm_item_cross_sell = m
+		mode: import
+		source =
+				let
+				    Source = GoogleBigQuery.Database([Implementation="2.0"]),
+				    #"posylka-dbt_Database" = Source{[Name="posylka-dbt",Kind="Database"]}[Data],
+				    dbt_prod_Schema = #"posylka-dbt_Database"{[Name="dbt_prod",Kind="Schema"]}[Data],
+				    fct_crm_item_cross_sell_Table = dbt_prod_Schema{[Name="fct_crm_item_cross_sell",Kind="Table"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(fct_crm_item_cross_sell_Table, each true)
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

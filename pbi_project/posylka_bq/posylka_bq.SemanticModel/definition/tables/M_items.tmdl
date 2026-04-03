@@ -1,0 +1,54 @@
+table M_items
+	lineageTag: 1ca304c8-42cf-47c8-834b-947d301cdbd9
+
+	measure items_bought_together = ```
+			
+			  VAR t1 =
+			      CALCULATE(SUM(fct_crm_item_cross_sell[times_bought_together]))
+			  VAR t2 =
+			      CALCULATE(
+			          SUM(fct_crm_item_cross_sell[times_bought_together]),
+			          USERELATIONSHIP(crm_products[product_name], fct_crm_item_cross_sell[item2_name])
+			      )
+			  RETURN t1 + t2
+			```
+		formatString: 0
+		lineageTag: bc58d174-cbc8-4a2c-9d24-a2a77d4b03f3
+
+	measure items_pair_revenue = ```
+			
+			  VAR r1 =
+			      CALCULATE(SUM(fct_crm_item_cross_sell[pair_revenue]))
+			  VAR r2 =
+			      CALCULATE(
+			          SUM(fct_crm_item_cross_sell[pair_revenue]),
+			          USERELATIONSHIP(crm_products[product_name], fct_crm_item_cross_sell[item2_name])
+			      )
+			  RETURN r1 + r2
+			```
+		lineageTag: 95fe25d8-3df3-42aa-9b7f-c4c3a6b655ac
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure items_confidence = ```
+			
+			  DIVIDE(
+			      SUM(fct_crm_item_cross_sell[times_bought_together]),
+			      SUM(fct_crm_item_cross_sell[item1_total_orders])
+			  )
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 5e0dd3c6-58bb-4d89-8259-4ba4a3c3c37e
+
+	partition M_items = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+
