@@ -22,17 +22,17 @@ table M_crm
 		lineageTag: e1000004-0000-0000-0000-000000000004
 
 	/// responds to status slicer
-	measure crm_new_customers = CALCULATE(COUNTROWS(fct_crm_sales), fct_crm_sales[is_new_customer] = TRUE())
+	measure crm_new_customers = CALCULATE(DISTINCTCOUNT(fct_crm_sales[user_nr]), fct_crm_sales[is_new_customer] = TRUE())
 		formatString: #,##0
 		lineageTag: e1000005-0000-0000-0000-000000000005
 
 	/// responds to status slicer
-	measure crm_returning_customers = [crm_orders] - [crm_new_customers]
+	measure crm_returning_customers = [crm_customers] - [crm_new_customers]
 		formatString: #,##0
 		lineageTag: e1000006-0000-0000-0000-000000000006
 
 	/// responds to status slicer
-	measure crm_new_customers_pct = DIVIDE([crm_new_customers], [crm_orders], 0)
+	measure crm_new_customers_pct = DIVIDE([crm_new_customers], [crm_customers], 0)
 		formatString: 0.0%
 		lineageTag: e1000007-0000-0000-0000-000000000007
 
@@ -92,6 +92,10 @@ table M_crm
 	measure crm_avg_delivery_days = AVERAGE(fct_crm_sales[delivery_days])
 		formatString: 0.0
 		lineageTag: e1000011-0000-0000-0000-000000000011
+
+	measure crm_customers = DISTINCTCOUNT(fct_crm_sales[user_nr])
+		formatString: 0
+		lineageTag: 5b796267-3c7c-4b40-b24e-3f920f028656
 
 	partition M_crm = m
 		mode: import

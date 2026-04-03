@@ -3,11 +3,11 @@
   "name": "cc010000000000000001",
   "position": {
     "x": 0,
-    "y": 1.4263092284516536,
+    "y": 2.2536082775404571,
     "z": 0,
-    "height": 83.589174685895628,
-    "width": 229.45386531486255,
-    "tabOrder": 7000
+    "height": 84.452284172371819,
+    "width": 194.25996704899327,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "cardVisual",
@@ -235,5 +235,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "b529421134c3e4917cbc"
+  "parentGroupName": "18ed2fd797e59be4c33f"
 }

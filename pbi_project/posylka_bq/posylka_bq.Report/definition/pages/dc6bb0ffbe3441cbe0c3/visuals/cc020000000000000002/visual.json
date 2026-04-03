@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "cc020000000000000002",
   "position": {
-    "x": 238.32777170825506,
-    "y": 0,
+    "x": 356.92099034538376,
+    "y": 2.4979807465053927,
     "z": 1000,
-    "height": 86.7237687366167,
-    "width": 163.53341782108987,
-    "tabOrder": 5000
+    "height": 84.452284172371819,
+    "width": 155.40797363919464,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,14 +23,32 @@
                       "Entity": "M_crm"
                     }
                   },
-                  "Property": "crm_orders"
+                  "Property": "crm_customers"
                 }
               },
-              "queryRef": "M_crm.crm_orders",
-              "nativeQueryRef": "crm_orders"
+              "queryRef": "M_crm.Customers",
+              "nativeQueryRef": "crm_customers"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "M_crm"
+                  }
+                },
+                "Property": "crm_customers"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
@@ -154,7 +172,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Orders'"
+                  "Value": "'Customers'"
                 }
               }
             },
@@ -238,5 +256,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "b529421134c3e4917cbc"
+  "parentGroupName": "18ed2fd797e59be4c33f"
 }

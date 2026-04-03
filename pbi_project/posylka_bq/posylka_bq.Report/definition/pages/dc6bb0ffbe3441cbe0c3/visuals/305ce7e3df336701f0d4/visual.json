@@ -27,8 +27,9 @@
                 }
               },
               "queryRef": "fct_crm_sales.is_new_customer",
-              "nativeQueryRef": "is_new_customer",
-              "active": true
+              "nativeQueryRef": "is_new_customers",
+              "active": true,
+              "displayName": "is_new_customers"
             }
           ]
         }
@@ -114,7 +115,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'new or returning'"
+                  "Value": "'new customers'"
                 }
               }
             },

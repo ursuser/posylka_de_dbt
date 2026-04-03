@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "a06fe6e6db8a012e0214",
   "position": {
-    "x": 874.45544554455444,
-    "y": 551.28712871287132,
-    "z": 7000,
-    "height": 500.59405940594058,
-    "width": 1031.2871287128714,
-    "tabOrder": 6000
+    "x": 796.70235546038543,
+    "y": 551.5631691648822,
+    "z": 6000,
+    "height": 509.93576017130619,
+    "width": 1108.9079229122055,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "scatterChart",

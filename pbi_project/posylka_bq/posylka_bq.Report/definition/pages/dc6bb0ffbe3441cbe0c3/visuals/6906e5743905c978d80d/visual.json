@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "cc040000000000000004",
+  "name": "6906e5743905c978d80d",
   "position": {
-    "x": 926.5531832472434,
-    "y": 0,
-    "z": 4000,
-    "height": 89.03640256959315,
-    "width": 149.3330267450383,
-    "tabOrder": 5000
+    "x": 205.15539108835779,
+    "y": 2.4979807465053927,
+    "z": 2000,
+    "height": 84,
+    "width": 140.83847611052013,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,11 +23,11 @@
                       "Entity": "M_crm"
                     }
                   },
-                  "Property": "crm_asp"
+                  "Property": "crm_orders"
                 }
               },
-              "queryRef": "M_crm.crm_asp",
-              "nativeQueryRef": "crm_asp"
+              "queryRef": "M_crm.crm_orders",
+              "nativeQueryRef": "crm_orders"
             }
           ]
         }
@@ -91,6 +91,22 @@
           }
         }
       ],
+      "divider": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
       "outline": [
         {
           "properties": {
@@ -138,7 +154,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'ASP'"
+                  "Value": "'Orders'"
                 }
               }
             },
