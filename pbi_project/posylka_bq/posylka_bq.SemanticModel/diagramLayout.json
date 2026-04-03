@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 497.84474569299891,
+        "x": 0,
         "y": 0
       },
       "nodes": [
@@ -121,6 +121,19 @@
           "nodeLineageTag": "c0b32c15-be0b-4e91-a73e-6b7eb3b1af64",
           "size": {
             "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2167.9344768761694,
+            "y": 303.228983954741
+          },
+          "nodeIndex": "fct_cohorts",
+          "nodeLineageTag": "24e4aeb8-5b8b-44f3-85cb-39a2fa0f74ee",
+          "size": {
+            "height": 300,
             "width": 234
           },
           "zIndex": 0

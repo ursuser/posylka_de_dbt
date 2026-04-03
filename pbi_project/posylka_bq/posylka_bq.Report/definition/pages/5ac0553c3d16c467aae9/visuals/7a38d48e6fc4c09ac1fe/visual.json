@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "3faf369580248af009c2",
+  "name": "7a38d48e6fc4c09ac1fe",
   "position": {
-    "x": 354.85148514851488,
-    "y": 551.28712871287132,
-    "z": 6000,
-    "height": 500.59405940594058,
-    "width": 500.59405940594058,
-    "tabOrder": 4000
+    "x": 1173.75,
+    "y": 11.25,
+    "z": 5001,
+    "height": 348.75,
+    "width": 730,
+    "tabOrder": 5001
   },
   "visual": {
-    "visualType": "donutChart",
+    "visualType": "barChart",
     "query": {
       "queryState": {
         "Category": {
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "fct_crm_sales"
+                      "Entity": "fct_cohorts"
                     }
                   },
-                  "Property": "source_name"
+                  "Property": "cohort_label"
                 }
               },
-              "queryRef": "fct_crm_sales.source_name",
-              "nativeQueryRef": "source_name",
+              "queryRef": "fct_cohorts.cohort_label",
+              "nativeQueryRef": "Count of cohort_label",
               "active": true
             }
           ]
@@ -36,54 +36,28 @@
           "projections": [
             {
               "field": {
-                "Measure": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "M_crm"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_cohorts"
+                        }
+                      },
+                      "Property": "cohort_size"
                     }
                   },
-                  "Property": "crm_orders"
+                  "Function": 0
                 }
               },
-              "queryRef": "M_crm.crm_orders",
-              "nativeQueryRef": "crm_orders"
+              "queryRef": "Sum(fct_cohorts.cohort_size)",
+              "nativeQueryRef": "cohort_size"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "M_crm"
-                  }
-                },
-                "Property": "crm_orders"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "objects": {
-      "legend": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
       "labels": [
         {
           "properties": {
@@ -97,13 +71,26 @@
           }
         }
       ],
-      "slices": [
+      "dataPoint": [
         {
           "properties": {
-            "innerRadiusRatio": {
+            "borderShow": {
               "expr": {
                 "Literal": {
-                  "Value": "35L"
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "innerPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "16L"
                 }
               }
             }
@@ -125,20 +112,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'orders by source'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "visualTooltip": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
+                  "Value": "'cohorts size'"
                 }
               }
             }

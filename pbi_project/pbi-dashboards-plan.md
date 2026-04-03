@@ -6,7 +6,7 @@
 |---|------|-------------|--------|
 | 1 | Traffic | GA4 | done |
 | 2 | CRM / Sales | CRM (BigQuery) | in progress |
-| 3 | Cohorts | CRM | pending |
+| 3 | Cohorts | CRM | done |
 | 4 | RFM | CRM | pending |
 | 5 | Google Ads | Google Ads (BigQuery) | pending |
 | 6 | Organic / SEO | Search Console (BigQuery) | pending |
@@ -21,9 +21,10 @@ Overview is built last — when all data sources are connected and pages are sta
 **Current state:** built, working. Needs the following changes:
 
 **Changes:**
-- [ ] Remove scatter plot (orders vs AOV by channel) — belongs on Ads page
-- [ ] Add funnel visual (replacing scatter plot): Sessions → View Item → Add to Cart → Begin Checkout → Purchase
-- [ ] Add KPI cards: CR (buyers / users), ARPPU (revenue / buyers), Orders per Buyer (orders / buyers)
+- [x] Remove scatter plot (orders vs AOV by channel) — belongs on Ads page
+- [x] Add funnel visual (replacing scatter plot): Sessions → View Item → Add to Cart → Begin Checkout → Purchase
+- [x] Add KPI cards: CR (buyers / users), ARPPU (revenue / buyers)
+- Orders per Buyer — DAX measure added, KPI card not displayed (inferred from orders + buyers)
 
 **KPI cards (final set):**
 `users | buyers | orders | revenue | AOV | CR | ARPPU | orders/buyer`
@@ -69,7 +70,7 @@ Overview is built last — when all data sources are connected and pages are sta
 - [x] Scatter/bubble chart: Orders (X) vs AOV (Y), sized by Revenue, by source_name
 - [ ] Stacked bar: Orders — New vs Returning by month
 - [ ] Field Parameter: Revenue / Orders toggle (shared by donut + bar)
-- [ ] Donut chart: share by source (top-5 + Other), switches via field parameter
+- [x] Donut chart: orders by source (currently orders only, no toggle yet)
 - [ ] Horizontal bar: source ranked by Revenue/Orders, switches via field parameter
 - [ ] Line chart: Refund Rate % trend by month
 - [ ] Line chart: Avg Delivery Days trend by month
@@ -88,17 +89,16 @@ Overview is built last — when all data sources are connected and pages are sta
 
 ## Page 3: Cohorts
 
-**Goal:** retention analysis — how many customers return after first purchase.
+**Status: done**
 
-**Metrics:**
-- Cohort month = month of first purchase
-- Retention rate by month (month 0, 1, 2, ...)
-- Revenue by cohort over time
-- Avg orders per customer by cohort
-
-**Slicers:**
-- Acquisition source/medium (`acquisition_sm`)
-- Acquisition campaign (`acquisition_campaign`)
+**Built:**
+- Cohort period slicer (Last N Months/Weeks)
+- Source/campaign slicer
+- Month / Week toggle
+- Retention rate / Retained customers toggle
+- Line chart: retention rate by period
+- Bar chart: cohort size
+- Cohort matrix table (heatmap)
 
 **Data source:** `fct_cohorts` — includes acquisition dimensions from GA4 + CRM fallback
 

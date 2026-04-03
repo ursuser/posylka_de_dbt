@@ -49,6 +49,27 @@ table M
 		formatString: #,##0
 		lineageTag: c1000004-0000-0000-0000-000000000004
 
+	measure retention_rate = ```
+			
+			  DIVIDE(                                                                                                                                                                       
+			      SUM(fct_cohorts[retained_customers]),                                                                                                                                     
+			      SUM(fct_cohorts[cohort_size])
+			  )
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: b65a87c4-727e-405f-9ba0-2498f1d5dc21
+
+	measure retained_customers = SUM(fct_cohorts[retained_customers])
+		formatString: 0
+		lineageTag: a6bf625b-a3c8-4463-b0bd-3396abf7a6ea
+
+	measure orders_per_user = ```
+			DIVIDE([Orders], [Users], 0)  
+			```
+		lineageTag: 30fd6bb6-54b9-4e08-80d1-70e20f830a03
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition M = m
 		mode: import
 		source =

@@ -1,0 +1,48 @@
+table cohort_metric
+	lineageTag: 406c54d4-7bee-4a28-89f7-0e9b792a966a
+
+	column cohort_metric
+		lineageTag: 6671a065-e6fe-42d6-9679-c7735e27f17d
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'cohort_metric Order'
+
+		relatedColumnDetails
+			groupByColumn: 'cohort_metric Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'cohort_metric Fields'
+		isHidden
+		lineageTag: 5bda6332-4dac-4038-9f89-1bed851030f4
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'cohort_metric Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'cohort_metric Order'
+		isHidden
+		formatString: 0
+		lineageTag: 034e44fc-9142-4a4f-a6a9-14a57293be3a
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition cohort_metric = calculated
+		mode: import
+		source =
+				{
+				    ("retention_rate", NAMEOF('M'[retention_rate]), 0),
+				    ("retained_customers", NAMEOF(M[retained_customers]), 1)
+				}
+
+	annotation PBI_Id = 1317ea9c4ba14c9ba5348b6f93d30004
+

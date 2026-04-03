@@ -35,3 +35,8 @@ relationship e0b72e55-f896-428f-b76a-b57f78429dfe
 	fromColumn: HB_Date_Basic.MonthStart
 	toColumn: LocalDateTable_f07212e3-44b3-4f32-9850-8222fa3e11d6.Date
 
+relationship 73ebed34-dc1c-40ee-aa2b-8ff7df4d90db
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fct_cohorts.cohort_period
+	toColumn: LocalDateTable_1c769152-4f19-4cc3-8a41-1b0d550a448c.Date
+

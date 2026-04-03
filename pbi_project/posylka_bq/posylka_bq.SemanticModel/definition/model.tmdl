@@ -10,7 +10,7 @@ annotation PBI_ProTooling = ["DevMode"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["fct_events_real_sm","M","HB_Date_Basic","HB_Date_Comp","M_prev","fct_crm_sales","M_crm"]
+annotation PBI_QueryOrder = ["fct_events_real_sm","M","HB_Date_Basic","HB_Date_Comp","M_prev","fct_crm_sales","M_crm","fct_cohorts"]
 
 ref table fct_events_real_sm
 ref table DateTableTemplate_4f58f198-cfd4-4ec1-8026-66d6afb693b5
@@ -26,6 +26,9 @@ ref table M_crm
 ref table period
 ref table LocalDateTable_138b723d-d93e-4058-9167-7c267b3696d2
 ref table LocalDateTable_f07212e3-44b3-4f32-9850-8222fa3e11d6
+ref table fct_cohorts
+ref table LocalDateTable_1c769152-4f19-4cc3-8a41-1b0d550a448c
+ref table cohort_metric
 
 ref cultureInfo en-US
 
