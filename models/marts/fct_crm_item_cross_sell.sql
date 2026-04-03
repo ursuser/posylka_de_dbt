@@ -22,11 +22,12 @@ order_items as (
 ),
 
 -- canonical name per sku: cyrillic names first, then most frequent
+-- canonical category per sku: non-empty first, then most frequent
 item_names as (
     select
         product_sku,
-        any_value(product_name having max sort_key) as product_name,
-        any_value(category_name having max sort_key) as category_name
+        any_value(product_name having max name_sort_key)     as product_name,
+        any_value(category_name having max cat_sort_key)     as category_name
     from (
         select
             product_sku,
@@ -36,7 +37,11 @@ item_names as (
             case
                 when regexp_contains(product_name, '[А-Яа-яЁё]') then count(*) + 1000000
                 else count(*)
-            end as sort_key
+            end as name_sort_key,
+            case
+                when category_name is not null and category_name != '' then count(*) + 1000000
+                else count(*)
+            end as cat_sort_key
         from {{ ref('stg_crm__order_products') }}
         where product_sku is not null
         group by product_sku, product_name, category_name
