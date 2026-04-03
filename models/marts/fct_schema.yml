@@ -81,3 +81,8 @@ models:
     config:
       tags: ['weekly', 'crm']
     description: customer-level rfm scores and segments based on executed orders
+
+  - name: fct_crm_item_cross_sell
+    config:
+      tags: ['weekly', 'crm']
+    description: all unique product pairs from executed crm orders with co-purchase counts and per-item order totals for cross-sell analysis in pbi
