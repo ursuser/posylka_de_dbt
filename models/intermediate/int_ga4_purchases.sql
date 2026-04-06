@@ -54,10 +54,21 @@ with
     ),
 
     -- deduplicate: one row per transaction_id, keep earliest event
+    -- in incremental runs also exclude transactions already recorded outside the replacement window
+    -- (handles GA4 duplicate purchase events fired from different devices on different dates)
     prep as (
         select *
         from purchases_raw
         where transaction_id is not null
+
+        {% if is_incremental() %}
+            and transaction_id not in (
+                select distinct transaction_id
+                from {{ this }}
+                where event_date < date_sub(current_date, interval 5 day)
+            )
+        {% endif %}
+
         qualify row_number() over (
             partition by transaction_id
             order by event_timestamp
