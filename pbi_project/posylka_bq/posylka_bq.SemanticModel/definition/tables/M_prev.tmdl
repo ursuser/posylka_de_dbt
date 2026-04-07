@@ -6,24 +6,30 @@ table M_prev
 		lineageTag: a1000001-0000-0000-0000-000000000001
 
 	measure users_diff = DIVIDE([users]-[users_prev],[users_prev],0)
-		formatString: ▲ 0%;▼ 0%;0%
+		formatString: +0%;-0%;0%
 		lineageTag: a1000002-0000-0000-0000-000000000002
+
+		annotation PBI_FormatHint = {"isCustom":true}
 
 	measure sessions_prev = CALCULATE([sessions],ALL('HB_Date_Basic'[DimDate]),USERELATIONSHIP('HB_Date_Comp'[DimDate],fct_events_real_sm[event_date]))
 		formatString: 0
 		lineageTag: a1000003-0000-0000-0000-000000000003
 
 	measure sessions_diff = DIVIDE([sessions]-[sessions_prev],[sessions_prev],0)
-		formatString: ▲ 0%;▼ 0%;0%
+		formatString: "+0%;-0%;0% "
 		lineageTag: a1000004-0000-0000-0000-000000000004
+
+		annotation PBI_FormatHint = {"isCustom":true}
 
 	measure orders_prev = CALCULATE([orders],ALL('HB_Date_Basic'[DimDate]),USERELATIONSHIP('HB_Date_Comp'[DimDate],fct_events_real_sm[event_date]))
 		formatString: 0
 		lineageTag: a1000005-0000-0000-0000-000000000005
 
 	measure orders_diff = DIVIDE([orders]-[orders_prev],[orders_prev],0)
-		formatString: ▲ 0%;▼ 0%;0%
+		formatString: "+0%;-0%;0% "
 		lineageTag: a1000006-0000-0000-0000-000000000006
+
+		annotation PBI_FormatHint = {"isCustom":true}
 
 	measure revenue_prev = CALCULATE([revenue],ALL('HB_Date_Basic'[DimDate]),USERELATIONSHIP('HB_Date_Comp'[DimDate],fct_events_real_sm[event_date]))
 		lineageTag: a1000007-0000-0000-0000-000000000007
@@ -31,8 +37,10 @@ table M_prev
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure revenue_diff = DIVIDE([revenue]-[revenue_prev],[revenue_prev],0)
-		formatString: ▲ 0%;▼ 0%;0%
+		formatString: +0%;-0%;0%
 		lineageTag: a1000008-0000-0000-0000-000000000008
+
+		annotation PBI_FormatHint = {"isCustom":true}
 
 	measure AOV_prev = CALCULATE([AOV],ALL('HB_Date_Basic'[DimDate]),USERELATIONSHIP('HB_Date_Comp'[DimDate],fct_events_real_sm[event_date]))
 		lineageTag: a1000009-0000-0000-0000-000000000009
@@ -40,24 +48,30 @@ table M_prev
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure AOV_diff = DIVIDE([AOV]-[AOV_prev],[AOV_prev],0)
-		formatString: ▲ 0%;▼ 0%;0%
+		formatString: +0%;-0%;0%
 		lineageTag: a1000010-0000-0000-0000-000000000010
+
+		annotation PBI_FormatHint = {"isCustom":true}
 
 	measure buyers_prev = CALCULATE([buyers],ALL('HB_Date_Basic'[DimDate]),USERELATIONSHIP('HB_Date_Comp'[DimDate],fct_events_real_sm[event_date]))
 		formatString: 0
 		lineageTag: a1000011-0000-0000-0000-000000000011
 
 	measure buyers_diff = DIVIDE([buyers]-[buyers_prev],[buyers_prev],0)
-		formatString: ▲ 0%;▼ 0%;0%
+		formatString: +0%;-0%;0%
 		lineageTag: a1000012-0000-0000-0000-000000000012
+
+		annotation PBI_FormatHint = {"isCustom":true}
 
 	measure CR_prev = CALCULATE([CR],ALL('HB_Date_Basic'[DimDate]),USERELATIONSHIP('HB_Date_Comp'[DimDate],fct_events_real_sm[event_date]))
 		formatString: 0
 		lineageTag: a2000001-0000-0000-0000-000000000001
 
 	measure CR_diff = DIVIDE([CR]-[CR_prev],[CR_prev],0)
-		formatString: ▲ 0%;▼ 0%;0%
+		formatString: +0%;-0%;0%
 		lineageTag: a2000002-0000-0000-0000-000000000002
+
+		annotation PBI_FormatHint = {"isCustom":true}
 
 	measure ARPPU_prev = CALCULATE([ARPPU],ALL('HB_Date_Basic'[DimDate]),USERELATIONSHIP('HB_Date_Comp'[DimDate],fct_events_real_sm[event_date]))
 		lineageTag: a2000003-0000-0000-0000-000000000003
@@ -65,16 +79,20 @@ table M_prev
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure ARPPU_diff = DIVIDE([ARPPU]-[ARPPU_prev],[ARPPU_prev],0)
-		formatString: ▲ 0%;▼ 0%;0%
+		formatString: +0%;-0%;0%
 		lineageTag: a2000004-0000-0000-0000-000000000004
+
+		annotation PBI_FormatHint = {"isCustom":true}
 
 	measure new_users_prev = CALCULATE([new_users],ALL('HB_Date_Basic'[DimDate]),USERELATIONSHIP('HB_Date_Comp'[DimDate],fct_events_real_sm[event_date]))
 		formatString: 0
 		lineageTag: a3000001-0000-0000-0000-000000000001
 
 	measure new_users_diff = DIVIDE([new_users]-[new_users_prev],[new_users_prev],0)
-		formatString: ▲ 0%;▼ 0%;0%
+		formatString: +0%;-0%;0%
 		lineageTag: a3000002-0000-0000-0000-000000000002
+
+		annotation PBI_FormatHint = {"isCustom":true}
 
 	partition M_prev = m
 		mode: import
