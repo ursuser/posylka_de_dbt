@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "a06fe6e6db8a012e0214",
+  "name": "ef2d65281c640af94c37",
   "position": {
-    "x": 796.70235546038543,
-    "y": 551.5631691648822,
-    "z": 6000,
-    "height": 509.93576017130619,
-    "width": 1108.9079229122055,
-    "tabOrder": 5000
+    "x": 276.66666666666669,
+    "y": 535.55555555555554,
+    "z": 10000,
+    "height": 344.44444444444446,
+    "width": 1032.2222222222222,
+    "tabOrder": 7000
   },
   "visual": {
-    "visualType": "scatterChart",
+    "visualType": "barChart",
     "query": {
       "queryState": {
         "Category": {
@@ -32,25 +32,7 @@
             }
           ]
         },
-        "Series": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "fct_crm_sales"
-                    }
-                  },
-                  "Property": "source_name"
-                }
-              },
-              "queryRef": "fct_crm_sales.source_name",
-              "nativeQueryRef": "source_name"
-            }
-          ]
-        },
-        "Size": {
+        "Y": {
           "projections": [
             {
               "field": {
@@ -64,97 +46,69 @@
                 }
               },
               "queryRef": "M_crm.crm_revenue",
-              "nativeQueryRef": "crm_revenue"
+              "nativeQueryRef": "Revenue",
+              "displayName": "Revenue"
             }
-          ]
-        },
-        "X": {
-          "projections": [
+          ],
+          "fieldParameters": [
             {
-              "field": {
-                "Measure": {
+              "parameterExpr": {
+                "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "M_crm"
+                      "Entity": "metric"
                     }
                   },
-                  "Property": "crm_orders"
+                  "Property": "metric"
                 }
               },
-              "queryRef": "M_crm.crm_orders",
-              "nativeQueryRef": "crm_orders",
-              "active": true
-            }
-          ]
-        },
-        "Y": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "M_crm"
-                    }
-                  },
-                  "Property": "crm_aov"
-                }
-              },
-              "queryRef": "M_crm.crm_aov",
-              "nativeQueryRef": "crm_aov"
+              "index": 0,
+              "length": 1
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "M_crm"
+                  }
+                },
+                "Property": "crm_revenue"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
-      "legend": [
-        {
-          "properties": {
-            "showGradientLegend": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "bubbles": [
-        {
-          "properties": {
-            "bubbleSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "14L"
-                }
-              }
-            }
-          }
-        }
-      ],
       "categoryAxis": [
         {
           "properties": {
-            "end": {
+            "maxMarginFactor": {
               "expr": {
                 "Literal": {
-                  "Value": "70000D"
+                  "Value": "50L"
                 }
               }
             },
-            "start": {
+            "preferredCategoryWidth": {
               "expr": {
                 "Literal": {
-                  "Value": "-1500D"
+                  "Value": "20D"
+                }
+              }
+            },
+            "innerPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "22L"
                 }
               }
             }
@@ -164,17 +118,28 @@
       "valueAxis": [
         {
           "properties": {
-            "end": {
+            "gridlineTransparency": {
               "expr": {
                 "Literal": {
-                  "Value": "1600D"
+                  "Value": "0D"
                 }
               }
-            },
-            "start": {
+            }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {}
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "-200D"
+                  "Value": "true"
                 }
               }
             }
@@ -199,10 +164,17 @@
       "title": [
         {
           "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'orders, AOV and revenue by source_name'"
+                  "Value": "'Orders & Revenue by Source Name'"
                 }
               }
             }

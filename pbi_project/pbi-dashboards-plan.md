@@ -5,7 +5,7 @@
 | # | Page | Data Source | Status |
 |---|------|-------------|--------|
 | 1 | Traffic | GA4 | done |
-| 2 | CRM / Sales | CRM (BigQuery) | in progress |
+| 2 | CRM / Sales | CRM (BigQuery) | done |
 | 3 | Cohorts | CRM | done |
 | 4 | RFM | CRM | pending |
 | 5 | Google Ads | Google Ads (BigQuery) | pending |
@@ -68,12 +68,12 @@ Overview is built last — when all data sources are connected and pages are sta
 - [x] Combo chart: Revenue (bars) + AOV (line) with period toggle (Day/Week/Month/Year)
 - [x] Period Field Parameter: Day / Week / Month / Year toggle on combo chart
 - [x] Scatter/bubble chart: Orders (X) vs AOV (Y), sized by Revenue, by source_name
-- [ ] Stacked bar: Orders — New vs Returning by month
-- [ ] Field Parameter: Revenue / Orders toggle (shared by donut + bar)
-- [x] Donut chart: orders by source (currently orders only, no toggle yet)
-- [ ] Horizontal bar: source ranked by Revenue/Orders, switches via field parameter
-- [ ] Line chart: Refund Rate % trend by month
-- [ ] Line chart: Avg Delivery Days trend by month
+- [x] Stacked bar: Orders — New vs Returning by month (incorporated into combo chart as legend)
+- [x] Field Parameter: Revenue / Orders toggle (shared by donut + bar + combo chart)
+- [x] Donut chart: orders by source (with Revenue/Orders toggle)
+- [x] Horizontal bar: source ranked by Revenue/Orders, switches via field parameter
+- [x] Line chart: Refund Rate % trend by month
+- [x] Line chart: Avg Delivery Days trend by month
 
 **DAX measures needed:**
 - `Revenue` = SUMX filtered on is_executed

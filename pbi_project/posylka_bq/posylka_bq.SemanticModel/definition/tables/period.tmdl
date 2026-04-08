@@ -40,7 +40,7 @@ table period
 		mode: import
 		source =
 				{
-				    ("Date", NAMEOF('HB_Date_Basic'[DimDate]), 0),
+				    ("Day", NAMEOF('HB_Date_Basic'[DimDate]), 0),
 				    ("Week", NAMEOF('HB_Date_Basic'[WeekStart]), 1),
 				    ("Month", NAMEOF('HB_Date_Basic'[MonthStart]), 2),
 				    ("Year", NAMEOF('HB_Date_Basic'[Year]), 3)

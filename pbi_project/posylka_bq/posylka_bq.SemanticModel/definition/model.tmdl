@@ -34,6 +34,7 @@ ref table LocalDateTable_9d386990-4ca9-41fa-ab48-f14ad06028a2
 ref table M_items
 ref table crm_products
 ref table items_times_revenue
+ref table metric
 
 ref cultureInfo en-US
 

@@ -150,23 +150,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "311c899b18f576af9479",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "fct_crm_item_cross_sell"
-              }
-            },
-            "Property": "pair_label"
-          }
-        },
-        "type": "TopN"
-      }
-    ]
   }
 }

@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 1525.9115045953597,
+        "x": 2236.7328814605016,
         "y": 0
       },
       "nodes": [
@@ -186,6 +186,32 @@
           "nodeLineageTag": "fd488452-2014-434b-8139-d260e31624eb",
           "size": {
             "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3338.6907271645282,
+            "y": 377.228983954741
+          },
+          "nodeIndex": "items_times_revenue",
+          "nodeLineageTag": "d4b18f4e-534d-4531-850c-18648e86af4a",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3622.6907271645282,
+            "y": 377.228983954741
+          },
+          "nodeIndex": "metric",
+          "nodeLineageTag": "b40959e5-8172-4473-a2db-8b8598ef1064",
+          "size": {
+            "height": 152,
             "width": 234
           },
           "zIndex": 0

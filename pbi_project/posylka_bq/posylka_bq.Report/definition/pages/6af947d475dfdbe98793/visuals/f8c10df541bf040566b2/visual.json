@@ -184,51 +184,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "159b804357554f3ebd9e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "fct_crm_item_cross_sell"
-              }
-            },
-            "Property": "item1_name"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "0d217b8ebc836f076aaa",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "fct_crm_item_cross_sell"
-              }
-            },
-            "Property": "item2_name"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "100bb3d0d7dd6e1906e6",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "M_items"
-              }
-            },
-            "Property": "items_pair_revenue"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

@@ -1,0 +1,48 @@
+table metric
+	lineageTag: b40959e5-8172-4473-a2db-8b8598ef1064
+
+	column metric
+		lineageTag: e9b4ad69-ea07-4b40-b43b-f2e35c53e25f
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'metric Order'
+
+		relatedColumnDetails
+			groupByColumn: 'metric Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'metric Fields'
+		isHidden
+		lineageTag: 917f8f23-f677-4086-94a6-51515a65a3d0
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'metric Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'metric Order'
+		isHidden
+		formatString: 0
+		lineageTag: 5436572f-c18a-4f6c-91d8-62d9c31e8c2e
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition metric = calculated
+		mode: import
+		source =
+				{
+				    ("Revenue", NAMEOF('M_crm'[crm_revenue]), 0),
+				    ("Orders", NAMEOF('M_crm'[crm_orders]), 1)
+				}
+
+	annotation PBI_Id = 1207b3412c434ded8652f95ea55d1fe2
+

@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "30520f2ba68a5b3be0d6",
+  "name": "3bf67b48aa6c93486e42",
   "position": {
-    "x": 415.11777301927197,
-    "y": 35.845824411134906,
-    "z": 2000,
-    "height": 62.441113490364025,
-    "width": 507.62312633832977,
-    "tabOrder": 2000
+    "x": 1032.2222222222222,
+    "y": 535.55555555555554,
+    "z": 10500,
+    "height": 30,
+    "width": 276.66666666666669,
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "items_times_revenue"
+                      "Entity": "metric"
                     }
                   },
-                  "Property": "items_times_revenue"
+                  "Property": "metric"
                 }
               },
-              "queryRef": "items_times_revenue.items_times_revenue",
-              "nativeQueryRef": "items_times_revenue",
+              "queryRef": "metric.metric",
+              "nativeQueryRef": "metric",
               "active": true
             }
           ]
@@ -51,20 +51,13 @@
       "general": [
         {
           "properties": {
-            "orientation": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
-                }
-              }
-            },
             "filter": {
               "filter": {
                 "Version": 2,
                 "From": [
                   {
-                    "Name": "i",
-                    "Entity": "items_times_revenue",
+                    "Name": "m",
+                    "Entity": "metric",
                     "Type": 0
                   }
                 ],
@@ -77,10 +70,10 @@
                             "Column": {
                               "Expression": {
                                 "SourceRef": {
-                                  "Source": "i"
+                                  "Source": "m"
                                 }
                               },
-                              "Property": "items_times_revenue Fields"
+                              "Property": "metric Fields"
                             }
                           }
                         ],
@@ -88,7 +81,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'''M_items''[items_pair_revenue]'"
+                                "Value": "'''M_crm''[crm_revenue]'"
                               }
                             }
                           ]
@@ -102,10 +95,10 @@
                             "Column": {
                               "Expression": {
                                 "SourceRef": {
-                                  "Entity": "items_times_revenue"
+                                  "Entity": "metric"
                                 }
                               },
-                              "Property": "items_times_revenue"
+                              "Property": "metric"
                             }
                           }
                         ],
@@ -116,7 +109,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'''M_items''[items_pair_revenue]'"
+                                      "Value": "'''M_crm''[crm_revenue]'"
                                     }
                                   }
                                 ]
@@ -129,10 +122,10 @@
                                 "Column": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "items_times_revenue"
+                                      "Entity": "metric"
                                     }
                                   },
-                                  "Property": "items_times_revenue Fields"
+                                  "Property": "metric Fields"
                                 }
                               }
                             }
@@ -140,13 +133,32 @@
                         },
                         "valueMap": [
                           {
-                            "0": "items_pair_revenue"
+                            "0": "Revenue"
                           }
                         ]
                       }
                     }
                   }
                 ]
+              }
+            },
+            "outlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "outlineWeight": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
               }
             }
           }
@@ -172,6 +184,34 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "items": [
+        {
+          "properties": {
+            "outlineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Tile'"
                 }
               }
             }
