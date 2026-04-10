@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: stg_ga4__events_promotion
+    config:
+      tags: ['daily', 'ga4']
+    description: >
+      promotion events (view_promotion + select_promotion) with items unpacked.
+      impressions are deduplicated to 1 per (user_pseudo_id, session_id, promotion_name).
+      duplicate promotion names are normalized to canonical russian names.
+    columns:
+      - name: event_date
+        tests:
+          - not_null
+      - name: session_id
+        tests:
+          - not_null
+      - name: promotion_name
+        tests:
+          - not_null

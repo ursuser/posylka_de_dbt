@@ -21,7 +21,13 @@ with
     ga4_source as (
         select *
         from {{ source("analytics_298705553", "events") }}
-        where _table_suffix >= '{{ var("ga4_start_date", "20260301") }}'
+        where _table_suffix >= (
+            {% if target.name == 'dev' %}
+                format_date('%Y%m%d', date_sub(current_date(), interval 30 day))
+            {% else %}
+                '{{ var("ga4_start_date", "20260201") }}'
+            {% endif %}
+        )
 
         {% if is_incremental() %}
             and parse_date('%Y%m%d', regexp_extract(_table_suffix, '[0-9]+'))

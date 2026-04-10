@@ -82,6 +82,21 @@ models:
       tags: ['weekly', 'crm']
     description: customer-level rfm scores and segments based on executed orders
 
+  - name: fct_banner_performance
+    config:
+      tags: ['daily', 'ga4']
+    description: >
+      banner performance by promotion_name + placement_type + creative_slot + event_date.
+      metrics: impressions, clicks, ctr, click_sessions, add_to_cart_sessions,
+      checkout_sessions, purchase_sessions, revenue (same-session attribution).
+    columns:
+      - name: event_date
+        tests:
+          - not_null
+      - name: promotion_name
+        tests:
+          - not_null
+
   - name: fct_crm_item_cross_sell
     config:
       tags: ['weekly', 'crm']
