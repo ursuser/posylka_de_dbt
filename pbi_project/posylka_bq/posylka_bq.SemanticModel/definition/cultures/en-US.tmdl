@@ -16485,75 +16485,165 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "M_crm.crm_new_orders": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_crm",
+			          "ConceptualProperty": "crm_new_orders"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "crm new orders": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "crm_new_orders": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "crm new instruction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "crm new guideline": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "crm new preparation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "crm new direction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "crm new command": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "crm new tip": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "crm new briefing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "crm new remit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "crm new mission": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "crm new directive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "M_crm.crm_new_orders_pct": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_crm",
+			          "ConceptualProperty": "crm_new_orders_pct"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "crm new orders pct": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "crm_new_orders_pct": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "New Orders %": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "fct_cohort_cohort_period_date_hierarchy_has_fct_cohort_cohort_period_day": {
-			      "Binding": {
-			        "ConceptualEntity": "fct_cohorts"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fct_cohort.cohort_period.date_hierarchy": {
-			          "Target": {
-			            "Entity": "fct_cohort.cohort_period.date_hierarchy"
-			          }
-			        },
-			        "fct_cohort.cohort_period.day": {
-			          "Target": {
-			            "Entity": "fct_cohort.cohort_period.day"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fct_cohort.cohort_period.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "fct_cohort.cohort_period.day"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "cohort_period_date_hierarchies_have_cohort_period_days"
-			        }
-			      ]
-			    },
-			    "fct_cohort_cohort_period_date_hierarchy_has_fct_cohort_cohort_period_month": {
-			      "Binding": {
-			        "ConceptualEntity": "fct_cohorts"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fct_cohort.cohort_period.date_hierarchy": {
-			          "Target": {
-			            "Entity": "fct_cohort.cohort_period.date_hierarchy"
-			          }
-			        },
-			        "fct_cohort.cohort_period.month": {
-			          "Target": {
-			            "Entity": "fct_cohort.cohort_period.month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fct_cohort.cohort_period.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "fct_cohort.cohort_period.month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "cohort_period_date_hierarchies_have_cohort_period_months"
-			        }
-			      ]
-			    },
 			    "fct_cohort_cohort_period_date_hierarchy_has_fct_cohort_cohort_period_quarter": {
 			      "Binding": {
 			        "ConceptualEntity": "fct_cohorts"
@@ -17501,6 +17591,72 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "HB_date_basics_have_fct_events_real_sm"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_has_M_crm_crm_new_orders_pct": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "M_crm.crm_new_orders_pct": {
+			          "Target": {
+			            "Entity": "M_crm.crm_new_orders_pct"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale"
+			            },
+			            "Object": {
+			              "Role": "M_crm.crm_new_orders_pct"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_crm_sales_have_crm_new_orders_pct"
+			        }
+			      ]
+			    },
+			    "fct_crm_sale_has_M_crm_crm_new_orders": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_sale": {
+			          "Target": {
+			            "Entity": "fct_crm_sale"
+			          }
+			        },
+			        "M_crm.crm_new_orders": {
+			          "Target": {
+			            "Entity": "M_crm.crm_new_orders"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_sale"
+			            },
+			            "Object": {
+			              "Role": "M_crm.crm_new_orders"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_crm_sales_have_crm_new_orders"
 			        }
 			      ]
 			    },
@@ -22553,6 +22709,72 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "some_fct_crm_sales_are_executed_fct_crm_sales"
+			        }
+			      ]
+			    },
+			    "fct_cohort_cohort_period_date_hierarchy_has_fct_cohort_cohort_period_month": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_cohorts"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_cohort.cohort_period.date_hierarchy": {
+			          "Target": {
+			            "Entity": "fct_cohort.cohort_period.date_hierarchy"
+			          }
+			        },
+			        "fct_cohort.cohort_period.month": {
+			          "Target": {
+			            "Entity": "fct_cohort.cohort_period.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_cohort.cohort_period.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "fct_cohort.cohort_period.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cohort_period_date_hierarchies_have_cohort_period_months"
+			        }
+			      ]
+			    },
+			    "fct_cohort_cohort_period_date_hierarchy_has_fct_cohort_cohort_period_day": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_cohorts"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_cohort.cohort_period.date_hierarchy": {
+			          "Target": {
+			            "Entity": "fct_cohort.cohort_period.date_hierarchy"
+			          }
+			        },
+			        "fct_cohort.cohort_period.day": {
+			          "Target": {
+			            "Entity": "fct_cohort.cohort_period.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_cohort.cohort_period.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "fct_cohort.cohort_period.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cohort_period_date_hierarchies_have_cohort_period_days"
 			        }
 			      ]
 			    },

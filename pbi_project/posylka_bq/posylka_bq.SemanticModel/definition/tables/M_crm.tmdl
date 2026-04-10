@@ -97,6 +97,14 @@ table M_crm
 		formatString: 0
 		lineageTag: 5b796267-3c7c-4b40-b24e-3f920f028656
 
+	measure crm_new_orders = CALCULATE(DISTINCTCOUNT(fct_crm_sales[order_nr]), fct_crm_sales[is_new_customer] = TRUE())
+		formatString: 0
+		lineageTag: 682802a1-51dc-4f3c-8e27-db9732b9ed4e
+
+	measure crm_new_orders_pct = DIVIDE([crm_new_orders], [crm_orders], 0)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: c14367d1-0dcf-44c8-8f66-2c14251738a9
+
 	partition M_crm = m
 		mode: import
 		source =

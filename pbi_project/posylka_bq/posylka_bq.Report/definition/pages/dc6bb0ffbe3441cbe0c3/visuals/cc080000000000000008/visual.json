@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "cc080000000000000008",
   "position": {
-    "x": 1270.4323791137201,
-    "y": 0.3087719298245617,
+    "x": 313.44444444444446,
+    "y": 0,
     "z": 8000,
-    "height": 84.474853801169587,
-    "width": 162.90095421961291
+    "height": 88,
+    "width": 163
   },
   "visual": {
     "visualType": "cardVisual",
@@ -22,14 +22,32 @@
                       "Entity": "M_crm"
                     }
                   },
-                  "Property": "crm_avg_delivery_days"
+                  "Property": "crm_new_orders_pct"
                 }
               },
-              "queryRef": "M_crm.crm_avg_delivery_days",
-              "nativeQueryRef": "crm_avg_delivery_days"
+              "queryRef": "M_crm.crm_new_orders_pct",
+              "nativeQueryRef": "crm_new_orders_pct"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "M_crm"
+                  }
+                },
+                "Property": "crm_new_orders_pct"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
@@ -137,7 +155,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Avg Delivery Days'"
+                  "Value": "'New Orders %'"
                 }
               }
             },
@@ -221,5 +239,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "18ed2fd797e59be4c33f"
+  "parentGroupName": "14929435ac865f822c6e"
 }
