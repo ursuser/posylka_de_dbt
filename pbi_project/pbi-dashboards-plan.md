@@ -1,6 +1,6 @@
 # Power BI Dashboards — Plan
 
-## Report Structure (7 pages, priority order)
+## Report Structure (9 pages, priority order)
 
 | # | Page | Data Source | Status |
 |---|------|-------------|--------|
@@ -8,9 +8,11 @@
 | 2 | CRM / Sales | CRM (BigQuery) | done |
 | 3 | Cohorts | CRM | done |
 | 4 | RFM | CRM | pending |
-| 5 | Google Ads | Google Ads (BigQuery) | pending |
-| 6 | Organic / SEO | Search Console (BigQuery) | pending |
-| 7 | Overview | all sources | last |
+| 5 | Products / SKU | CRM (BigQuery) | pending |
+| 6 | Cross-sell | CRM (BigQuery) | done |
+| 7 | Google Ads | Google Ads (BigQuery) | pending |
+| 8 | Organic / SEO | Search Console (BigQuery) | pending |
+| 9 | Overview | all sources | last |
 
 Overview is built last — when all data sources are connected and pages are stable.
 
@@ -121,7 +123,56 @@ Overview is built last — when all data sources are connected and pages are sta
 
 ---
 
-## Page 5: Google Ads
+## Page 5: Products / SKU
+
+**Goal:** product-level performance — which SKUs sell best, and inventory health.
+
+**Not available (no data in CRM):**
+- Out of Stock — no inventory data in CRM
+- Inventory turnover — no inventory data
+- Margin by SKU — no cost_price in order_products table
+- Stock level (units) — no inventory data
+- Stock value (sum) — no inventory data
+- Days of inventory — no inventory data
+
+**KPI cards:**
+- `Active Products` = count of distinct products with at least one executed order in period
+- `Top SKU` = product name with highest revenue in period
+- ~~Out of Stock~~ — not available
+- ~~Inventory turnover~~ — not available
+
+**Visuals:**
+- Bar chart: Revenue by SKU (top N, with category slicer)
+- Bar chart: Orders by SKU (top N)
+- Table: Product performance — product name, orders, revenue, units sold, ASP
+- ~~Margin by SKU~~ — not available
+
+**Slicers:**
+- Date range
+- Category
+- Product name (search/multi-select)
+
+**DAX measures needed:**
+- `Active Products` = DISTINCTCOUNT(product_id) filtered on executed orders
+- `Top SKU` = product with MAX(Revenue)
+- `Units Sold` = SUM(quantity) from order_products
+- `ASP` = Revenue / Units Sold
+
+**Data source:** `stg_crm__order_products` joined to `fct_crm_sales` / orders
+
+**Implementation note:** may need a new mart model `fct_products` aggregating order_products with order status filter (executed only).
+
+---
+
+## Page 6: Cross-sell
+
+**Status: done** (existing page `items_cross_sell`)
+
+Kept as a separate page — different analytical question from SKU performance (pair relationships vs individual product metrics).
+
+---
+
+## Page 7: Google Ads (was page 5)
 
 **Metrics:**
 - Impressions, Clicks, CTR
@@ -134,7 +185,7 @@ Overview is built last — when all data sources are connected and pages are sta
 
 ---
 
-## Page 6: Organic / SEO
+## Page 8: Organic / SEO
 
 **Metrics:**
 - Clicks, Impressions, CTR, Average Position
@@ -146,7 +197,7 @@ Overview is built last — when all data sources are connected and pages are sta
 
 ---
 
-## Page 7: Overview
+## Page 9: Overview
 
 **Goal:** one-glance summary for the client — most important KPIs from all sources.
 

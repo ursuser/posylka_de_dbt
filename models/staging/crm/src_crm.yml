@@ -1,5 +1,54 @@
 version: 2
 
+models:
+  - name: stg_crm__supplies
+    config:
+      tags: ['crm']  # 'daily' tag to be added once all annual batches are loaded and daily schedule is ready
+    description: >
+      procurement lines from mv3_data_supplies. one row per (procurement_nr, product_sku).
+      source data arrives as annual batch loads (2020-2024 loaded together, then 2025, then daily).
+      run --full-refresh when a new annual batch arrives; switch to daily schedule once data is on daily cadence.
+
+      deduplication: group by (procurement_nr, product_sku), all other fields taken from the row with max loaded_at.
+      supplier_name cleaned: \r and contact person suffixes stripped (e.g. "Name\r - Herr X" → "Name").
+
+      not all rows are real products — the source mixes goods with logistics costs, catalogs, and labeling services.
+      use is_product flag to separate them. non-product rows are kept for full procurement cost visibility.
+    columns:
+      - name: procurement_nr
+        description: procurement order number from the ERP system
+        tests:
+          - not_null
+      - name: procurement_date
+        description: date of the procurement order (from procurement_at)
+        tests:
+          - not_null
+      - name: supplier_nr
+        description: unique supplier identifier
+      - name: supplier_name
+        description: supplier name, cleaned of \r and contact person suffixes
+      - name: product_sku
+        description: product article number. real products follow the 08xxxxxx format (8-digit numeric)
+        tests:
+          - not_null
+      - name: product_name
+        description: product name as provided by the supplier
+      - name: quantity
+        description: quantity ordered
+      - name: unit_price
+        description: unit purchase price in EUR
+      - name: is_product
+        description: >
+          false for known non-product lines mixed into the procurement data:
+          transport costs (sku: text, text1, 7777),
+          shipping fees (sku: 9996),
+          printed catalogs (sku: 9xxx pattern — 9046, 9090, 9099, 9101, 9122, 9191, 9222, 9223),
+          labeling and misc services (sku: 9991 — catch-all code used for unrelated items).
+          true for everything else, including real products with non-standard sku formats
+          (e.g. barcodes like 47450990666793, appliances like 991077, 991002).
+      - name: loaded_at
+        description: timestamp when the row was loaded into the source table
+
 sources:
   - name: mv3_data
     database: posylka-de-478903
@@ -19,6 +68,13 @@ sources:
             error_after: {count: 72, period: hour}
 
       - name: mv3_data_status
+        config:
+          loaded_at_field: loaded_at
+          freshness:
+            warn_after: {count: 48, period: hour}
+            error_after: {count: 72, period: hour}
+
+      - name: mv3_data_supplies
         config:
           loaded_at_field: loaded_at
           freshness:
