@@ -6,10 +6,12 @@ models:
       tags: ['crm', 'daily']
     description: >
       procurement lines from mv3_data_supplies. one row per (procurement_nr, product_sku).
-      source data arrives as annual batch loads (2020-2024 loaded together, then 2025, then daily).
-      run --full-refresh when a new annual batch arrives; switch to daily schedule once data is on daily cadence.
+      source data arrives in batches — the same procurement order may appear multiple times
+      (partial delivery first, full order later). incremental strategy: merge on (procurement_nr, product_sku),
+      re-processing all rows for orders that had any activity in the last 5 days.
 
-      deduplication: group by (procurement_nr, product_sku), all other fields taken from the row with max loaded_at.
+      deduplication: procurement_date taken from the earliest batch (min loaded_at);
+      all other fields from the latest batch (max loaded_at).
       supplier_name cleaned: \r and contact person suffixes stripped (e.g. "Name\r - Herr X" → "Name").
 
       not all rows are real products — the source mixes goods with logistics costs, catalogs, and labeling services.
@@ -46,8 +48,10 @@ models:
           labeling and misc services (sku: 9991 — catch-all code used for unrelated items).
           true for everything else, including real products with non-standard sku formats
           (e.g. barcodes like 47450990666793, appliances like 991077, 991002).
-      - name: loaded_at
-        description: timestamp when the row was loaded into the source table
+      - name: first_loaded_at
+        description: timestamp when this (procurement_nr, product_sku) was first seen in the source
+      - name: last_loaded_at
+        description: timestamp when this (procurement_nr, product_sku) was last updated in the source
 
 sources:
   - name: mv3_data
