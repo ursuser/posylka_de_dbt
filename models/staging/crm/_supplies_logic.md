@@ -10,7 +10,7 @@ with a fresh `loaded_at` timestamp.
 
 A single procurement order can arrive in multiple waves:
 
-```
+```text
 procurement_nr = 525, ordered 25 items
 
 Wave 1 (loaded_at = 2026-05-01):  15 items arrive at warehouse → full snapshot of 15 lines uploaded
@@ -29,12 +29,12 @@ Gaps between waves can range from a few days to over a month.
 
 Grain: one row per `(procurement_nr, product_sku)`.
 
-| Column | Source |
-|---|---|
+| Column           | Source                                                                    |
+| ---------------- | ------------------------------------------------------------------------- |
 | `procurement_date` | `date(procurement_at)` from the **earliest** batch (`having min loaded_at`) |
-| all other fields | from the **latest** batch (`having max loaded_at`) |
-| `first_loaded_at` | `min(loaded_at)` — when this line was first seen |
-| `last_loaded_at` | `max(loaded_at)` — when this line was last updated |
+| all other fields | from the **latest** batch (`having max loaded_at`)                        |
+| `first_loaded_at` | `min(loaded_at)` — when this line was first seen                         |
+| `last_loaded_at` | `max(loaded_at)` — when this line was last updated                       |
 
 `procurement_date` is taken from the first batch because it reflects the original order
 date. Later batches may carry a different `procurement_at` (delivery date), which would
@@ -77,9 +77,9 @@ May 1 and May 20 batches for that order and produce the correct final row.
 Not all rows represent real goods. The source mixes in logistics costs, catalogs,
 and labeling fees under special SKU codes:
 
-| SKU pattern | Meaning |
-|---|---|
-| `text`, `text1`, `deleted`, `7777` | transport / misc costs |
+| SKU pattern                        | Meaning                                   |
+| ---------------------------------- | ----------------------------------------- |
+| `text`, `text1`, `deleted`, `7777` | transport / misc costs                    |
 | `^9[0-9]{2,3}$` (e.g. 9046, 9991) | printed catalogs, labeling, shipping fees |
 
 Use `is_product = true` to filter to real goods. Non-product rows are kept for
@@ -91,10 +91,10 @@ full procurement cost visibility.
 
 As of 2026-05-12, joining `stg_crm__supplies` to `stg_crm__order_products` on `product_sku`:
 
-| Direction | Total SKUs | Matched | Unmatched |
-|---|---|---|---|
-| Supplies → Orders | 45 847 | 11 372 (24.8%) | 34 475 (75.2%) |
-| Orders → Supplies | 15 113 | 11 372 (75.2%) | 3 741 (24.8%) |
+| Direction          | Total SKUs | Matched          | Unmatched        |
+| ------------------ | ---------- | ---------------- | ---------------- |
+| Supplies → Orders  | 45 847     | 11 372 (24.8%)   | 34 475 (75.2%)   |
+| Orders → Supplies  | 15 113     | 11 372 (75.2%)   | 3 741 (24.8%)    |
 
 SKU formats are consistent in both tables (8-digit strings, 99.9% of rows).
 
@@ -122,11 +122,11 @@ Two distinct patterns found:
 The company switched from the Scharkoff brand (Olymp supplier) to KazanoFF brand
 (PE DAVR METALL supplier) for fire ovens / учаги. Old stock was never sold.
 
-| Dead SKU | Name | Units | Value |
-|---|---|---|---|
-| 08400264 | Учаг Scharkoff Ø40.8cm | 1 264 | €138 791 |
-| 08035716 | Feuerofen Ø40.5cm | 1 196 | €91 780 |
-| 08400263 | Учаг Scharkoff Ø37.4cm | 967 | €82 428 |
+| Dead SKU | Name                   | Units | Value     |
+| -------- | ---------------------- | ----- | --------- |
+| 08400264 | Учаг Scharkoff Ø40.8cm | 1 264 | €138 791  |
+| 08035716 | Feuerofen Ø40.5cm      | 1 196 | €91 780   |
+| 08400263 | Учаг Scharkoff Ø37.4cm | 967   | €82 428   |
 
 Replacement SKUs actively selling in orders: 08403477, 08403478, 08403479 (KazanoFF).
 
@@ -135,6 +135,7 @@ Same physical product procured under two different SKU codes. Old SKU shows as d
 stock only because orders reference the new SKU.
 
 Example: Мантоварка 28cm from Olymp
+
 - Old SKU **08146548** (Russian name, first procured 2020) → 2 621 units, €115K, last
   procurement 2025-04-01 — **shows as dead stock**
 - New SKU **08801788** (German name, first procured 2022) → same supplier (Olymp),
@@ -150,6 +151,7 @@ Pattern B (SKU renames) inflates this number — true dead stock is lower.
 Exact split between Pattern A and Pattern B is not yet quantified.
 
 Top suppliers by dead stock value:
+
 1. Olymp Handels GmbH — €1 366 194 (21.1%)
 2. REDMOND LV SIA — €472 399 (7.3%)
 3. Sima Land Izida — €405 884 (6.3%)
