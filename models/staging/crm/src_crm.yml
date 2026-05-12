@@ -3,7 +3,7 @@ version: 2
 models:
   - name: stg_crm__supplies
     config:
-      tags: ['crm']  # 'daily' tag to be added once all annual batches are loaded and daily schedule is ready
+      tags: ['crm', 'daily']
     description: >
       procurement lines from mv3_data_supplies. one row per (procurement_nr, product_sku).
       source data arrives as annual batch loads (2020-2024 loaded together, then 2025, then daily).
