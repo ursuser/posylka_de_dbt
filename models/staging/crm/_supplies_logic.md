@@ -84,3 +84,74 @@ and labeling fees under special SKU codes:
 
 Use `is_product = true` to filter to real goods. Non-product rows are kept for
 full procurement cost visibility.
+
+---
+
+## SKU Join Quality: Supplies ↔ Orders
+
+As of 2026-05-12, joining `stg_crm__supplies` to `stg_crm__order_products` on `product_sku`:
+
+| Direction | Total SKUs | Matched | Unmatched |
+|---|---|---|---|
+| Supplies → Orders | 45 847 | 11 372 (24.8%) | 34 475 (75.2%) |
+| Orders → Supplies | 15 113 | 11 372 (75.2%) | 3 741 (24.8%) |
+
+SKU formats are consistent in both tables (8-digit strings, 99.9% of rows).
+
+### Why orders SKUs are missing in supplies (3 741 SKUs)
+
+Not a data quality problem — three structural reasons:
+
+1. **Billing / logistics SKUs** — shipping fees, packaging, dry ice, catalogs, Amazon Prime
+   surcharges (SKUs: 9993, 9996, 9994, 9998, 9981, 9982, 05110000, 05110800, 99101010, `text`).
+   These are never procured.
+
+2. **Composite sets** — e.g. SKU 08503866 "KazanoFF Ø49 + Kasan 22L set" (155 orders, ~€40K revenue).
+   The set SKU itself is not in supplies; it is assembled from components that ARE procured
+   separately (08403479 = oven, 08064645 / 08103192 = kazan — all active in supplies).
+
+3. **Food & pharmacy products** — items like Валидол, Гематоген, Сгущёнка, Гречка appear in
+   hundreds of orders but have no supply records. Likely sourced via a separate procurement
+   channel not captured in `mv3_data_supplies`.
+
+### Why supply SKUs are missing in orders (dead stock, 34 475 SKUs)
+
+Two distinct patterns found:
+
+**Pattern A — Brand replacement (true dead stock):**
+The company switched from the Scharkoff brand (Olymp supplier) to KazanoFF brand
+(PE DAVR METALL supplier) for fire ovens / учаги. Old stock was never sold.
+
+| Dead SKU | Name | Units | Value |
+|---|---|---|---|
+| 08400264 | Учаг Scharkoff Ø40.8cm | 1 264 | €138 791 |
+| 08035716 | Feuerofen Ø40.5cm | 1 196 | €91 780 |
+| 08400263 | Учаг Scharkoff Ø37.4cm | 967 | €82 428 |
+
+Replacement SKUs actively selling in orders: 08403477, 08403478, 08403479 (KazanoFF).
+
+**Pattern B — SKU rename (phantom dead stock):**
+Same physical product procured under two different SKU codes. Old SKU shows as dead
+stock only because orders reference the new SKU.
+
+Example: Мантоварка 28cm from Olymp
+- Old SKU **08146548** (Russian name, first procured 2020) → 2 621 units, €115K, last
+  procurement 2025-04-01 — **shows as dead stock**
+- New SKU **08801788** (German name, first procured 2022) → same supplier (Olymp),
+  avg price €49.87 — **actively sold** (68 orders)
+
+Action needed: audit whether 08146548 and 08801788 are the same physical item.
+If yes, the €115K is not true dead stock — it is procured inventory with a SKU mismatch.
+
+### Total dead stock value (2026-05-12)
+
+34 475 SKUs, 1 703 549 units, **€6 485 364** at procurement cost.
+Pattern B (SKU renames) inflates this number — true dead stock is lower.
+Exact split between Pattern A and Pattern B is not yet quantified.
+
+Top suppliers by dead stock value:
+1. Olymp Handels GmbH — €1 366 194 (21.1%)
+2. REDMOND LV SIA — €472 399 (7.3%)
+3. Sima Land Izida — €405 884 (6.3%)
+4. Lackmann — €313 627 (4.8%)
+5. Monolith Mitte — €285 051 (4.4%)
