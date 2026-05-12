@@ -157,3 +157,21 @@ Top suppliers by dead stock value:
 3. Sima Land Izida — €405 884 (6.3%)
 4. Lackmann — €313 627 (4.8%)
 5. Monolith Mitte — €285 051 (4.4%)
+
+---
+
+## Future Ideas
+
+### Supplier-level sell-through rate
+
+Idea: aggregate procurement vs sales at the supplier level instead of SKU level.
+
+- Procured: `sum(quantity)` from supplies grouped by `supplier_nr` — exact.
+- Sold: `sum(quantity)` from orders for SKUs that this supplier has supplied (via SKU join).
+
+Caveat: SKUs with multiple suppliers (3 405 SKUs) will be double-counted on the sold side —
+each supplier gets credited for all sales of the shared SKU. Could be handled by:
+- Running only on single-supplier SKUs for a clean number
+- Or accepting the overcount as a rough directional view
+
+Goal: cross-check against the dead stock figure calculated at SKU level.
