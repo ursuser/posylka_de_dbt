@@ -4,6 +4,11 @@ models:
   - name: stg_crm__supplies
     config:
       tags: ['crm', 'daily']
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - procurement_nr
+            - product_sku
     description: >
       procurement lines from mv3_data_supplies. one row per (procurement_nr, product_sku).
       source data arrives in batches — the same procurement order may appear multiple times
