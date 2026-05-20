@@ -40,7 +40,7 @@ total_cost as (
 final as (
     select
         s.primary_supplier_nr                                       as supplier_nr,
-        s.primary_supplier_name                                     as supplier_name,
+        max(s.primary_supplier_name)                                as supplier_name,
 
         count(*)                                                    as total_skus,
         countif(not s.is_dead_stock)                                as active_skus,
@@ -59,12 +59,12 @@ final as (
             max(tc.grand_total)
         )                                                           as procurement_share_pct,
 
-        pf.avg_days_between_procurements
+        max(pf.avg_days_between_procurements)                       as avg_days_between_procurements
 
     from sku_data                as s
     cross join total_cost        as tc
     left join procurement_freq   as pf on pf.supplier_nr = s.primary_supplier_nr
-    group by s.primary_supplier_nr, s.primary_supplier_name, pf.avg_days_between_procurements
+    group by s.primary_supplier_nr
 )
 
 select * from final
