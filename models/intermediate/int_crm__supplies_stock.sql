@@ -92,6 +92,19 @@ sales_before_last as (
     group by es.product_sku
 ),
 
+sku_category as (
+    select
+        op.product_sku,
+        any_value(op.category_id having max s.order_date)   as category_id,
+        any_value(op.category_name having max s.order_date) as category_name
+    from {{ ref('stg_crm__order_products') }} as op
+    inner join {{ ref('fct_crm_sales') }} as s on s.order_nr = op.order_nr
+    where op.product_sku is not null
+        and op.category_name is not null
+        and op.category_name != ''
+    group by op.product_sku
+),
+
 analysis_days as (
     select date_diff(current_date, date('2025-06-01'), day) as days
 ),
@@ -125,13 +138,29 @@ final as (
         safe_divide(
             coalesce(sbl.units_procured_before, 0) - coalesce(sbls.units_sold_before, 0),
             safe_divide(coalesce(sl.total_sold_units, 0), ad.days)
-        )                                                                   as stock_days_at_last_procurement
+        )                                                                   as stock_days_at_last_procurement,
+
+        cat.category_id,
+        cat.category_name,
+        coalesce(cat.category_id in (
+            2293, 2460, 2675, 2832,  -- Geschenkboxen, Geschenkverpackungen, Geschenkverpackung
+            2292,                    -- Geschenktüten
+            2294,                    -- Flaschenverpackung
+            1977                     -- Aufbewahrung
+        ), false)                                                           as is_packaging,
+        coalesce(cat.category_id in (
+            1745,                                        -- Geschenke Sale
+            1901, 1909, 1865, 2787, 2255, 2791, 1885,   -- Geschenkgeschirr
+            2207, 2697, 1588, 1996, 2793, 1614,          -- Geschenksets
+            1833                                         -- Weihnachtsbaumschmuck
+        ), false)                                                           as is_promo
 
     from supplies_agg              as sa
     left join sales_agg            as sl   on sl.product_sku  = sa.product_sku
     left join primary_supplier     as ps   on ps.product_sku  = sa.product_sku
     left join supplies_before_last as sbl  on sbl.product_sku = sa.product_sku
     left join sales_before_last    as sbls on sbls.product_sku = sa.product_sku
+    left join sku_category         as cat  on cat.product_sku = sa.product_sku
     cross join analysis_days       as ad
 )
 

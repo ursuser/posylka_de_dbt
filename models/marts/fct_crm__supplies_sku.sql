@@ -8,6 +8,8 @@ final as (
     select
         product_sku,
         product_name,
+        category_id,
+        category_name,
         primary_supplier_nr,
         primary_supplier_name,
 
@@ -35,6 +37,8 @@ final as (
         coalesce(stock_days_at_last_procurement > 60, false) as is_overstocked_at_procurement
 
     from source
+    where not is_packaging
+        and not is_promo
 )
 
 select * from final
