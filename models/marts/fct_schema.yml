@@ -101,3 +101,40 @@ models:
     config:
       tags: ['weekly', 'crm']
     description: all unique product pairs from executed crm orders with co-purchase counts and per-item order totals for cross-sell analysis in pbi
+
+  - name: fct_crm__supplies_sku
+    config:
+      tags: ['daily', 'crm']
+    description: >
+      one row per product_sku. procurement vs sales snapshot since 2025-06-01.
+      includes stock levels, weighted average margin, turnover days, and flags
+      for dead stock and redundant ordering.
+    columns:
+      - name: product_sku
+        tests:
+          - not_null
+          - unique
+      - name: gross_margin_pct
+        description: (avg_selling_price - avg_purchase_price) / avg_selling_price. null when no priced sales exist
+      - name: is_dead_stock
+        description: true when total_sold_units = 0 since 2025-06-01
+      - name: is_overstocked_at_procurement
+        description: true when stock_days_at_last_procurement > 60
+
+  - name: fct_crm__supplies_supplier
+    config:
+      tags: ['daily', 'crm']
+    description: >
+      one row per supplier. aggregated from fct_crm__supplies_sku plus procurement
+      frequency from stg_crm__supplies. use for supplier concentration and regularity analysis.
+    columns:
+      - name: supplier_nr
+        tests:
+          - not_null
+          - unique
+      - name: avg_gross_margin_pct
+        description: weighted average by total_sold_revenue across supplier skus
+      - name: procurement_share_pct
+        description: supplier share of total procurement cost across all suppliers since 2025-06-01
+      - name: avg_days_between_procurements
+        description: average gap in days between consecutive procurement dates for this supplier

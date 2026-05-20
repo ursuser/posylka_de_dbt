@@ -1,6 +1,32 @@
 version: 2
 
 models:
+  - name: int_crm__supplies_stock
+    config:
+      tags: ['daily', 'crm']
+    description: >
+      one row per product_sku. single source of truth for inventory analytics:
+      stock levels, turnover, margin, and redundant-order detection.
+      analysis window starts 2025-06-01 for both supplies and sales.
+    columns:
+      - name: product_sku
+        tests:
+          - not_null
+          - unique
+      - name: total_procured_units
+        tests:
+          - not_null
+      - name: stock_units
+        description: total_procured_units minus total_sold_units since 2025-06-01
+      - name: avg_purchase_price
+        description: weighted average — total_procured_cost / total_procured_units
+      - name: avg_selling_price
+        description: weighted average over orders where unit_price > 0 (excludes amazon zero-price records)
+      - name: turnover_days
+        description: stock_units / avg_daily_sales. null when no sales recorded
+      - name: stock_days_at_last_procurement
+        description: estimated days of stock on hand at the moment the last procurement was placed — flags redundant ordering
+
   - name: int_ga4_purchases
     config:
       tags: ['daily', 'ga4']

@@ -175,3 +175,73 @@ each supplier gets credited for all sales of the shared SKU. Could be handled by
 - Or accepting the overcount as a rough directional view
 
 Goal: cross-check against the dead stock figure calculated at SKU level.
+
+---
+
+## Mart Design: Supplies Analytics
+
+### Analysis window
+
+All mart models use **2025-06-01 as the cutoff date** for both supplies and sales.
+Stock = procured since cutoff − sold since cutoff. When historical sales data is extended
+further back, only this date needs to change — the logic stays the same.
+
+Composite sets are not present in the procurement data (confirmed with the ERP developer).
+Only `is_product = true` rows are included in all mart calculations.
+
+### int_crm__supplies_stock
+
+Intermediate model. Grain: one row per `product_sku`.
+Joins `stg_crm__supplies` to `stg_crm__order_products` + `fct_crm_sales` (executed orders only).
+Calculates the shared metrics reused by both mart models.
+
+| Column | Logic |
+| --- | --- |
+| `product_sku` | key |
+| `primary_supplier_nr` | supplier with the highest procured value for this SKU |
+| `primary_supplier_name` | name of the above |
+| `total_procured_units` | `sum(quantity)` from supplies since cutoff |
+| `total_procured_cost` | `sum(quantity * unit_price)` from supplies since cutoff |
+| `total_sold_units` | `sum(quantity)` from executed orders since cutoff |
+| `avg_purchase_price` | `total_procured_cost / total_procured_units` (weighted average) |
+| `avg_selling_price` | weighted average unit_price from executed orders |
+| `stock_units` | `total_procured_units − total_sold_units` |
+| `stock_value` | `stock_units * avg_purchase_price` |
+| `avg_daily_sales` | `total_sold_units / days in analysis window` |
+| `turnover_days` | `stock_units / avg_daily_sales` (null if no sales) |
+| `last_procurement_date` | date of the most recent procurement for this SKU |
+| `stock_days_at_last_procurement` | estimated `turnover_days` as of `last_procurement_date` — flags redundant ordering |
+
+For multi-supplier SKUs, `primary_supplier_nr` is the supplier with the largest
+`sum(quantity * unit_price)` for this SKU. The sold side is attributed fully to the
+primary supplier (acceptable approximation for analytics; not used for financial reporting).
+
+### fct_crm__supplies_sku
+
+Grain: one row per `product_sku`. Snapshot rebuilt on each daily run.
+Materialized as a table (not incremental — full rebuild is fast at this grain).
+
+Selects all columns from `int_crm__supplies_stock` plus derived flags:
+
+| Column | Logic |
+| --- | --- |
+| `gross_margin_pct` | `(avg_selling_price − avg_purchase_price) / avg_selling_price` |
+| `is_dead_stock` | `total_sold_units = 0` |
+| `is_overstocked_at_procurement` | `stock_days_at_last_procurement > 60` |
+
+### fct_crm__supplies_supplier
+
+Grain: one row per `supplier_nr`. Snapshot rebuilt on each daily run.
+Aggregates from `fct_crm__supplies_sku` joined back to `stg_crm__supplies` for
+procurement frequency.
+
+| Column | Logic |
+| --- | --- |
+| `supplier_nr` / `supplier_name` | key |
+| `total_skus` | count of distinct SKUs supplied since cutoff |
+| `active_skus` | SKUs with `total_sold_units > 0` |
+| `dead_stock_skus` | SKUs with `is_dead_stock = true` |
+| `total_stock_value` | `sum(stock_value)` across primary SKUs |
+| `avg_gross_margin_pct` | weighted by revenue |
+| `procurement_share_pct` | supplier's share of total procurement cost across all suppliers |
+| `avg_days_between_procurements` | average gap between consecutive procurement dates for this supplier |
