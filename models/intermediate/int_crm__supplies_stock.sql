@@ -136,13 +136,13 @@ final as (
 
         safe_divide(coalesce(sl.total_sold_units, 0), ad.days)              as avg_daily_sales,
         safe_divide(
-            sa.total_procured_units - coalesce(sl.total_sold_units, 0),
+            greatest(sa.total_procured_units - coalesce(sl.total_sold_units, 0), 0),
             safe_divide(coalesce(sl.total_sold_units, 0), ad.days)
         )                                                                   as turnover_days,
 
         sa.last_procurement_date,
         safe_divide(
-            coalesce(sbl.units_procured_before, 0) - coalesce(sbls.units_sold_before, 0),
+            greatest(coalesce(sbl.units_procured_before, 0) - coalesce(sbls.units_sold_before, 0), 0),
             safe_divide(coalesce(sl.total_sold_units, 0), ad.days)
         )                                                                   as stock_days_at_last_procurement,
 
