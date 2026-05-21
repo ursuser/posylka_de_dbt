@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 1599.9086826286396,
+        "x": 3482.3520450207106,
         "y": 0
       },
       "nodes": [
@@ -213,6 +213,45 @@
           "size": {
             "height": 152,
             "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3647.7006040480492,
+            "y": 0
+          },
+          "nodeIndex": "M_supplies",
+          "nodeLineageTag": "f0000001-0000-0000-0000-000000000000",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 4143.6016138706236,
+            "y": 12.846118642324996
+          },
+          "nodeIndex": "fct_crm__supplies_sku",
+          "nodeLineageTag": "55d4d4ff-e264-4609-9f59-a49d27998054",
+          "size": {
+            "height": 682.31875317194545,
+            "width": 402.17540462108991
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 4781.891132939053,
+            "y": 0.51325563677840691
+          },
+          "nodeIndex": "fct_crm__supplies_supplier",
+          "nodeLineageTag": "1f5ce917-02ea-49db-b04b-2d4d51126fa2",
+          "size": {
+            "height": 300,
+            "width": 283.33145202218657
           },
           "zIndex": 0
         }

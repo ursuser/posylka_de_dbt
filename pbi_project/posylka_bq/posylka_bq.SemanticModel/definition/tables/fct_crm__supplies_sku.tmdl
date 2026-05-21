@@ -1,0 +1,218 @@
+table fct_crm__supplies_sku
+	lineageTag: 55d4d4ff-e264-4609-9f59-a49d27998054
+
+	column product_sku
+		dataType: string
+		lineageTag: 123781a3-2078-4111-8a2b-814409e430dc
+		summarizeBy: none
+		sourceColumn: product_sku
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_name
+		dataType: string
+		lineageTag: 1c5111e1-578e-467d-ae15-09c48dca4bb7
+		summarizeBy: none
+		sourceColumn: product_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column category_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 5fbee9d5-f773-4a1f-a91c-c95ddd16eb23
+		summarizeBy: sum
+		sourceColumn: category_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column category_name
+		dataType: string
+		lineageTag: 456580d5-027f-49b7-b2db-1ca5a1082ba2
+		summarizeBy: none
+		sourceColumn: category_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column primary_supplier_nr
+		dataType: string
+		lineageTag: 492cac80-ace5-4e9d-992a-2c2e16c9bc85
+		summarizeBy: none
+		sourceColumn: primary_supplier_nr
+
+		annotation SummarizationSetBy = Automatic
+
+	column primary_supplier_name
+		dataType: string
+		lineageTag: b47c00f7-74ff-40b4-86af-39458652c1ce
+		summarizeBy: none
+		sourceColumn: primary_supplier_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_procured_units
+		dataType: int64
+		formatString: 0
+		lineageTag: 75915627-3048-450b-8a5c-5d0a4d8af304
+		summarizeBy: sum
+		sourceColumn: total_procured_units
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_procured_cost
+		dataType: double
+		lineageTag: 59e9c12f-61e0-4485-bd0c-3b2dbb884477
+		summarizeBy: sum
+		sourceColumn: total_procured_cost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_sold_units
+		dataType: int64
+		formatString: 0
+		lineageTag: 8901efb7-b73e-4309-b0b5-5772b95ce98c
+		summarizeBy: sum
+		sourceColumn: total_sold_units
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_sold_revenue
+		dataType: double
+		lineageTag: b0060845-8d98-4299-b77a-84e2550619af
+		summarizeBy: sum
+		sourceColumn: total_sold_revenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column stock_units
+		dataType: int64
+		formatString: 0
+		lineageTag: 75b6083a-85d5-4480-ba49-5e3c5ecb23bb
+		summarizeBy: sum
+		sourceColumn: stock_units
+
+		annotation SummarizationSetBy = Automatic
+
+	column stock_value
+		dataType: double
+		lineageTag: 18b95ec9-0e70-4d01-8f24-3ce00f21db42
+		summarizeBy: sum
+		sourceColumn: stock_value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column avg_purchase_price
+		dataType: double
+		lineageTag: 038298bb-8c8a-4b18-bcd1-6df60bcbe9b9
+		summarizeBy: sum
+		sourceColumn: avg_purchase_price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column avg_selling_price
+		dataType: double
+		lineageTag: 1ae1dbd3-f911-43dd-9eee-7cbaa0fcd146
+		summarizeBy: sum
+		sourceColumn: avg_selling_price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column gross_margin_pct
+		dataType: double
+		lineageTag: f6c28ec8-597a-464d-9003-d30117ec6911
+		summarizeBy: sum
+		sourceColumn: gross_margin_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column avg_daily_sales
+		dataType: double
+		lineageTag: 3f82d782-7d42-4b3a-8b5d-ffb725f13176
+		summarizeBy: sum
+		sourceColumn: avg_daily_sales
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column turnover_days
+		dataType: double
+		lineageTag: 4eb01455-172a-4513-8064-9f294b0b6216
+		summarizeBy: sum
+		sourceColumn: turnover_days
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column last_procurement_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 564bf73e-5fef-44ac-850c-06b2db9f5bce
+		summarizeBy: none
+		sourceColumn: last_procurement_date
+
+		variation Variation
+			isDefault
+			relationship: 444134cf-98c2-45b8-aac8-5ceaafa593b7
+			defaultHierarchy: LocalDateTable_4c6c4d3a-a7ad-474c-9580-9a531c707ec6.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column stock_days_at_last_procurement
+		dataType: double
+		lineageTag: 2ffa7f23-a8a8-43bd-8279-131910157ae5
+		summarizeBy: sum
+		sourceColumn: stock_days_at_last_procurement
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column is_dead_stock
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 185dc8ce-2db0-49df-8c40-1bae0452e1e3
+		summarizeBy: none
+		sourceColumn: is_dead_stock
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_overstocked_at_procurement
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 80afb8b9-6593-49cf-bcc5-0f2036570078
+		summarizeBy: none
+		sourceColumn: is_overstocked_at_procurement
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fct_crm__supplies_sku = m
+		mode: import
+		source =
+				let
+				    Source = GoogleBigQuery.Database([Implementation="2.0"]),
+				    #"posylka-dbt_Database" = Source{[Name="posylka-dbt",Kind="Database"]}[Data],
+				    dbt_prod_Schema = #"posylka-dbt_Database"{[Name="dbt_prod",Kind="Schema"]}[Data],
+				    fct_crm__supplies_sku_Table = dbt_prod_Schema{[Name="fct_crm__supplies_sku",Kind="Table"]}[Data]
+				in
+				    fct_crm__supplies_sku_Table
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

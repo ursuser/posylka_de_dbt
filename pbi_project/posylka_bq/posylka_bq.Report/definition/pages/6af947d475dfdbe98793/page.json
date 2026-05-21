@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
   "name": "6af947d475dfdbe98793",
-  "displayName": "items_cross_sell",
+  "displayName": "items cross sell",
   "displayOption": "FitToPage",
   "height": 1080,
   "width": 1920

@@ -54,3 +54,12 @@ relationship beb1dc24-8a72-bcbd-e43c-884f6094fcc8
 	fromColumn: fct_crm_item_cross_sell.item2_name
 	toColumn: crm_products.product_name
 
+relationship 444134cf-98c2-45b8-aac8-5ceaafa593b7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fct_crm__supplies_sku.last_procurement_date
+	toColumn: LocalDateTable_4c6c4d3a-a7ad-474c-9580-9a531c707ec6.Date
+
+relationship 8baff686-7e4d-152c-5a4d-fd08e116bdea
+	fromColumn: fct_crm__supplies_sku.primary_supplier_nr
+	toColumn: fct_crm__supplies_supplier.supplier_name
+

@@ -1,0 +1,111 @@
+table fct_crm__supplies_supplier
+	lineageTag: 1f5ce917-02ea-49db-b04b-2d4d51126fa2
+
+	column supplier_nr
+		dataType: string
+		lineageTag: 418758ec-78f1-4307-a993-0d4dd1a8e8ce
+		summarizeBy: none
+		sourceColumn: supplier_nr
+
+		annotation SummarizationSetBy = Automatic
+
+	column supplier_name
+		dataType: string
+		lineageTag: cca8e414-7014-406e-ba9a-2e265976dee9
+		summarizeBy: none
+		sourceColumn: supplier_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_skus
+		dataType: int64
+		formatString: 0
+		lineageTag: 18299074-b14f-4560-a987-16f65bac5ca6
+		summarizeBy: none
+		sourceColumn: total_skus
+
+		annotation SummarizationSetBy = Automatic
+
+	column active_skus
+		dataType: int64
+		formatString: 0
+		lineageTag: 6511546d-5938-42fb-ae2b-105b0341ae6a
+		summarizeBy: none
+		sourceColumn: active_skus
+
+		annotation SummarizationSetBy = Automatic
+
+	column dead_stock_skus
+		dataType: int64
+		formatString: 0
+		lineageTag: 7e9984f3-1711-4e64-b6e5-b4a24be0795d
+		summarizeBy: none
+		sourceColumn: dead_stock_skus
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_procured_cost
+		dataType: double
+		lineageTag: b027f92b-7d01-40a1-afdf-a0c1ce55b108
+		summarizeBy: none
+		sourceColumn: total_procured_cost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_stock_value
+		dataType: double
+		lineageTag: c2b9161b-3615-4192-a5be-d432602b83d7
+		summarizeBy: none
+		sourceColumn: total_stock_value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column avg_gross_margin_pct
+		dataType: double
+		lineageTag: 927e1d77-50e2-41b6-925c-e704e55453bf
+		summarizeBy: none
+		sourceColumn: avg_gross_margin_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column procurement_share_pct
+		dataType: double
+		lineageTag: 53b05514-0ce3-4fb2-b2fa-c92003715550
+		summarizeBy: none
+		sourceColumn: procurement_share_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column avg_days_between_procurements
+		dataType: double
+		lineageTag: 2c73b8d3-4989-4264-ae3c-652ad0f6678f
+		summarizeBy: none
+		sourceColumn: avg_days_between_procurements
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition fct_crm__supplies_supplier = m
+		mode: import
+		source =
+				let
+				    Source = GoogleBigQuery.Database([Implementation="2.0"]),
+				    #"posylka-dbt_Database" = Source{[Name="posylka-dbt",Kind="Database"]}[Data],
+				    dbt_prod_Schema = #"posylka-dbt_Database"{[Name="dbt_prod",Kind="Schema"]}[Data],
+				    fct_crm__supplies_supplier_Table = dbt_prod_Schema{[Name="fct_crm__supplies_supplier",Kind="Table"]}[Data]
+				in
+				    fct_crm__supplies_supplier_Table
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

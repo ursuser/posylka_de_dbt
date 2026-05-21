@@ -1,0 +1,59 @@
+table M_supplies
+	lineageTag: f0000001-0000-0000-0000-000000000000
+
+	measure supplies_total_stock_value = SUM(fct_crm__supplies_sku[stock_value])
+		formatString: € #,##0
+		lineageTag: f1000001-0000-0000-0000-000000000001
+
+	measure supplies_dead_stock_value =
+			CALCULATE(
+			    SUM(fct_crm__supplies_sku[stock_value]),
+			    fct_crm__supplies_sku[is_dead_stock] = TRUE()
+			)
+		formatString: € #,##0
+		lineageTag: f1000002-0000-0000-0000-000000000002
+
+	measure supplies_dead_stock_pct = DIVIDE([supplies_dead_stock_value], [supplies_total_stock_value])
+		formatString: 0.0%
+		lineageTag: f1000003-0000-0000-0000-000000000003
+
+	measure supplies_dead_stock_skus =
+			CALCULATE(
+			    COUNTROWS(fct_crm__supplies_sku),
+			    fct_crm__supplies_sku[is_dead_stock] = TRUE()
+			)
+		formatString: #,##0
+		lineageTag: f1000004-0000-0000-0000-000000000004
+
+	measure supplies_overstocked_skus =
+			CALCULATE(
+			    COUNTROWS(fct_crm__supplies_sku),
+			    fct_crm__supplies_sku[is_overstocked_at_procurement] = TRUE()
+			)
+		formatString: #,##0
+		lineageTag: f1000005-0000-0000-0000-000000000005
+
+	measure supplies_avg_gross_margin_pct =
+			DIVIDE(
+			    SUMX(fct_crm__supplies_sku, fct_crm__supplies_sku[gross_margin_pct] * fct_crm__supplies_sku[total_sold_revenue]),
+			    SUM(fct_crm__supplies_sku[total_sold_revenue])
+			)
+		formatString: 0.0%
+		lineageTag: f1000006-0000-0000-0000-000000000006
+
+	measure supplies_avg_turnover_days = AVERAGE(fct_crm__supplies_sku[turnover_days])
+		formatString: #,##0
+		lineageTag: f1000007-0000-0000-0000-000000000007
+
+	partition M_supplies = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMlSKjQUA", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", Int64.Type}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+

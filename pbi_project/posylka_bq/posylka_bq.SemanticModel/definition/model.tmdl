@@ -10,7 +10,7 @@ annotation PBI_ProTooling = ["DevMode"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["fct_events_real_sm","M","HB_Date_Basic","HB_Date_Comp","M_prev","fct_crm_sales","M_crm","fct_cohorts","fct_crm_item_cross_sell","M_items"]
+annotation PBI_QueryOrder = ["fct_events_real_sm","M","HB_Date_Basic","HB_Date_Comp","M_prev","fct_crm_sales","M_crm","fct_cohorts","fct_crm_item_cross_sell","M_items","fct_crm__supplies_sku","fct_crm__supplies_supplier","M_supplies"]
 
 ref table fct_events_real_sm
 ref table DateTableTemplate_4f58f198-cfd4-4ec1-8026-66d6afb693b5
@@ -35,6 +35,10 @@ ref table M_items
 ref table crm_products
 ref table items_times_revenue
 ref table metric
+ref table fct_crm__supplies_sku
+ref table LocalDateTable_4c6c4d3a-a7ad-474c-9580-9a531c707ec6
+ref table fct_crm__supplies_supplier
+ref table M_supplies
 
 ref cultureInfo en-US
 
