@@ -17,7 +17,11 @@ models:
         tests:
           - not_null
       - name: stock_units
-        description: total_procured_units minus total_sold_units since 2025-06-01
+        description: >
+          total_procured_units minus total_sold_units since 2025-06-01.
+          floored at 0 via greatest() — negative values are an artifact of the analysis
+          window (items procured before cutoff but sold after it); without an opening
+          inventory balance negative stock is physically impossible.
       - name: avg_purchase_price
         description: weighted average — total_procured_cost / total_procured_units
       - name: avg_selling_price

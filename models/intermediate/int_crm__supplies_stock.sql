@@ -124,9 +124,15 @@ final as (
         safe_divide(sa.total_procured_cost, sa.total_procured_units)        as avg_purchase_price,
         safe_divide(sl.total_sold_revenue, sl.units_with_price)             as avg_selling_price,
 
-        sa.total_procured_units - coalesce(sl.total_sold_units, 0)         as stock_units,
-        (sa.total_procured_units - coalesce(sl.total_sold_units, 0))
-            * safe_divide(sa.total_procured_cost, sa.total_procured_units)  as stock_value,
+        greatest(
+            sa.total_procured_units - coalesce(sl.total_sold_units, 0),
+            0
+        )                                                                   as stock_units,
+        greatest(
+            (sa.total_procured_units - coalesce(sl.total_sold_units, 0))
+                * safe_divide(sa.total_procured_cost, sa.total_procured_units),
+            0
+        )                                                                   as stock_value,
 
         safe_divide(coalesce(sl.total_sold_units, 0), ad.days)              as avg_daily_sales,
         safe_divide(
