@@ -3,10 +3,11 @@
   "name": "3cac0e5b911c8c2b997b",
   "position": {
     "x": 0,
-    "y": 0.96590909090909094,
+    "y": 0.97402597402597413,
     "z": 0,
-    "height": 83.068181818181827,
-    "width": 215.66180643898619
+    "height": 83.7662337662338,
+    "width": 215.36060279870833,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -26,7 +27,8 @@
                 }
               },
               "queryRef": "M_supplies.supplies_total_stock_value",
-              "nativeQueryRef": "supplies_total_stock_value"
+              "nativeQueryRef": "supplies_total_stock_value",
+              "format": "\"€\" #,0.00;-\"€\" #,0.00;\"€\" #,0.00"
             }
           ]
         }

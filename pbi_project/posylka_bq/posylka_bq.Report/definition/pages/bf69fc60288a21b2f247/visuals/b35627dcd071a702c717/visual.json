@@ -2,11 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
   "name": "b35627dcd071a702c717",
   "position": {
-    "x": 612.23289950092953,
+    "x": 611.37782561894494,
     "y": 0,
     "z": 1000,
-    "height": 85,
-    "width": 172.78168118211173
+    "height": 85.714285714285737,
+    "width": 172.54036598493005,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -26,7 +27,8 @@
                 }
               },
               "queryRef": "M_supplies.supplies_dead_stock_skus",
-              "nativeQueryRef": "supplies_dead_stock_skus"
+              "nativeQueryRef": "supplies_dead_stock_skus",
+              "format": "0"
             }
           ]
         }

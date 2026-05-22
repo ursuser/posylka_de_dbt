@@ -1,37 +1,42 @@
 # Power BI Dashboards — Plan
 
-## Next Steps — Stock Analytics Page
+## Stock Analytics Page
 
-**Status:** KPI cards done (7 cards wired to M_supplies). Main visuals not yet built.
+**Status:** Done. One enhancement pending (see below).
 
-### To do
+### Done
 
-**1. Delete 2 stale cards** (still reference M_crm, don't belong on this page):
+- [x] 7 KPI cards (wired to M_supplies)
+- [x] 5 slicers: category, supplier, is_dead_stock, is_overstocked, last_procurement_date
+- [x] SKU detail table — columns: product_name, category_name, stock_units, stock_value, turnover_days, gross_margin_pct, is_dead_stock, is_overstocked_at_procurement. Sort by stock_value desc.
+- [x] SKU Risk scatter — X: turnover_days, Y: gross_margin_pct, Size: stock_value, Legend: category_name. Y axis -100% to 100%.
+- [x] Top Suppliers by Stock Value — stacked horizontal bar (Live Stock + Dead Stock)
+- [x] Top Categories by Stock Value — stacked horizontal bar (Live Stock + Dead Stock)
+- [x] Deleted 3 stale CRM visuals
+- [x] Supplier relationship fixed
 
-- `70623eaa070c7f28fcbe` — Refund Rate
-- `97ebfa0f03873bdfad51` — Buyout Rate
+### Pending enhancement — Overstock Value bar chart
 
-→ User deletes manually in Power BI and rearranges remaining cards.
+**Idea:** replace "Top Categories by Stock Value" with "Overstock Value" chart showing where money is tied up in excess stock.
 
-**2. Add slicers** (user creates in Power BI):
+**Implementation:**
 
-- Category (`fct_crm__supplies_sku[category_name]`)
-- Supplier (`fct_crm__supplies_supplier[supplier_name]`)
-- Dead stock toggle (`fct_crm__supplies_sku[is_dead_stock]`)
-- Overstocked toggle (`fct_crm__supplies_sku[is_overstocked_at_procurement]`)
+1. New DAX measure:
+```dax
+Supplies Overstock Value =
+CALCULATE(
+    SUM(fct_crm__supplies_sku[stock_value]),
+    fct_crm__supplies_sku[is_overstocked_at_procurement] = TRUE()
+)
+```
 
-**3. Main visuals — configure in Power BI, Claude tweaks JSON if needed:**
+2. Global Field Parameter — Category / Supplier toggle, shared across both bar charts (Suppliers and Overstock Value).
 
-| Visual | Type | X / Axis | Y / Values | Size / Legend |
-| --- | --- | --- | --- | --- |
-| SKU risk scatter | Scatter | `turnover_days` | `gross_margin_pct` | size = `stock_value`, legend = `is_dead_stock` |
-| Stock by category | Bar (horizontal) | `category_name` | `stock_value` | color = `is_dead_stock` share |
-| Top suppliers | Bar (horizontal) | `supplier_name` | `stock_value` | second bar = `dead_stock_value` |
-| SKU detail table | Table | `product_name`, `category_name`, `stock_value`, `stock_units`, `turnover_days`, `gross_margin_pct`, `is_dead_stock`, `is_overstocked_at_procurement` | — | — |
-
-**4. Relationship** (confirm wired in Power BI):
-
-- `fct_crm__supplies_supplier[supplier_nr]` → `fct_crm__supplies_sku[primary_supplier_nr]` (1:many, filter direction supplier→sku)
+3. Bar chart:
+   - Y axis: Field Parameter (category_name or supplier_name)
+   - X axis: `[Supplies Overstock Value]`
+   - Sort: by overstock value desc
+   - Visual filter: `[Supplies Overstock Value] > €X` (threshold TBD)
 
 ---
 
@@ -41,6 +46,8 @@
 - `FILTER()` in DAX causes QuerySystemError on `fct_crm__supplies_sku` — use `CALCULATE()` or no filter (SUMX ignores NULLs automatically)
 - `supplies_avg_gross_margin_pct` = revenue-weighted, formula: `DIVIDE(SUMX(table, gm_pct * revenue), SUM(revenue))`
 - `is_packaging` and `is_promo` are filtered out at dbt level (not columns in final table)
+- `is_dead_stock` = zero sales since 2025-06-01; `is_slow_moving` (not yet built) = no sales in last 90 days
+- Turnover Days = stock_units / avg_daily_sales — measures time to sell current stock, NOT product velocity. High value = overstocked OR slow-moving.
 
 ---
 

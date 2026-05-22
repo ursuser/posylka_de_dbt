@@ -2,11 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
   "name": "d884df191185cf4efc78",
   "position": {
-    "x": 227.01242783051177,
-    "y": 0.96590909090909094,
+    "x": 226.69537136706134,
+    "y": 0.97402597402597413,
     "z": 2000,
-    "height": 82.102272727272734,
-    "width": 157.64751932674429
+    "height": 82.792207792207833,
+    "width": 157.42734122712594,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "cardVisual",
@@ -22,11 +23,12 @@
                       "Entity": "M_supplies"
                     }
                   },
-                  "Property": "supplies_dead_stock_value"
+                  "Property": "dead_stock_value"
                 }
               },
               "queryRef": "M_supplies.supplies_dead_stock_value",
-              "nativeQueryRef": "supplies_dead_stock_value"
+              "nativeQueryRef": "supplies_dead_stock_value",
+              "format": "\"€\" #,0.00;-\"€\" #,0.00;\"€\" #,0.00"
             }
           ]
         }

@@ -61,13 +61,12 @@ table fct_crm__supplies_sku
 
 	column total_procured_cost
 		dataType: double
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
 		lineageTag: 59e9c12f-61e0-4485-bd0c-3b2dbb884477
 		summarizeBy: sum
 		sourceColumn: total_procured_cost
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column total_sold_units
 		dataType: int64
@@ -99,43 +98,39 @@ table fct_crm__supplies_sku
 
 	column stock_value
 		dataType: double
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
 		lineageTag: 18b95ec9-0e70-4d01-8f24-3ce00f21db42
 		summarizeBy: sum
 		sourceColumn: stock_value
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column avg_purchase_price
 		dataType: double
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
 		lineageTag: 038298bb-8c8a-4b18-bcd1-6df60bcbe9b9
 		summarizeBy: sum
 		sourceColumn: avg_purchase_price
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column avg_selling_price
 		dataType: double
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
 		lineageTag: 1ae1dbd3-f911-43dd-9eee-7cbaa0fcd146
 		summarizeBy: sum
 		sourceColumn: avg_selling_price
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column gross_margin_pct
 		dataType: double
+		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: f6c28ec8-597a-464d-9003-d30117ec6911
 		summarizeBy: sum
 		sourceColumn: gross_margin_pct
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column avg_daily_sales
 		dataType: double

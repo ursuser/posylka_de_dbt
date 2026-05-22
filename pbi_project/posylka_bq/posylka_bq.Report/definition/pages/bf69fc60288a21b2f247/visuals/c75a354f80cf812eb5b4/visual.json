@@ -2,11 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
   "name": "c75a354f80cf812eb5b4",
   "position": {
-    "x": 795.104021919953,
+    "x": 793.99354144241124,
     "y": 0,
     "z": 5000,
-    "height": 84.0340909090909,
-    "width": 218.1841667482141
+    "height": 84.740259740259773,
+    "width": 217.8794402583423,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -26,7 +27,8 @@
                 }
               },
               "queryRef": "M_supplies.supplies_overstocked_skus",
-              "nativeQueryRef": "supplies_overstocked_skus"
+              "nativeQueryRef": "supplies_overstocked_skus",
+              "format": "0.00"
             }
           ]
         }

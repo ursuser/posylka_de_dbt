@@ -2,11 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
   "name": "bd58d1557a69b0946bbd",
   "position": {
-    "x": 1024.6388100596926,
+    "x": 1029.5600558659219,
     "y": 0,
     "z": 3000,
-    "height": 83.068181818181827,
-    "width": 209.35590566591642
+    "height": 83.69747899159664,
+    "width": 179.7486033519553,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -26,7 +27,8 @@
                 }
               },
               "queryRef": "M_supplies.supplies_avg_gross_margin_pct",
-              "nativeQueryRef": "supplies_avg_gross_margin_pct"
+              "nativeQueryRef": "supplies_avg_gross_margin_pct",
+              "format": "0.00%;-0.00%;0.00%"
             }
           ]
         }

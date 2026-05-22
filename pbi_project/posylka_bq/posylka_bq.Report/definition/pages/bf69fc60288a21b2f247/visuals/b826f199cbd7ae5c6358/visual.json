@@ -2,11 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
   "name": "b826f199cbd7ae5c6358",
   "position": {
-    "x": 394.99999999999994,
+    "x": 394.4483240223463,
     "y": 0,
     "z": 8000,
-    "height": 84.0340909090909,
-    "width": 205.99999999999997
+    "height": 84.740259740259773,
+    "width": 205.71229050279325,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -26,7 +27,8 @@
                 }
               },
               "queryRef": "M_supplies.supplies_dead_stock_pct",
-              "nativeQueryRef": "supplies_dead_stock_pct"
+              "nativeQueryRef": "supplies_dead_stock_pct",
+              "format": "0.00%;-0.00%;0.00%"
             }
           ]
         }

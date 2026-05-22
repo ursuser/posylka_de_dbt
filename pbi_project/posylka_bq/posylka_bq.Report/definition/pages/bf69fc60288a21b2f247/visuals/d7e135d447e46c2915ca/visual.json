@@ -5,9 +5,9 @@
     "x": 0,
     "y": 0,
     "z": 0,
-    "height": 77,
-    "width": 247,
-    "tabOrder": 0
+    "height": 83.243243243243256,
+    "width": 247.1428571428572,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "fct_crm__supplies_supplier"
+                      "Entity": "fct_crm__supplies_sku"
                     }
                   },
-                  "Property": "supplier_name"
+                  "Property": "primary_supplier_name"
                 }
               },
-              "queryRef": "fct_crm__supplies_supplier.supplier_name",
-              "nativeQueryRef": "supplier_name",
+              "queryRef": "fct_crm__supplies_sku.primary_supplier_name",
+              "nativeQueryRef": "primary_supplier_name",
               "active": true
             }
           ]
@@ -45,6 +45,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'Dropdown'"
+                }
+              }
+            },
+            "isInvertedSelectionMode": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

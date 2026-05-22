@@ -5,7 +5,7 @@ table M_supplies
 		formatString: € #,##0
 		lineageTag: f1000001-0000-0000-0000-000000000001
 
-	measure supplies_dead_stock_value =
+	measure dead_stock_value =
 			CALCULATE(
 			    SUM(fct_crm__supplies_sku[stock_value]),
 			    fct_crm__supplies_sku[is_dead_stock] = TRUE()
@@ -13,7 +13,7 @@ table M_supplies
 		formatString: € #,##0
 		lineageTag: f1000002-0000-0000-0000-000000000002
 
-	measure supplies_dead_stock_pct = DIVIDE([supplies_dead_stock_value], [supplies_total_stock_value])
+	measure supplies_dead_stock_pct = DIVIDE([dead_stock_value], [supplies_total_stock_value])
 		formatString: 0.0%
 		lineageTag: f1000003-0000-0000-0000-000000000003
 
@@ -44,6 +44,10 @@ table M_supplies
 	measure supplies_avg_turnover_days = AVERAGE(fct_crm__supplies_sku[turnover_days])
 		formatString: #,##0
 		lineageTag: f1000007-0000-0000-0000-000000000007
+
+	measure live_stock_value = [supplies_total_stock_value] - [dead_stock_value]
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
+		lineageTag: b4238250-ac0e-4a6a-abb9-619702c12fc5
 
 	partition M_supplies = m
 		mode: import

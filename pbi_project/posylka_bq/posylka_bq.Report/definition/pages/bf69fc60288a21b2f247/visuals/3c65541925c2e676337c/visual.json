@@ -2,15 +2,360 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
   "name": "3c65541925c2e676337c",
   "position": {
-    "x": 276,
-    "y": 100,
-    "z": 12002,
-    "height": 428,
-    "width": 1031,
-    "tabOrder": 10002
+    "x": 275,
+    "y": 110,
+    "z": 4000,
+    "height": 500,
+    "width": 1430,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_crm__supplies_sku"
+                    }
+                  },
+                  "Property": "product_name"
+                }
+              },
+              "queryRef": "fct_crm__supplies_sku.product_name",
+              "nativeQueryRef": "product_name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_crm__supplies_sku"
+                    }
+                  },
+                  "Property": "category_name"
+                }
+              },
+              "queryRef": "fct_crm__supplies_sku.category_name",
+              "nativeQueryRef": "category_name"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_crm__supplies_sku"
+                        }
+                      },
+                      "Property": "stock_units"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(fct_crm__supplies_sku.stock_units)",
+              "nativeQueryRef": "units",
+              "displayName": "units"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_crm__supplies_sku"
+                        }
+                      },
+                      "Property": "stock_value"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(fct_crm__supplies_sku.stock_value)",
+              "nativeQueryRef": "value",
+              "displayName": "value"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_crm__supplies_sku"
+                    }
+                  },
+                  "Property": "turnover_days"
+                }
+              },
+              "queryRef": "Sum(fct_crm__supplies_sku.turnover_days)",
+              "nativeQueryRef": "turnover_days",
+              "displayName": "turnover days"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_crm__supplies_sku"
+                    }
+                  },
+                  "Property": "gross_margin_pct"
+                }
+              },
+              "queryRef": "Sum(fct_crm__supplies_sku.gross_margin_pct)",
+              "nativeQueryRef": "gross_margin_pct",
+              "displayName": "gross margin"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_crm__supplies_sku"
+                    }
+                  },
+                  "Property": "is_dead_stock"
+                }
+              },
+              "queryRef": "fct_crm__supplies_sku.is_dead_stock",
+              "nativeQueryRef": "dead stock",
+              "displayName": "dead stock"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_crm__supplies_sku"
+                    }
+                  },
+                  "Property": "is_overstocked_at_procurement"
+                }
+              },
+              "queryRef": "fct_crm__supplies_sku.is_overstocked_at_procurement",
+              "nativeQueryRef": "overstock",
+              "displayName": "overstock"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fct_crm__supplies_sku"
+                      }
+                    },
+                    "Property": "stock_value"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "588D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "fct_crm__supplies_sku.product_name"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "83D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(fct_crm__supplies_sku.stock_units)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "108D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(fct_crm__supplies_sku.gross_margin_pct)"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(fct_crm__supplies_sku.turnover_days)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            },
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(fct_crm__supplies_sku.stock_units)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Right'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(fct_crm__supplies_sku.stock_value)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Left'"
+                }
+              }
+            },
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "fct_crm__supplies_sku.product_name"
+          }
+        },
+        {
+          "properties": {
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "fct_crm__supplies_sku.category_name"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "fct_crm__supplies_sku.is_dead_stock"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "fct_crm__supplies_sku.is_overstocked_at_procurement"
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
   }
 }

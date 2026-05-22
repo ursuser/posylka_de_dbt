@@ -2,11 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
   "name": "3135ea10ec6296fd8635",
   "position": {
-    "x": 1250.3900577355905,
-    "y": 0.96590909090909094,
+    "x": 1225.286312849162,
+    "y": 1.008403361344538,
     "z": 4000,
-    "height": 81.13636363636364,
-    "width": 181.60994226440943
+    "height": 81.680672268907571,
+    "width": 204.71368715083798,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -26,7 +27,8 @@
                 }
               },
               "queryRef": "M_supplies.supplies_avg_turnover_days",
-              "nativeQueryRef": "supplies_avg_turnover_days"
+              "nativeQueryRef": "supplies_avg_turnover_days",
+              "format": "0"
             }
           ]
         }
@@ -137,7 +139,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Avg Turnover'"
+                  "Value": "'Avg Turnover Days'"
                 }
               }
             },
