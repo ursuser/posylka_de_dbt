@@ -17283,7 +17283,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "supplier name": {
+			          "Supplier Name": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -19379,12 +19379,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "dead stock": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "is dead inventory": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -19395,16 +19389,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "dead inventory": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
 			          "inventory": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -19412,6 +19396,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "dead stock": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -20501,6 +20495,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.491
 			          }
+			        },
+			        {
+			          "Total Stock": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -21114,75 +21118,649 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "M_supply.over_stock_value": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "M_supplies",
+			          "ConceptualProperty": "over_stock_value"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "over stock value": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "over_stock_value": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "value": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "over inventory value": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "over stock assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "over stock worth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "over stock price": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "over stock cost": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "over stock charge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "over stock rate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "over stock importance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "over stock significance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "Over Stock": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "stock_breakdown": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "stock_breakdown"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "stock breakdown": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "stock_breakdown": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "breakdown": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "inventory breakdown": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "stock failure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "stock cessation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "stock interruption": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "failure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "cessation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "interruption": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "stock collapse": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "stock halt": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "stock break": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "stock_breakdown.stock_breakdown": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "stock_breakdown",
+			          "ConceptualProperty": "stock_breakdown"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "stock breakdown": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "stock breakdown name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "stock_breakdown": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "breakdown": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "inventory breakdown": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "stock failure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "stock cessation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "stock interruption": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "failure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "cessation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "interruption": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "stock collapse": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "stock halt": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "stock break": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ],
+			      "NameType": "Name"
+			    },
+			    "stock_breakdown.stock_breakdown_field": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "stock_breakdown",
+			          "ConceptualProperty": "stock_breakdown Fields"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "stock_breakdown field": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "stock_breakdown arena": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "stock_breakdown turf": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "stock_breakdown ground": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "stock_breakdown pitch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "stock_breakdown park": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "stock_breakdown meadow": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "stock_breakdown grassland": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "stock_breakdown lea": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "stock_breakdown pasture": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "stock_breakdown countryside": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        }
+			      ]
+			    },
+			    "stock_breakdown.stock_breakdown_order": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "stock_breakdown",
+			          "ConceptualProperty": "stock_breakdown Order"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "stock_breakdown order": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "stock_breakdown instruction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "stock_breakdown direction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "stock_breakdown edict": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "stock_breakdown command": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "stock_breakdown directive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "stock_breakdown demand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "stock_breakdown mandate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "stock_breakdown imperative": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "stock_breakdown stability": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "stock_breakdown harmony": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "fct_cohort_cohort_period_date_hierarchy_has_fct_cohort_cohort_period_month": {
-			      "Binding": {
-			        "ConceptualEntity": "fct_cohorts"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fct_cohort.cohort_period.date_hierarchy": {
-			          "Target": {
-			            "Entity": "fct_cohort.cohort_period.date_hierarchy"
-			          }
-			        },
-			        "fct_cohort.cohort_period.month": {
-			          "Target": {
-			            "Entity": "fct_cohort.cohort_period.month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fct_cohort.cohort_period.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "fct_cohort.cohort_period.month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "cohort_period_date_hierarchies_have_cohort_period_months"
-			        }
-			      ]
-			    },
-			    "fct_cohort_cohort_period_date_hierarchy_has_fct_cohort_cohort_period_quarter": {
-			      "Binding": {
-			        "ConceptualEntity": "fct_cohorts"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fct_cohort.cohort_period.date_hierarchy": {
-			          "Target": {
-			            "Entity": "fct_cohort.cohort_period.date_hierarchy"
-			          }
-			        },
-			        "fct_cohort.cohort_period.quarter": {
-			          "Target": {
-			            "Entity": "fct_cohort.cohort_period.quarter"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fct_cohort.cohort_period.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "fct_cohort.cohort_period.quarter"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "cohort_period_date_hierarchies_have_cohort_period_quarters"
-			        }
-			      ]
-			    },
 			    "fct_cohort_cohort_period_date_hierarchy_has_fct_cohort_cohort_period_year": {
 			      "Binding": {
 			        "ConceptualEntity": "fct_cohorts"
@@ -22155,6 +22733,85 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "HB_date_basics_have_fct_events_real_sm"
+			        }
+			      ]
+			    },
+			    "stock_breakdown_has_stock_breakdown": {
+			      "Binding": {
+			        "ConceptualEntity": "stock_breakdown"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "stock_breakdown": {
+			          "Target": {
+			            "Entity": "stock_breakdown"
+			          }
+			        },
+			        "stock_breakdown.stock_breakdown": {
+			          "Target": {
+			            "Entity": "stock_breakdown.stock_breakdown"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "stock_breakdown"
+			            },
+			            "Object": {
+			              "Role": "stock_breakdown.stock_breakdown"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stock_breakdowns_have_stock_breakdowns"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "stock_breakdown"
+			            },
+			            "Name": {
+			              "Role": "stock_breakdown.stock_breakdown"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "stock_breakdowns_are_names_IDs_of_stock_breakdowns"
+			        }
+			      ]
+			    },
+			    "fct_crm_supplies_sku_has_M_supply_over_stock_value": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_crm__supplies_sku"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_crm_supplies_sku": {
+			          "Target": {
+			            "Entity": "fct_crm_supplies_sku"
+			          }
+			        },
+			        "M_supply.over_stock_value": {
+			          "Target": {
+			            "Entity": "M_supply.over_stock_value"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_crm_supplies_sku"
+			            },
+			            "Object": {
+			              "Role": "M_supply.over_stock_value"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_crm_supplies_skus_have_over_stock_value"
 			        }
 			      ]
 			    },
@@ -28701,6 +29358,72 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "some_fct_crm_sales_are_executed_fct_crm_sales"
+			        }
+			      ]
+			    },
+			    "fct_cohort_cohort_period_date_hierarchy_has_fct_cohort_cohort_period_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_cohorts"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_cohort.cohort_period.date_hierarchy": {
+			          "Target": {
+			            "Entity": "fct_cohort.cohort_period.date_hierarchy"
+			          }
+			        },
+			        "fct_cohort.cohort_period.quarter": {
+			          "Target": {
+			            "Entity": "fct_cohort.cohort_period.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_cohort.cohort_period.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "fct_cohort.cohort_period.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cohort_period_date_hierarchies_have_cohort_period_quarters"
+			        }
+			      ]
+			    },
+			    "fct_cohort_cohort_period_date_hierarchy_has_fct_cohort_cohort_period_month": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_cohorts"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_cohort.cohort_period.date_hierarchy": {
+			          "Target": {
+			            "Entity": "fct_cohort.cohort_period.date_hierarchy"
+			          }
+			        },
+			        "fct_cohort.cohort_period.month": {
+			          "Target": {
+			            "Entity": "fct_cohort.cohort_period.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_cohort.cohort_period.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "fct_cohort.cohort_period.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cohort_period_date_hierarchies_have_cohort_period_months"
 			        }
 			      ]
 			    },

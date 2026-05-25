@@ -1,0 +1,48 @@
+table stock_breakdown
+	lineageTag: e69b96ec-f193-4999-9fea-f9ae6ebaf6b2
+
+	column stock_breakdown
+		lineageTag: cb12680f-96da-4351-a92d-c00116122759
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'stock_breakdown Order'
+
+		relatedColumnDetails
+			groupByColumn: 'stock_breakdown Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'stock_breakdown Fields'
+		isHidden
+		lineageTag: b89163e3-b99c-4e72-ac5a-97871c2cc693
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'stock_breakdown Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'stock_breakdown Order'
+		isHidden
+		formatString: 0
+		lineageTag: 39d9b16b-9ce2-4386-938c-2dbee5660cc2
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition stock_breakdown = calculated
+		mode: import
+		source =
+				{
+				    ("Supplier Name", NAMEOF('fct_crm__supplies_sku'[primary_supplier_name]), 0),
+				    ("Category Name", NAMEOF('fct_crm__supplies_sku'[category_name]), 1)
+				}
+
+	annotation PBI_Id = 12b93730afd549f08f140d22c138a80f
+

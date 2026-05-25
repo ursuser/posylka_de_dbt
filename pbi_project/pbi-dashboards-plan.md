@@ -2,7 +2,7 @@
 
 ## Stock Analytics Page
 
-**Status:** Done. One enhancement pending (see below).
+**Status:** Done.
 
 ### Done
 
@@ -10,33 +10,9 @@
 - [x] 5 slicers: category, supplier, is_dead_stock, is_overstocked, last_procurement_date
 - [x] SKU detail table — columns: product_name, category_name, stock_units, stock_value, turnover_days, gross_margin_pct, is_dead_stock, is_overstocked_at_procurement. Sort by stock_value desc.
 - [x] SKU Risk scatter — X: turnover_days, Y: gross_margin_pct, Size: stock_value, Legend: category_name. Y axis -100% to 100%.
-- [x] Top Suppliers by Stock Value — stacked horizontal bar (Live Stock + Dead Stock)
-- [x] Top Categories by Stock Value — stacked horizontal bar (Live Stock + Dead Stock)
 - [x] Deleted 3 stale CRM visuals
 - [x] Supplier relationship fixed
-
-### Pending enhancement — Overstock Value bar chart
-
-**Idea:** replace "Top Categories by Stock Value" with "Overstock Value" chart showing where money is tied up in excess stock.
-
-**Implementation:**
-
-1. New DAX measure:
-```dax
-Supplies Overstock Value =
-CALCULATE(
-    SUM(fct_crm__supplies_sku[stock_value]),
-    fct_crm__supplies_sku[is_overstocked_at_procurement] = TRUE()
-)
-```
-
-2. Global Field Parameter — Category / Supplier toggle, shared across both bar charts (Suppliers and Overstock Value).
-
-3. Bar chart:
-   - Y axis: Field Parameter (category_name or supplier_name)
-   - X axis: `[Supplies Overstock Value]`
-   - Sort: by overstock value desc
-   - Visual filter: `[Supplies Overstock Value] > €X` (threshold TBD)
+- [x] Stock Breakdown bar chart — stacked horizontal bar (Normal Live + Overstock + Dead Stock), sorted by total stock value desc, with Category / Supplier Field Parameter toggle
 
 ---
 
@@ -58,7 +34,7 @@ CALCULATE(
 | 1 | Traffic | GA4 | done |
 | 2 | CRM / Sales | CRM (BigQuery) | done |
 | 3 | Cohorts | CRM | done |
-| 4 | RFM | CRM | pending |
+| 4 | RFM | CRM | pending — dbt model done, PBI page pending |
 | 5 | Products / SKU | CRM (BigQuery) | pending |
 | 6 | Cross-sell | CRM (BigQuery) | done |
 | 7 | Google Ads | Google Ads (BigQuery) | pending |

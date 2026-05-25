@@ -39,6 +39,7 @@ ref table fct_crm__supplies_sku
 ref table LocalDateTable_4c6c4d3a-a7ad-474c-9580-9a531c707ec6
 ref table fct_crm__supplies_supplier
 ref table M_supplies
+ref table stock_breakdown
 
 ref cultureInfo en-US
 

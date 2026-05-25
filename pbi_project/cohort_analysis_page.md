@@ -70,4 +70,4 @@ Avg Retention M3 = CALCULATE(AVERAGE(fct_cohorts[retention_rate]), fct_cohorts[p
 Avg Retention M6 = CALCULATE(AVERAGE(fct_cohorts[retention_rate]), fct_cohorts[period_offset] = 6)
 ```
 
-**STATUS: TODO** — KPI cards not yet built. All other visuals are done.
+TODO: — KPI cards not yet built. All other visuals are done.

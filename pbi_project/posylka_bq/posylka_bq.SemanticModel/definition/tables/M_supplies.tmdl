@@ -2,7 +2,7 @@ table M_supplies
 	lineageTag: f0000001-0000-0000-0000-000000000000
 
 	measure supplies_total_stock_value = SUM(fct_crm__supplies_sku[stock_value])
-		formatString: € #,##0
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
 		lineageTag: f1000001-0000-0000-0000-000000000001
 
 	measure dead_stock_value =
@@ -10,7 +10,7 @@ table M_supplies
 			    SUM(fct_crm__supplies_sku[stock_value]),
 			    fct_crm__supplies_sku[is_dead_stock] = TRUE()
 			)
-		formatString: € #,##0
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
 		lineageTag: f1000002-0000-0000-0000-000000000002
 
 	measure supplies_dead_stock_pct = DIVIDE([dead_stock_value], [supplies_total_stock_value])
@@ -45,9 +45,19 @@ table M_supplies
 		formatString: #,##0
 		lineageTag: f1000007-0000-0000-0000-000000000007
 
-	measure live_stock_value = [supplies_total_stock_value] - [dead_stock_value]
+	measure live_stock_value =
+			CALCULATE(SUM(fct_crm__supplies_sku[stock_value]),
+			      fct_crm__supplies_sku[is_dead_stock] = FALSE(),
+			      fct_crm__supplies_sku[is_overstocked_at_procurement] = FALSE())
 		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
 		lineageTag: b4238250-ac0e-4a6a-abb9-619702c12fc5
+
+	measure over_stock_value =
+			CALCULATE(SUM(fct_crm__supplies_sku[stock_value]),
+			      fct_crm__supplies_sku[is_dead_stock] = FALSE(),
+			      fct_crm__supplies_sku[is_overstocked_at_procurement] = TRUE())
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
+		lineageTag: 075c83b1-43c2-4215-88a8-b9ea937714a8
 
 	partition M_supplies = m
 		mode: import
