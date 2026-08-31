@@ -45,6 +45,31 @@ Tested `powerbi-desktop status` directly:
 
 ---
 
+## Update — 2026-08-31
+
+The `powerbi-modeling-mcp` MCP server (part of the same `powerbi-authoring` plugin, backs the `semantic-model-authoring` skill) also fails to connect from a Claude Code session running on the Mac side — `CONNECTION_CLOSED`.
+
+Same root cause as the bridge CLI above: it needs a live connection to the Power BI Desktop process, which only exists inside the Parallels Windows VM. Confirms this is a general constraint, not specific to the bridge CLI — any part of the plugin that needs a running Desktop instance is unusable from the Mac side; only the pure file-I/O CLI commands work.
+
+---
+
+## Update — 2026-08-31 (2): live reload confirmed working
+
+The August 2026 Power BI monthly release added a feature separate from the Desktop Bridge: Desktop now watches the open PBIP project's files on disk and shows an "Apply external changes" banner when they change externally, no restart needed. Unlike the Bridge (named pipe, local-only, remote access not supported per Microsoft's own docs), this is Desktop's own file-watcher — same file access path Desktop already uses to open the project, so it isn't blocked by the Mac ↔ Parallels boundary.
+
+**Tested and confirmed working end-to-end:**
+
+- Environment: `posylka_bq.pbip` open in Power BI Desktop inside the Parallels Windows VM; file edited via Claude Code on the Mac side, through the shared folder.
+- On Desktop **2.154.956.0 (May 2026)**: no banner appeared — feature not present in that build.
+- Updated Desktop via Microsoft Store (Library → Get updates) to the August 2026 build.
+- Repeated the same edit (changed a page's `displayName` in `page.json`): banner **"This project's files were changed externally. Apply to view the latest changes."** with an **"Apply external changes"** button appeared immediately. Clicking it updated the page tab name live, no restart.
+
+**Conclusion:** the old "close Desktop before JSON edits, reopen after" workflow (see project's Power BI dashboard-building process) is obsolete on Desktop August 2026+. Updated the global skill (`~/.claude/skills/power-bi-dashboard-building/SKILL.md`) to use the apply-external-changes flow as the default, with close/reopen kept only as a fallback for older Desktop builds.
+
+**Caveat:** while Desktop has the external change pending (banner shown but not yet applied) or has just applied it, don't make further edits to the same files from Claude Code — Desktop holds its own in-memory copy, and a save from Desktop would overwrite anything written to disk in between. Wait for the user to confirm they applied and saved before touching the files again.
+
+---
+
 ## To try
 
 - TODO: run `powerbi-report-author validate` against `posylka_bq.pbip` and see what it reports
