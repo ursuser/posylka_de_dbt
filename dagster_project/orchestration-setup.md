@@ -55,7 +55,8 @@ Each project is a git clone of its GitHub repo. `dagster_project/` lives inside 
 - `dagster_project/` inside each dbt repo defines what to run and when (assets, schedules)
 - `workspace.yaml` tells Dagster where to find each code location
 - `dagster_home/` stores logs and run history
-- Dagster UI: `http://91.107.197.188:3000`
+- Dagster UI: port 3000, bound to loopback only (not reachable from the public
+  internet) — see "How to Manage Server" below for browser access via SSH tunnel
 - To view dbt logs (bytes processed, rows, timing): Runs → select run → View → select step → stdout/stderr
 
 ## Key Config Files on Server
@@ -107,6 +108,11 @@ Email alerts go to `ursuser@gmail.com` (Gmail App Password stored in `ALERT_EMAI
 ```bash
 # SSH access (load key first: ssh-add ~/.ssh/id_rsa)
 ssh root@91.107.197.188
+
+# Browser access to Dagster UI (port 3000 is loopback-only, no direct public
+# access) — open this tunnel first, keep the terminal window open, then visit
+# http://localhost:3000 in the browser
+ssh -L 3000:localhost:3000 root@91.107.197.188
 
 # Start/stop all
 cd /root/orchestration && docker compose up -d
